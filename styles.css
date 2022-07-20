@@ -1,0 +1,854 @@
+:root {
+    --nav-div:0.5vw;
+    --h1a: 3vw;
+    --h1lh: 3.3vw;
+    --spacing1: .08vw;
+    --spacing2: .25vw;
+    --p1: .85vw;
+    --pa: 1vw;
+    --pb: 1.15vw;
+    --pc: 1.25vw;
+    --pd: 1.5vw;
+    --pe: 1.75vw;
+    --pf: 2vw;
+    --pageheadtxt-w: 75%;
+    --pageheadtxt-h2: 5vw;
+    --pageheadtxt-h2-lh: 4.5vw;
+    --base-safearea-padding: 25%;
+}
+html {
+    background-color: #365673;
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0 auto;
+}
+/*---------------NAVIGATION (ALL PAGES)---------------*/
+#nav {
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+#nav-divider {
+    width: 100%;
+    height: var(--nav-div);
+    background-color: #FCC069;
+    border-bottom: solid #F29544 .6vw;
+}
+
+#icon {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    left: 20%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#nav ul {
+    height: 4%; 
+    width: 100%;
+    list-style-type: none;
+    position: relative;
+    text-align: center;
+    padding-inline-start: 0%;
+    margin: 0;
+    padding-top: 0%;
+    background-image: url(./images/TexturedVignette.png);
+    background-size: cover;
+    background-color: #283C4F;
+}
+
+#nav ul li{
+    display: inline-block;
+    position: relative;
+    color: #F2E5D8;
+    padding-top: .8%;
+    padding-bottom: .7%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--pa);
+}
+
+#nav ul li a{
+    transition-property: color;
+    transition-duration: .25s;
+    color: #F2E5D8;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 2;
+}
+
+#nav ul li a:hover{
+    transition-duration: .25s;
+    color: #728FA8;
+    cursor: pointer;
+}
+
+#nav ul li a:active{
+    color: #728FA8;
+}
+/*---------------HEADER (ALL PAGES)---------------*/
+#header {
+    width: 100%;
+    height: 45%; 
+    background-color: #F2E5D8;
+    text-align: center;
+    background-image: url(./base-images/Desert-Banner.png);
+    background-size:contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-top: 4.5%;
+    z-index: 2;
+}
+
+#logo {
+    width: 27.5%;
+    height: 60%;
+    position: relative;
+    padding: 2%;
+}
+
+/*---------------PAGE CONTENT (ALL PAGES)---------------*/
+
+#page-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #F2E5D8;
+    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: left;
+}
+
+.page-head {
+    width: 40%;
+    margin-left: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+@font-face {
+    font-family: Heavitas;
+    src: url(./fonts/Heavitas.ttf);
+}
+@font-face {
+    font-family: Proxima Nova;
+    src: url(./fonts/Proxima\ Nova\ Font.otf);
+}
+
+/*---------------HOME PAGE CONTENT---------------*/
+
+.home-header-text {
+    width: var(--pageheadtxt-w);
+    display: inline-block;
+    position: relative;
+    margin: 2%;
+    margin-left: 2.5%;
+}
+
+.home-header-text h1{
+    margin: 0;
+    font-size: var(--h1a);
+    color:#283C4F;
+    font-family: Heavitas;
+    font-weight: normal;
+    padding: 0%;
+}
+
+.home-header-text h2{
+    margin: 0;
+    margin-block-start: 0;
+    padding: 0%;
+    font-size: var(--pageheadtxt-h2);
+    color:#365673;
+    font-family: Heavitas;
+    line-height: var(--pageheadtxt-h2-lh);
+}
+
+.home-header-image {
+    display: inline-block;
+    position: absolute;
+    top:3%;
+    width: 8%;
+    padding-left: 1%;
+}
+
+.home-header-image img {
+    width: 100%;
+}
+
+.section-divider{
+    display: block;
+    margin: 0;
+    width: 100%;
+    background-color: #283C4F;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+}
+.section-div-text{
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: var(--pc);
+    padding: .6%;
+    padding-bottom: .4%;
+    margin: 0;
+    font-weight:bolder;
+    letter-spacing: var(--spacing2);
+}
+
+#select-page-home {
+    width: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+}
+
+#select-page-home div{
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin: -1%;
+    margin-top: 2%;
+    width: 51%;
+}
+
+#select-page-home div h1{
+    margin: 0;
+    font-size: var(--h1a);
+    color:#F2E5D8;
+    font-family: Heavitas;
+    padding: 0%;
+    line-height: var(--h1a);
+    margin-bottom: 2%;
+    font-weight: normal;
+}
+
+#select-page-home div button{
+    margin: 0;
+    font-size: var(--pa);
+    color:white;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    letter-spacing: var(--spacing1);
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-left: 6%;
+    padding-right: 6%;
+    cursor: pointer;
+}
+
+#select-page-home div:first-child{
+    background-image: url(./base-images/TexturedVignette.png);
+    background-color: #2C736C;
+}
+
+#select-page-home div:last-child{
+    background-image: url(./base-images/TexturedVignette-orange.png);
+    background-color: #D97B59;
+}
+
+#select-page-home div:first-child button{
+    border: none;
+    background-color: rgba(32, 84, 79, 0.6);
+}
+
+#select-page-home div:first-child button:hover{
+    border: none;
+    background-color: rgba(32, 84, 79, 1.0);
+}
+
+#select-page-home div:last-child button{
+    border: none;
+    background-color: rgba(164, 92, 65, 0.6);
+}
+#select-page-home div:last-child button:hover{
+    background-color: rgba(164, 92, 65, 1.0);
+    border: none;
+    opacity: 100%;
+}
+
+/*---------------ABOUT PAGE CONTENT---------------*/
+
+#about-header-text {
+    width: var(--pageheadtxt-w);
+    display: inline-block;
+    position: relative;
+    margin: 2%;
+    margin-left: 2.5%;
+    margin-bottom: 2.5;
+}
+
+#about-header-text h1{
+    margin: 0;
+    font-size:var(--h1a);
+    color:#283C4F;
+    font-family: Heavitas;
+    padding: 0%;
+    font-weight: normal;
+}
+
+#about-header-text h2{
+    margin: 0;
+    margin-block-start: 0;
+    padding: 0%;
+    font-size: var(--pageheadtxt-h2);
+    color:#365673;
+    font-family: Heavitas;
+    line-height: var(--pageheadtxt-h2-lh);
+}
+
+#about-header-image {
+    display: inline-block;
+    position: absolute;
+    top: 1%;
+    width: 8%;
+    padding-left: 1%;
+}
+
+#about-header-image img {
+    width: 100%;
+}
+
+.section-divider{
+    display: block;
+    margin: 0;
+    width: 100%;
+    background-color: #283C4F;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+}
+.section-div-text{
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: var(--pb);
+    padding: .55%;
+    padding-bottom: .45%;
+    margin: 0;
+    font-weight:bolder;
+    letter-spacing: var(--spacing2);
+}
+
+#page-content section h1 {
+    margin: 0;
+    font-size: var(--h1a);
+    color:#F2E5D8;
+    font-family: Heavitas;
+    line-height: var(--h1a);
+    margin-bottom: 1%;
+    font-weight: normal;
+    
+}
+
+/*---------------ABOUT ME - INTRO---------------*/
+
+#elena-m {
+    width: 50%;
+    padding-left: var(--base-safearea-padding);
+    padding-right: var(--base-safearea-padding);
+    background-image: url(./base-images/TexturedVignette-blue.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #365673;
+    margin-top: 2%;
+    padding-bottom: 0.5%;
+}
+
+#left{
+    width: 55%;
+    padding-left: 4.5%;
+    margin: 0;
+    display: inline-block
+}
+
+#elena-m h1 {
+    padding-top: 7.5%;
+    display: inline-block;
+}
+
+#elena-m h2 {
+    margin: 0;
+    font-size: var(--pe);
+    color:#728FA8;
+    font-family: Heavitas;
+    padding: 0%;
+    line-height: var(--pf);
+    margin-bottom: 2%;
+    font-weight: normal;
+    display:block;
+}
+
+#left p {
+    font-size: var(--p1);
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    line-height: var(--pb);
+    color: white;
+}
+
+#social img {
+    display: inline-block;
+    width:8%;
+    margin-left: 1%;
+}
+
+#right {
+    width:34.5%;
+    display: inline-block;
+    margin-left: 0%;
+    top: 0%;
+}
+
+#right img {
+    width: 100%;
+    display: inline-block;
+    border-radius: 10vw;
+}
+
+/*---------------ABOUT ME - WHAT I DO---------------*/
+
+#what-i-do {
+    width: 50%;
+    padding-left: var(--base-safearea-padding);
+    padding-right: var(--base-safearea-padding);
+    background-size: cover;
+    background-position: center;
+    margin-top: 0%;
+    padding-bottom: 0.5%;
+    background-image: url(./base-images/TexturedVignette.png);
+    background-color: #2C736C
+}
+
+#what-i-do h1 {
+    padding-top: 3%;
+    padding-left: 5%;
+    display: block;
+}
+
+#what-i-do h2 {
+    padding-left: 5%;
+    margin: 0;
+    font-size: var(--pe);
+    color:#83b5a4;
+    font-family: Heavitas;
+    line-height: var(--pd);
+    margin-bottom: 1%;
+    font-weight: normal;
+    display:block;
+}
+
+#what-i-do h3 {
+    margin: 0;
+    font-size: var(--pb);
+    color:white;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    line-height: var(--pc);
+    margin-bottom: 2%;
+    font-weight: bolder;
+    display:block;
+    text-align: center;
+}
+
+#what-i-do-categories{
+    width: 100%;
+    display: inline-block;
+    height: 15%;
+    padding-left: 3%;
+}
+
+#what-i-do-categories div{
+    width: 20%;
+    background-color:#20544F;
+    display: inline-block;
+    padding-left: .5%;
+    padding-right: .5%;
+    padding-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 2.5%;
+}
+
+#what-i-do-categories div:nth-child(4) h2{
+    padding-left: 15%;
+    padding-bottom: 8%;
+}
+
+#what-i-do-categories ul {
+    color:#F2E5D8;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-size: var(--p1);
+    line-height: var(--pc);
+    margin-top: 4%;
+}
+
+/*---------------ABOUT ME - WHERE I LEARNED---------------*/
+
+#where-i-learned {
+    width: 50%;
+    padding-left: var(--base-safearea-padding);
+    padding-right: var(--base-safearea-padding);
+    background-size: cover;
+    background-position: center;
+    margin-top: 0%;
+    padding-bottom: 1.5%;
+    background-image: url(./base-images/TexturedVignette-orange.png);
+    background-color:#D97B59;
+}
+
+#where-i-learned h1 {
+    padding-top: 3%;
+    padding-left: 5%;
+    display: block;
+    padding-bottom: 0%;
+}
+
+.column {
+    display:inline-block;
+    width: 40%;
+    padding: 0%;
+    margin: 0%;
+    padding-left: 4.5%;
+}
+
+.column h2 {
+    margin: 0;
+    font-size: var(--pd);
+    color:#e1b1a0;
+    font-family: Heavitas;
+    line-height: var(--pc);;
+    margin-bottom: 3%;
+    font-weight: normal;
+    
+}
+
+.column div {
+    padding: 5%;
+    background-color:#A65D42;
+}
+
+.column div h3 {
+    margin: 0;
+    font-size: var(--pb);
+    color:white;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    line-height: var(--pc);
+    margin-bottom: 1%;
+    font-weight: bolder;
+    display:block;
+    text-align: left;
+    letter-spacing: var(--spacing1);
+}
+.column div h4 {
+    margin: 0;
+    font-size: var(--pb);
+    color:white;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    line-height: var(--pc);
+    margin-bottom: 3%;
+    font-weight: normal;
+    display:block;
+    text-align: left;
+}
+
+.column div p {
+    margin: 0;
+    font-size: var(--pa);
+    color:#F2E5D8;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    line-height: var(--pb);
+    margin-bottom: 0%;
+    font-weight: normal;
+    display:block;
+    text-align: left;
+}
+
+.column div div {
+    width:110%;
+    height: 2%;
+    padding: 1%;
+    background-color: #D97B59;
+    margin-left: -5.5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/*---------------ABOUT ME - PAGE FOOTER---------------*/
+
+#about-me-foot {
+    width: 50%;
+    padding-top: 1.5%;
+    padding-left: var(--base-safearea-padding);
+    padding-right: var(--base-safearea-padding);
+    text-align: center;
+}
+
+#about-me-foot p {
+    margin: 0;
+    font-size: var(--pa);
+    color:#283C4F;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    line-height: var(--pb);
+    margin-bottom: 0%;
+    font-weight: bold;
+    display:block;
+}
+#about-me-foot button{
+    font-size: var(--pa);
+    color:white;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    letter-spacing: var(--spacing1);
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-left: 6%;
+    padding-right: 6%;
+    cursor: pointer;
+}
+
+#about-me-foot button {
+    border: none;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    background-color: #2C736C;
+}
+
+#about-me-foot button:hover{
+    border: none;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    background-color: #20544F;
+}
+
+/*---------------PORTFOLIO PAGE---------------*/
+
+#port-header-text {
+    width: var(--pageheadtxt-w);
+    display: inline-block;
+    position: relative;
+    margin: 2%;
+    margin-left: 2.5%;
+    margin-bottom: 2.5;
+}
+
+#port-header-text h1{
+    margin: 0;
+    font-size: var(--h1a);
+    color:#283C4F;
+    font-family: Heavitas;
+    padding: 0%;
+    font-weight: normal;
+}
+
+#port-header-text h2{
+    margin: 0;
+    margin-block-start: 0;
+    padding: 0%;
+    font-size: var(--pageheadtxt-h2);
+    color:#365673;
+    font-family: Heavitas;
+    line-height: var(--pageheadtxt-h2-lh);
+}
+
+#port-header-image {
+    display: inline-block;
+    position: absolute;
+    top: 3%;
+    width: 8%;
+    padding-left: 1%;
+}
+
+#port-header-image img {
+    width: 100%;
+}
+#select-page-port {
+    width: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+}
+
+#select-page-port div{
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin: -1%;
+    margin-top: 2%;
+    width: 51%;
+}
+
+#select-page-port div h1{
+    margin: 0;
+    font-size:var(--h1a);
+    color:#F2E5D8;
+    font-family: Heavitas;
+    padding: 0%;
+    line-height: var(--h1a);
+    font-weight: normal;
+}
+#select-page-port div h1:last-of-type{
+    margin-bottom: 2%;
+}
+
+#select-page-port div button{
+    margin: 0;
+    font-size: var(--pa);
+    color:white;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    letter-spacing: var(--spacing1);
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-left: 6%;
+    padding-right: 6%;
+    cursor: pointer;
+}
+
+#select-page-port div:first-child{
+    background-image: url(./base-images/TexturedVignette.png);
+    background-color: #2C736C;
+}
+
+#select-page-port div:last-child{
+    background-image: url(./base-images/TexturedVignette-orange.png);
+    background-color: #D97B59;
+}
+
+#select-page-port div:first-child button{
+    border: none;
+    margin: 2px;
+    background-color: rgba(32, 84, 79, 0.6);
+}
+
+#select-page-port div:first-child button:hover{
+    border: none;
+    margin: 2px;
+    background-color: rgba(32, 84, 79, 1.0);
+}
+
+#select-page-port div:last-child button{
+    border: none;
+    margin: 2px;
+    background-color: rgba(164, 92, 65, 0.6);
+}
+#select-page-port div:last-child button:hover{
+    background-color: rgba(164, 92, 65, 1.0);
+    border: none;
+    margin: 2px;
+    opacity: 100%;
+}
+
+/*---------------PORTFOLIO PASSWORD PAGE---------------*/
+
+#pw-lightbox {
+    width: 100%;
+    height: 100vh;
+    background-color: #283C4F;
+}
+
+#pw-content{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 40vw;
+    height: 45vh;
+    background-color:#365673;
+}
+
+#pw-content h1{
+    margin: 0;
+    font-size:var(--h1a);
+    color:#F2E5D8;
+    font-family: Heavitas;
+    padding: 0%;
+    line-height: var(--h1a);
+    font-weight: normal;
+    text-align: center;
+    margin-top: 30%;
+}
+
+#pw-content h2:first-of-type{
+    margin: 0;
+    font-size: var(--pb);
+    color:#F2E5D8;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    padding: 0%;
+    line-height: var(--pb);
+    font-weight:normal;
+    text-align: center;
+    margin-top: 1%;
+}
+
+#pw-lock{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 7%;
+    text-align: center;
+}
+#pw-lock input {
+    font-size: 1vw;
+}
+
+#request{
+    position: absolute;
+    top: 68.5%;
+    left: 30%;
+    width: 40vw;
+    height: 11.5vh;
+    background-color:#365673;
+}
+
+#request h2{
+    margin: 0;
+    font-size: var(--p1);
+    color:#F2E5D8;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    padding: 0%;
+    line-height: var(--pb);
+    font-weight:normal;
+    text-align: center;
+    margin-top: 3%;
+}
+
+#pw-request{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+ #pw-request input{
+    font-size: .75vw;
+ }
+
+
+/*---------------SITE FOOTER (ALL PAGES)---------------*/
+
+#footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left:var(--base-safearea-padding);
+    text-align: left;
+    background-color: #283C4F;
+}
+
+#footer p {
+    color: #F2E5D8;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding: 0%;
+}
