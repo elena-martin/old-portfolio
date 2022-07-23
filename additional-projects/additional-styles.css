@@ -1,0 +1,132 @@
+#graphic-design {
+    width: 50%;
+    height: 450px;
+    padding-left: var(--base-safearea-padding);
+    padding-right: var(--base-safearea-padding);
+    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #365673;
+    margin-top: 0%;
+    margin-bottom: 0;
+    padding-bottom: 6.25%;
+    text-align: center;
+}
+
+#graphic-design h1 {
+    padding-top: 7.5%;
+    display: inline-block;
+}
+
+#graphic-design h2 {
+    margin: 0;
+    font-size: var(--pe);
+    color:#728FA8;
+    font-family: Heavitas;
+    padding: 0%;
+    line-height: var(--pf);
+    margin-bottom: 2%;
+    font-weight: normal;
+    display:block;
+}
+
+#graphic-design div{
+
+    padding: 0%;
+    box-sizing: inherit;
+}
+
+#gfx-slide1 {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(41, 1fr);
+    grid-template-rows: repeat(41, 1vw);
+    grid-gap:10px;
+    margin-left: 15%;
+}
+
+.gallery__img {
+    transition: .25s;
+    transform: scale(100%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery__img:hover {
+    transition: .25s;
+    transform: scale(105%);
+    cursor: pointer;
+}
+
+figure{
+    margin:0;
+}
+
+#yt-thumbnail {
+    grid-column-start: 1;
+    grid-column-end: 23;
+    grid-row-start: 1;
+    grid-row-end:8;
+    max-width: 100%;
+}
+#avjlift-sig {
+    grid-column-start: 23;
+    grid-column-end: 42;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+#mikko-sig {
+    grid-column-start: 23;
+    grid-column-end: 42;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    object-position:left;
+}
+#hellfire-squad-pb{
+    grid-column-start: 1;
+    grid-column-end: 21;
+    grid-row-start:8;
+    grid-row-end: 11;
+}
+#totally-80s-squad-pb {
+    grid-column-start: 21;
+    grid-column-end: 42;
+    grid-row-start:8;
+    grid-row-end: 11;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  

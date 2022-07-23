@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Password Protected Page</title>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #dialogText h1{
+            text-align: center;
+            font-family: Heavitas;
+            font-size: 2.5vw;
+            color: #F2E5D8;
+            background-color: #365673;
+            margin: 0;
+        }
+        #dialogText h2{
+            text-align: center;
+            font-family: Heavitas;
+            font-size: 1.1vw;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: normal;
+            background-color: #365673;
+            margin-top: 0px;
+        }
+        
+        #dialogWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+            background-color: #283C4F;
+        }
+        
+        #dialogWrapCell {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        #mainDialog {
+            max-width: 800px;
+            margin: 5px;
+            border: solid #283C4F 0px;
+            border-radius: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #365673;
+            overflow: hidden;
+            text-align: left;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #mainDialog > * {
+            padding: 10px 30px;
+        }
+        #passArea {
+            width: 400px;
+            background-color: #365673;
+            padding-left: 200px;
+            padding-top: 0;
+        }
+        #passArea > * {
+            margin: 5px auto;
+        }
+        #pass {
+            width: 100%;
+            height: 40px;
+            font-size: 30px;
+        }
+
+        #passwordPrompt {
+        
+            color: white;
+        }
+        
+        #messageWrapper {
+            float: left;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+        
+        .notifyText {
+            display: none;
+        }
+        
+        #invalidPass {
+            color: red;
+        }
+        
+        #success {
+            color: green;
+        }
+        
+        #submitPass {
+            font-size: 20px;
+            border-radius: 0px;
+            background-color: #E7E7E7;
+            border: none;
+            float: right;
+            cursor: pointer;
+        }
+        #contentFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #attribution {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+        #attribution, #attribution a {
+            color: #999;
+        }
+        .error {
+            display: none;
+            color: red;
+        }
+        a {
+            color: #F2E5D8;
+        }
+
+        #pwRequest {
+            max-width: 800px;
+            margin-top: 10px;
+            border: solid #283C4F 0px;
+            border-radius: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #365673;
+            overflow: hidden;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #pwRequest h2{
+            text-align: center;
+            font-family: Heavitas;
+            font-size: 1.1vw;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: normal;
+            background-color: #365673;
+            margin-top: 0px;
+        }
+        #pwRequested {
+            max-width: 800px;
+            margin-top: 10px;
+            border: solid #283C4F 0px;
+            border-radius: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #365673;
+            overflow: hidden;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #pwRequested h2{
+            text-align: center;
+            font-family: Heavitas;
+            font-size: 1.4vw;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: normal;
+            margin-top: 0px;
+        }
+        #pwRequested p{
+            text-align: center;
+            font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+            font-size: 1.1vw;
+            color: #F2E5D8;
+            font-weight: normal;
+            margin-top: 0px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="lock">
+        <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
+        <div id="dialogWrap">
+        <div id="dialogWrapCell">
+            <div id="mainDialog">
+                <div id="dialogText">
+                    <h1>Enter the Password</h1>
+                    <h2>You can find it at the bottom of my resume</h2>
+                </div>
+                <div id="passArea">
+                    <p id="passwordPrompt">Password</p>
+                    <input id="pass" type="password" name="pass" autofocus>
+                    <div>
+                        <span id="messageWrapper">
+                            <span id="invalidPass" class="error">Sorry, please try again.</span>
+                            <span id="trycatcherror" class="error">Sorry, something went wrong.</span>
+                            <span id="success" class="notifyText">Success!</span>
+                            &nbsp;
+                        </span>
+                        <button id="submitPass" type="button">Submit</button>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <div id="securecontext" class="error">
+                    <p>
+                        Sorry, but password protection only works over a secure connection. Please load this page via HTTPS.
+                    </p>
+                </div>
+                <div id="nocrypto" class="error">
+                    <p>
+                        Your web browser appears to be outdated. Please visit this page using a modern browser.
+                    </p>
+                </div>
+            </div>
+            <div id="pwRequest">
+                <h2>Don't have a resume? Request the password below</h2>
+                <input type="text" placeholder="Your Name" id="name" required="true">
+                <input type="email" placeholder="Your Email" id="email" required="true">
+                <input type="text" placeholder="Your Company" id="company" required="true">
+                <input type="button" value="Submit" formmethod="post" onclick="requestPW()">
+            </div>
+            <div id="pwRequested" style="display: none;">
+                <h2>Password Requested!</h2>
+                <p>Send the auto-filled email to recieve the password in your inbox shortly.</p>
+            </div>
+        </div>
+        </div>
+        <div id="attribution">
+            Protected by <a href="https://www.maxlaumeister.com/pagecrypt/">PageCrypt</a>
+        </div>
+    </div>
+    
+    <script src="../commercial-projects/lock-script.js"></script>
+  </body>
+</html>

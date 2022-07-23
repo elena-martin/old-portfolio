@@ -20,6 +20,7 @@ html {
     background-color: #365673;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 body {
     margin: 0 auto;
@@ -219,7 +220,7 @@ body {
     padding-bottom: 3%;
     margin: -1%;
     margin-top: 2%;
-    width: 51%;
+    width: 50.9%;
 }
 
 #select-page-home div h1{
@@ -424,7 +425,7 @@ body {
     background-position: center;
     margin-top: 0%;
     padding-bottom: 0.5%;
-    background-image: url(./base-images/TexturedVignette.png);
+    background-image: url(./base-images/TexturedVignette-blue.png);
     background-color: #2C736C
 }
 
@@ -798,6 +799,9 @@ body {
 }
 #pw-lock input {
     font-size: 1vw;
+    padding: 1%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
 }
 
 #request{
@@ -830,6 +834,9 @@ body {
 }
  #pw-request input{
     font-size: .75vw;
+    padding: .5%;
+    padding-left: 1%;
+    padding-right: 1%;
  }
 
 
