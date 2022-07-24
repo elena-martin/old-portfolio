@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="../styles.css">
         <link rel="stylesheet" href="../additional-projects/additional-styles.css">
     </head>
-    <body>
+    <body onload="load();">
         <div id="nav">
             <a href="index.html"><img id="icon" src="../base-images/Icon - 2022.svg"></a>
             <ul>
@@ -18,7 +18,7 @@
             <img id="logo" src="../base-images/Wordmark - 2022.svg">
         </div>
         
-        <div id="page-content">
+        <div id="page-content" id="lightbox">
             <div class="page-head">
                 <div id = "about-header-text">
                     <h1>Additional</h1>
@@ -36,13 +36,11 @@
                 <h1>Graphic Design</h1>
                 <iframe width="100%" height="400px" style="margin-top: -20px; border: none; display: none;" src="https://elena-martin.github.io/portfolio-gfx/" id="gfx-frame"></iframe>
                 <h2 style="font-size: 45px;margin-bottom:0px;">THUMBNAILS & BANNERS</h2>
-                <div id="slide-modal" class="lightbox">
+                <div id="slide-modal" class="lightbox" onclick="test(event)">
                     <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
                     <div id="gfx-slide1" class="gfx-slide">
-                        <figure id="yt-thumbnail" class="gallery-fig">
-                            <a href="./gfx/Thumbnail1.png" data-pswp-width="2500" data-pswp-height="1667" target="_blank">
+                        <figure id="yt-thumbnail" class="gallery-fig" onclick="lightboxOpen()">
                             <img src="./gfx/Thumbnail1.png" class="gallery__img" alt="YouTube Thumbnail" description="YouTube thumbnail created for a client">
-                            </a>
                         </figure>
                         <figure id="avjlift-sig" class="gallery-fig">
                             <span class="hoverText"></span>
@@ -103,6 +101,62 @@
         <div id="footer">
             <p>© Copyright 2022 Elena Martin</p>
         </div>
-        <script type="module" src="../base-script.js"></script>
+
+        <script>
+            const nav = document.getElementById("nav");
+            const figures = document.getElementsByClassName("gallery-fig");
+            var source = ""
+
+            const boxContent = document.createElement("div");
+            boxContent.id = "boxContent";
+
+            const boxImg = document.createElement("img");
+            boxImg.id = "boxImg";
+            
+
+            const imgTitle = document.createElement("h2");
+            imgTitle.id = "boxImg";
+
+
+            function load(){
+                const lightbox = document.createElement("div");
+                lightbox.id = "lightbox";
+                lightbox.style = "visibility: hidden";
+
+                document.body.insertBefore(lightbox, nav);
+
+                lightbox.appendChild(boxContent);
+                boxContent.appendChild(boxImg);
+
+            };
+
+            function test(e){ 
+                source = e.target.src;
+            }
+            
+            function hoverImg() {
+                const hoverOL = document.createElement("div");
+                hoverOL.classList.add("hoverOL");
+                hoverOL.width = "100%";
+                hoverOL.height = "100%";
+                hoverOL.backgroundColor = "#365673";
+                list.forEach(function(){
+                    gallergyFigs.appendChild(hoverOL);
+                })
+            };
+            boxImg.setAttribute("src", "url("+source+")");
+            boxImg.setAttribute("target", "_blank");
+
+            function lightboxOpen(){
+                lightbox.style = "visibility: visible";
+                
+            }
+
+            
+
+            function lightboxClose(){
+                lightbox.style = "visibility: hidden";
+            }
+        </script>
     </body>
 </html>
