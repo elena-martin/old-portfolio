@@ -2,7 +2,7 @@
     <head>
         <title>Elena Martin | About Me</title>
         <link rel="stylesheet" href="../styles.css">
-        <link rel="stylesheet" href="../additional-projects/additional-styles.css">
+        <link rel="stylesheet" href="./additional-styles.css">
     </head>
     <body onload="load();">
         <div id="nav">
@@ -34,28 +34,75 @@
             
             <section id="graphic-design">
                 <h1>Graphic Design</h1>
-                <iframe width="100%" height="400px" style="margin-top: -20px; border: none; display: none;" src="https://elena-martin.github.io/portfolio-gfx/" id="gfx-frame"></iframe>
-                <h2 style="font-size: 45px;margin-bottom:0px;">THUMBNAILS & BANNERS</h2>
-                <div id="slide-modal" class="lightbox" onclick="test(event)">
-                    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-                    <div id="gfx-slide1" class="gfx-slide">
-                        <figure id="yt-thumbnail" class="gallery-fig" onclick="lightboxOpen()">
-                            <img src="./gfx/Thumbnail1.png" class="gallery__img" alt="YouTube Thumbnail" description="YouTube thumbnail created for a client">
-                        </figure>
-                        <figure id="avjlift-sig" class="gallery-fig">
-                            <span class="hoverText"></span>
-                            <img src="./gfx/Av-JLift-Sig.png" class="gallery__img" alt="AVJLift Forum Signature" description="User signature for use on the Tactical Gaming forums">
-                        </figure>
-                        <figure id="mikko-sig" class="gallery-fig">
-                            <img src="./gfx/mikkosig.png" class="gallery__img" alt="Mikko Forum Signature" description="User signature for use on the Tactical Gaming forums">
-                        </figure>
-                        <figure id="hellfire-squad-pb" class="gallery-fig">
-                            <img src="./gfx/Hellfire-PB.png" class="gallery__img" alt="Hellfire Squad Practice Briefing Forum Banner" description="Digital banner for use on the Tactical Gaming forums">
-                        </figure>
-                        <figure id="totally-80s-squad-pb" class="gallery-fig">
-                            <img src="./gfx/Totally-80-s-PB.png" class="gallery__img" alt="Totally 80's Squad Practice Briefing Forum Banner" description="Digital banner for use on the Tactical Gaming forums">
-                        </figure>
-                    </div>
+                <!--<iframe width="100%" height="400px" style="margin-top: -20px; border: none; display: none;" src="https://elena-martin.github.io/portfolio-gfx/" id="gfx-frame"></iframe>-->
+                <a class="slideshow-nav-left" onclick="prevSlide();"></a>
+                <a class="slideshow-nav-right"onclick="nextSlide();"></a>
+                <span class="slide-dots" style="margin-left: 0%;"></span>
+                <span class="slide-dots" style="margin-left:2%;"></span>
+                <span class="slide-dots" style="margin-left:4%;"></span>
+        
+                
+                <div id="gfx-slideshow" class="lightbox" onclick="test(event)">
+                    <label title="slide-1" class="slide1">
+                        <h2>THUMBNAILS & BANNERS</h2>
+                        <div id="gfx-slide1" class="gfx-slide">
+                            <figure id="yt-thumbnail" class="gallery-fig" onclick="lightboxOpen()">
+                                <img src="./gfx/Thumbnail1.png" class="gallery__img" alt="YouTube Thumbnail"><p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client</p>
+                            </figure>
+                            <figure id="avjlift-sig" class="gallery-fig" onclick="lightboxOpen()">
+                                <span class="hoverText"></span>
+                                <img src="./gfx/Av-JLift-Sig.png" class="gallery__img" alt="AVJLift Forum Signature"><p class="gallery-desc" style="display: none;">User signature for use on the Tactical Gaming forums</p>
+                            </figure>
+                            <figure id="mikko-sig" class="gallery-fig" onclick="lightboxOpen()">
+                                <img src="./gfx/mikkosig.png" class="gallery__img" alt="Mikko Forum Signature"><p class="gallery-desc" style="display: none;">User signature for use on the Tactical Gaming forums</p>
+                            </figure>
+                            <figure id="hellfire-squad-pb" class="gallery-fig" onclick="lightboxOpen()">
+                                <img src="./gfx/Hellfire-PB.png" class="gallery__img" alt="Hellfire Squad Banner"><p class="gallery-desc" style="display: none;">Digital banner for use on the Tactical Gaming forums</p>
+                            </figure>
+                            <figure id="totally-80s-squad-pb" class="gallery-fig" onclick="lightboxOpen()">
+                                <img src="./gfx/Totally-80-s-PB.png" class="gallery__img" alt="Totally 80's Squad Banner"><p class="gallery-desc" style="display: none;">Digital banner for use on the Tactical Gaming forums</p>
+                            </figure>
+                        </div>
+                    </label>
+                    <label title="slide-2" class="slide2">
+                        <h2>LOGOS & BRANDING</h2>
+                        <div id="gfx-slide2" class="gfx-slide">
+                            <figure id="scarlet-witch-logo" class="gallery-fig" onclick="lightboxOpen()">
+                                <img src="./gfx/scarlet-witch-logo.png" class="gallery__img" alt="Scarlet Witch Logo"><p class="gallery-desc" style="display: none;">Conceptual logo design for personal use - 2022</p>
+                            </figure>
+                            <figure id="stella-logo" class="gallery-fig" onclick="lightboxOpen()">
+                                <span class="hoverText"></span>
+                                <img src="./gfx/stella-logo.png" class="gallery__img" alt="Stella Logo"><p class="gallery-desc" style="display: none;">Conceptual logo design for personal use - 2019</p>
+                            </figure>
+                            <figure id="ensemble-logo" class="gallery-fig" onclick="lightboxOpen()">
+                                <img src="./gfx/ensemble-logo.png" class="gallery__img" alt="ORHS Ensemble Logo"><p class="gallery-desc" style="display: none;">Conceptual logo/t-shirt design for my high school chorus - 2016</p>
+                            </figure>
+                            <figure id="cactus-candle-logo" class="gallery-fig" onclick="lightboxOpen()">
+                                <img src="./gfx/CC-horizontal.svg" class="gallery__img" alt="Cactus Candle Logo"><p class="gallery-desc" style="display: none;">Logo design for client Cactus Candle - 2022</p>
+                            </figure>
+                            <figure id="cactus-oak-logo" class="gallery-fig" onclick="lightboxOpen()">
+                                <img src="./gfx/neon-logo.png" class="gallery__img" alt="Cactus + Oak Neon Logo"><p class="gallery-desc" style="display: none;">Conceptual logo design/photo manipulation for personal use - 2017</p>
+                            </figure>
+                            <figure id="gat-logo" class="gallery-fig" onclick="lightboxOpen()">
+                                <img src="./gfx/GAT-logo.png" class="gallery__img" alt="Girl About Town Logo"><p class="gallery-desc" style="display: none;">Logo design for Girl About Town - 2019</p>
+                            </figure>
+                        </div>
+                    </label>
+                    <label title="slide-3" class="slide3">
+                        <h2>CARDS, LABELS & SIGNS</h2>
+                        <div id="gfx-slide3" class="gfx-slide">
+                            <figure id="pff-card-back" class="gallery-fig" onclick="lightboxOpen()">
+                                <img src="./gfx/pff-card-back.png" class="gallery__img" alt="Promotional Card - Back"><p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (1/2) - 2019</p>
+                            </figure>
+                            <figure id="pff-card-front" class="gallery-fig" onclick="lightboxOpen()">
+                                <span class="hoverText"></span>
+                                <img src="./gfx/pff-card-front.png" class="gallery__img" alt="Promotional Card - Front"><p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (2/2) - 2019</p>
+                            </figure>
+                            <figure id="ben-sign" class="gallery-fig" onclick="lightboxOpen()">
+                                <img src="./gfx/ben-sign.png" class="gallery__img" alt="Class of 2020 Yard Sign"><p class="gallery-desc" style="display: none;">Yard sign for graduates of Oak Ridge High School - 2020</p>
+                            </figure>
+                        </div>
+                    </label>
                 </div>
             </section>
             <section id="what-i-do">
@@ -105,7 +152,13 @@
         <script>
             const nav = document.getElementById("nav");
             const figures = document.getElementsByClassName("gallery-fig");
+            const indicators = document.getElementsByClassName("slide-dots");
+            const slideshow= document.getElementById('gfx-slideshow');
+            let slides = slideshow.children;
             var source = ""
+            var relsource = ""
+            var title = ""
+            var desc = ""
 
             const boxContent = document.createElement("div");
             boxContent.id = "boxContent";
@@ -113,25 +166,50 @@
             const boxImg = document.createElement("img");
             boxImg.id = "boxImg";
             
+            const imgContent = document.createElement("div");
+            imgContent.id = "imgContent";
 
             const imgTitle = document.createElement("h2");
-            imgTitle.id = "boxImg";
+            imgTitle.id = "imgTitle";
+            
 
+            const imgDesc = document.createElement("p");
+            imgDesc.id = "imgDesc";
+
+            const closeLightbox = document.createElement("button");
+            closeLightbox.id = "close-lightbox";
+            closeLightbox.textContent="×"
+            closeLightbox.setAttribute("onclick","lightboxClose();")
+
+            var currentSlide = 1;
 
             function load(){
                 const lightbox = document.createElement("div");
                 lightbox.id = "lightbox";
-                lightbox.style = "visibility: hidden";
+                lightbox.style = "display: none";
 
                 document.body.insertBefore(lightbox, nav);
 
                 lightbox.appendChild(boxContent);
+                boxContent.appendChild(closeLightbox);
                 boxContent.appendChild(boxImg);
+                boxContent.appendChild(imgContent);
+                imgContent.appendChild(imgTitle);
+                imgContent.appendChild(imgDesc);
+
+                slide1();
 
             };
 
             function test(e){ 
-                source = e.target.src;
+                source = e.target.src
+                title = e.target.alt
+                let descP = e.target.nextElementSibling
+                desc = descP.textContent
+                relsource = source.replace("file:///D:/Coding/GitHub%20Repositories/portfolio/additional-projects/", "./");
+                boxImg.setAttribute("src", relsource);
+                imgTitle.textContent = title;
+                imgDesc.textContent = desc;
             }
             
             function hoverImg() {
@@ -144,18 +222,109 @@
                     gallergyFigs.appendChild(hoverOL);
                 })
             };
-            boxImg.setAttribute("src", "url("+source+")");
-            boxImg.setAttribute("target", "_blank");
+            
+            /*----------SLIDE COUNTER----------*/
+            function prevSlide(){
+                prev();
+                if (currentSlide == 1){
+                    slide1();
+                };
+                if (currentSlide == 2){
+                    slide2();
+                };
+                if (currentSlide == 3){
+                    slide3();
+                };
+            };
 
-            function lightboxOpen(){
-                lightbox.style = "visibility: visible";
+            function nextSlide(){
+                next();
+                if (currentSlide == 1){
+                    slide1();
+                };
+                if (currentSlide == 2){
+                    slide2();
+                };
+                if (currentSlide == 3){
+                    slide3();
+                };
+                
+            };
+
+            function prev(){
+                if (currentSlide == 1){
+                    currentSlide = 3
+                    console.log(currentSlide)
+                } else{
+                    currentSlide -= 1;
+                    console.log(currentSlide)
+                }
+            }
+
+            function next(){
+                if (currentSlide == 3){
+                    currentSlide = 1
+                    console.log(currentSlide)
+                } else{
+                    currentSlide += 1;
+                    console.log(currentSlide)
+                }
+            }
+            
+            /*----------SLIDE FUNCTIONS----------*/
+            function slide1(){
+                indicators.item(currentSlide + 1).setAttribute("style","background-color: rgba(40, 60, 79, 0.4);margin-left:4%");
+                indicators.item(currentSlide).setAttribute("style","background-color: rgba(40, 60, 79, 0.4);margin-left:2%");
+                indicators.item(currentSlide - 1).setAttribute("style","background-color: rgba(40, 60, 79, 1);");
+
+                slides.item(currentSlide).setAttribute("style", "display: none");
+                slides.item(currentSlide-1).setAttribute("style", "display: block");
+                slides.item(currentSlide+1).setAttribute("style", "display: none");
+
+                /*slides.item(currentSlide-1).setAttribute("style", "opacity: 100%");
+                slides.item(currentSlide).setAttribute("style", "opacity: 0%");
+                slides.item(currentSlide+1).setAttribute("style", "opacity: 0%");*/
+    
+            }
+
+            function slide2(){
+                indicators.item(currentSlide).setAttribute("style","background-color: rgba(40, 60, 79, 0.4);margin-left:4%");
+                indicators.item(currentSlide - 2).setAttribute("style","background-color: rgba(40, 60, 79, 0.4);");
+                indicators.item(currentSlide - 1).setAttribute("style","background-color: rgba(40, 60, 79, 1);margin-left:2%;");
+                
+                slides.item(currentSlide-2).setAttribute("style", "display: none");
+                slides.item(currentSlide-1).setAttribute("style", "display: block");
+                slides.item(currentSlide).setAttribute("style", "display: none");
+
+                /*slides.item(currentSlide-2).setAttribute("style", "opacity: 0%");
+                slides.item(currentSlide-1).setAttribute("style", "opacity: 100%");
+                slides.item(currentSlide).setAttribute("style", "opacity: 0%");*/
                 
             }
 
-            
+            function slide3(){
+                indicators.item(currentSlide - 3).setAttribute("style","background-color: rgba(40, 60, 79, 0.4);");
+                indicators.item(currentSlide - 2).setAttribute("style","background-color: rgba(40, 60, 79, 0.4);margin-left:2%");
+                indicators.item(currentSlide - 1).setAttribute("style","background-color: rgba(40, 60, 79, 1);margin-left:4%;");
+
+                slides.item(currentSlide-3).setAttribute("style", "display: none");
+                slides.item(currentSlide-2).setAttribute("style", "display: none");
+                slides.item(currentSlide-1).setAttribute("style", "display: block");
+                
+                /*slides.item(currentSlide-3).setAttribute("style", "opacity: 0%");
+                slides.item(currentSlide-2).setAttribute("style", "opacity: 0%");
+                slides.item(currentSlide-1).setAttribute("style", "opacity: 100%");*/
+
+            }
+
+            function lightboxOpen(){
+                lightbox.style = "display: block";
+                boxImg.setAttribute("target", "_blank");
+            }
 
             function lightboxClose(){
-                lightbox.style = "visibility: hidden";
+                lightbox.style = "display: none";
+                boxImg.setAttribute("target", "_blank");
             }
         </script>
     </body>

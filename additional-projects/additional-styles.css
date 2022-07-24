@@ -16,11 +16,12 @@
 #graphic-design h1 {
     padding-top: 7.5%;
     display: inline-block;
+    font-size: var(--h1a);
 }
 
 #graphic-design h2 {
     margin: 0;
-    font-size: var(--pe);
+    font-size: 2.25vw;
     color:#728FA8;
     font-family: Heavitas;
     padding: 0%;
@@ -31,16 +32,58 @@
 }
 
 #graphic-design div{
-
     padding: 0%;
     box-sizing: inherit;
 }
 
-#gfx-slide1 {
+.slideshow-nav-left {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 60px solid transparent;
+    border-right: 40px solid rgba(40, 60, 79, 0.6);
+    border-bottom: 60px solid transparent;
+    margin-top: 14.5%;
+    z-index: 4;
+    left: 27.5%
+}
+.slideshow-nav-left:hover {
+    border-right: 40px solid rgba(40, 60, 79, 1.0);
+}
+
+.slideshow-nav-right {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 60px solid transparent;
+    border-left: 40px solid rgba(40, 60, 79, 0.6);
+    border-bottom: 60px solid transparent;
+    margin-top: 14.5%;
+    z-index: 4;
+    right: 27.5%
+}
+
+.slideshow-nav-right:hover {
+    border-left: 40px solid rgba(40, 60, 79, 1.0);
+}
+
+.slide-dots {
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(40, 60, 79, 0.4);;
+    border-radius: 50%;
+    top: 46.5%;
+    left: 48%;
+}
+
+
+.gfx-slide {
     width: 70%;
     display: grid;
     grid-template-columns: repeat(41, 1fr);
-    grid-template-rows: repeat(41, 1vw);
+    grid-template-rows: repeat(10, 1vw);
     grid-gap:10px;
     margin-left: 15%;
 }
@@ -63,6 +106,8 @@
 figure{
     margin:0;
 }
+
+/*----------SLIDE 1----------*/
 
 #yt-thumbnail {
     grid-column-start: 1;
@@ -97,6 +142,73 @@ figure{
     grid-row-end: 11;
 }
 
+/*----------SLIDE 2----------*/
+
+#scarlet-witch-logo {
+    grid-column-start: 1;
+    grid-column-end: 15;
+    grid-row-start:1;
+    grid-row-end: 7;
+}
+
+#stella-logo {
+    grid-column-start: 15;
+    grid-column-end: 31;
+    grid-row-start:2;
+    grid-row-end: 6;
+}
+#ensemble-logo {
+    grid-column-start: 31;
+    grid-column-end: 42;
+    grid-row-start:1;
+    grid-row-end: 7;
+}
+#cactus-candle-logo {
+    grid-column-start: 1;
+    grid-column-end: 22;
+    grid-row-start:7;
+    grid-row-end: 11;
+}
+#cactus-oak-logo {
+    grid-column-start: 22;
+    grid-column-end: 29;
+    grid-row-start:7;
+    grid-row-end: 11;
+}
+#gat-logo {
+    grid-column-start: 29;
+    grid-column-end: 42;
+    grid-row-start:7;
+    grid-row-end: 11;
+}
+
+/*----------SLIDE 3----------*/
+
+#pff-card-front {
+    grid-column-start: 1;
+    grid-column-end: 15;
+    grid-row-start:1;
+    grid-row-end: 7;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+#pff-card-back {
+    grid-column-start: 6;
+    grid-column-end: 21;
+    grid-row-start:5;
+    grid-row-end: 11;
+    z-index: 2;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+#ben-sign {
+    grid-column-start: 21;
+    grid-column-end: 42;
+    grid-row-start:1;
+    grid-row-end: 11;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+
 
 #lightbox{
     width: 100%;
@@ -107,20 +219,70 @@ figure{
     z-index: 5;
 }
 
-#boxcontent {
-    width: 50vw;
-    height: 50vh;
-    margin-left: 25vw;
-    margin-top: 50vh;
+#boxContent {
+    width: 40vw;
+    height: auto;
+    margin-left: 28.75vw;
+    margin-top: 12.5vw;
+    
+    padding: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+#boxContent button {
+    text-align: right;
 }
 
-.close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
-    font-weight: bold;
+
+#boxContent img{
+    max-width: 100%;
+    max-height: 20vw;
 }
-  
+
+#imgContent {
+    width: 100%;
+    background-color: #283c4f;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+
+#imgContent h2{
+    margin: 0%;
+    font-size: 2vw;
+    color:#F2E5D8;
+    padding-top: .5vw;
+    font-family: Heavitas;
+    font-weight: lighter;
+}
+
+#imgContent p{
+    font-size: 1vw;
+    color:white;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-top: .5%;
+    padding-bottom: 1%;
+}
+
+#close-lightbox {
+    background-color: white;
+    border: none;
+    height: 40px;
+    width: 40px;
+    color: #365673;
+    display:flex;
+    font-size: 2.25vw;
+    line-height: 2vw;
+    border-radius: 10vw;
+    margin-top: -1%;
+    margin-right: 0;
+    margin-left: auto;
+    justify-self: flex;
+    
+}
+
+#close-lightbox:hover {
+    background-color: white;
+    cursor: pointer;
+}
   
