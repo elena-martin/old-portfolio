@@ -1,28 +1,51 @@
-#graphic-design {
+#nav{
+    z-index: 5;
+}
+.port-section {
     width: 50%;
     height: 450px;
     padding-left: var(--base-safearea-padding);
     padding-right: var(--base-safearea-padding);
-    background-image: url(../base-images/TexturedVignette-blue.png);
     background-size: cover;
     background-position: center;
-    background-color: #365673;
     margin-top: 0%;
     margin-bottom: 0;
     padding-bottom: 6.25%;
     text-align: center;
+    padding-bottom: 6.25%;
 }
 
-#graphic-design h1 {
+.port-section:first-of-type {
+    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-color: #365673;
+}
+
+.port-section:nth-of-type(2) {
+    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-color: #2C736C;
+}
+
+.port-section:nth-of-type(3) {
+    background-image: url(../base-images/TexturedVignette-orange.png);
+    background-color: #D97B59;
+}
+
+.port-section:first-of-type h1 {
     padding-top: 7.5%;
     display: inline-block;
     font-size: var(--h1a);
 }
 
-#graphic-design h2 {
+.port-section h1 {
+    padding-top: 3.5%;
+    display: inline-block;
+    font-size: var(--h1a);
+}
+
+.slides h2 {
     margin: 0;
-    font-size: 2.25vw;
-    color:#728FA8;
+    font-size: 2vw;
+    color:rgba(255, 255, 255, 0.4);
     font-family: Heavitas;
     padding: 0%;
     line-height: var(--pf);
@@ -32,7 +55,6 @@
 }
 
 #graphic-design div{
-    padding: 0%;
     box-sizing: inherit;
 }
 
@@ -41,14 +63,34 @@
     height: 0;
     position: absolute;
     border-top: 60px solid transparent;
-    border-right: 40px solid rgba(40, 60, 79, 0.6);
     border-bottom: 60px solid transparent;
     margin-top: 14.5%;
     z-index: 4;
     left: 27.5%
 }
-.slideshow-nav-left:hover {
+
+.slideshow-nav-left.gfx {
+    border-right: 40px solid rgba(40, 60, 79, 0.6);
+}
+
+.slideshow-nav-left.gfx:hover {
     border-right: 40px solid rgba(40, 60, 79, 1.0);
+}
+
+.slideshow-nav-left.git{
+    border-right: 40px solid rgba(32, 84, 79, 0.6);
+}
+
+.slideshow-nav-left.git:hover {
+    border-right: 40px solid rgba(32, 84, 79, 1.0);
+}
+.slideshow-nav-left.data-vis{
+    margin-top: 13%;
+    border-right: 40px solid rgba(166, 93, 66, 0.6);
+}
+
+.slideshow-nav-left.data-vis:hover {
+    border-right: 40px solid rgba(166, 93, 66, 1.0);
 }
 
 .slideshow-nav-right {
@@ -56,28 +98,90 @@
     height: 0;
     position: absolute;
     border-top: 60px solid transparent;
-    border-left: 40px solid rgba(40, 60, 79, 0.6);
+    
     border-bottom: 60px solid transparent;
     margin-top: 14.5%;
     z-index: 4;
     right: 27.5%
 }
 
-.slideshow-nav-right:hover {
+.slideshow-nav-right.gfx {
+    border-left: 40px solid rgba(40, 60, 79, 0.6);
+}
+
+.slideshow-nav-right.gfx:hover {
     border-left: 40px solid rgba(40, 60, 79, 1.0);
 }
 
-.slide-dots {
-    display: inline-block;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: rgba(40, 60, 79, 0.4);;
-    border-radius: 50%;
-    top: 46.5%;
-    left: 48%;
+.slideshow-nav-right.git {
+    border-left: 40px solid rgba(32, 84, 79, 0.6);
 }
 
+.slideshow-nav-right.git:hover {
+    border-left: 40px solid rgba(32, 84, 79, 1.0);
+}
+
+.slideshow-nav-right.data-vis{
+    margin-top: 13%;
+    border-left: 40px solid rgba(166, 93, 66, 0.6);
+}
+
+.slideshow-nav-right.data-vis:hover {
+    border-left: 40px solid rgba(166, 93, 66, 1.0);
+}
+
+
+.slide-indicators {
+    width: 100%;
+    display: inline-block;
+    margin-top: 2.5%;
+
+}
+
+.slide-indicators span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+span.gfx:first-of-type {
+    background: rgba(40, 60, 79, 0.4) ;
+}
+
+span.gfx:nth-of-type(2) {
+    background: rgba(40, 60, 79, 0.4) ;
+    margin-left: 0.5vw;
+    margin-right: .5vw;
+}
+
+span.gfx:last-of-type {
+    background: rgba(40, 60, 79, 0.4) ;
+}
+
+span.git:first-of-type {
+    background: rgba(32, 84, 79, 0.4);
+    margin-right: .75vw;
+}
+
+span.git:last-of-type {
+    background: rgba(32, 84, 79, 0.4);
+    margin-left: .75vw;
+}
+
+span.data-vis:first-of-type {
+    background: rgba(166, 93, 66, 0.4) ;
+}
+
+span.data-vis:nth-of-type(2) {
+    background: rgba(166, 93, 66, 0.4);
+    margin-left: 0.5vw;
+    margin-right: .5vw;
+}
+
+span.data-vis:last-of-type {
+    background: rgba(166, 93, 66, 0.4);
+}
 
 .gfx-slide {
     width: 70%;
@@ -87,6 +191,7 @@
     grid-gap:10px;
     margin-left: 15%;
 }
+
 
 .gallery__img {
     transition: .25s;
@@ -107,7 +212,7 @@ figure{
     margin:0;
 }
 
-/*----------SLIDE 1----------*/
+/*----------GFX SLIDE 1----------*/
 
 #yt-thumbnail {
     grid-column-start: 1;
@@ -142,7 +247,7 @@ figure{
     grid-row-end: 11;
 }
 
-/*----------SLIDE 2----------*/
+/*----------GFX SLIDE 2----------*/
 
 #scarlet-witch-logo {
     grid-column-start: 1;
@@ -182,7 +287,7 @@ figure{
     grid-row-end: 11;
 }
 
-/*----------SLIDE 3----------*/
+/*----------GFX SLIDE 3----------*/
 
 #pff-card-front {
     grid-column-start: 1;
@@ -208,6 +313,68 @@ figure{
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
+/*--------------------GIT--------------------*/
+
+
+
+/*--------------------DATA VIS--------------------*/
+
+.datavis-slide{
+    width: 50%;
+    margin-left: 23%;
+    background-color:#A65D42;
+    padding: 2%;
+    transition: .25s;
+    transform: scale(1.0);
+}
+
+.datavis-slide:hover {
+    transition-property: scale;
+    transition: .25s;
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.datavis-slide span{
+    width: 100%;
+    background-color: #A65D42;
+}
+.datavis-slide span a{
+    background-color: #D97B59;
+    position: absolute;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    text-decoration: none;
+    font-weight: bold;
+    color: white
+
+}
+
+.datavis-slide img{
+    width: 100%;
+}
+
+.datavis-slide h3{
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color:white;
+    margin-bottom: 0%;
+    margin-top: 4.75%;
+}
+.datavis-slide p{
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    color:#F2E5D8;
+    margin-top: .5vw;
+    margin-bottom: 1.75%;
+}
+
+/*----------SLIDE 1----------*/
 
 
 #lightbox{

@@ -213,6 +213,7 @@ body {
     width: 100%;
     position: relative;
     text-align: center;
+    background-color: #1c514b;
 }
 
 #select-page div{
@@ -222,12 +223,8 @@ body {
     z-index: 1;
     padding-top: 3%;
     padding-bottom: 3%;
-    margin: -1%;
     margin-top: 2%;
-    width: 34.5%;
-}
-#select-page div:nth-child(2){
-    margin-right: 0%;
+    width: 33.3%;
 }
 
 .concepts h1{
@@ -308,16 +305,19 @@ body {
 #select-page div:first-child{
     background-image: url(../base-images/TexturedVignette-blue.png);
     background-color: #365673;
+    margin-right: -.165%;
 }
 
 #select-page div:nth-child(2){
     background-image: url(../base-images/TexturedVignette-blue.png);
     background-color: #2C736C;
+    
 }
 
 #select-page div:last-child{
     background-image: url(../base-images/TexturedVignette-orange.png);
     background-color: #D97B59;
+    margin-left: -.165%;
 }
 
 #select-page div:first-child button{
@@ -351,10 +351,43 @@ body {
     opacity: 100%;
 }
 
-.page-back {
+.case-head {
+    width: 100%;
+    padding-top: 7%;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    text-align: center;
+    padding-bottom:0%;
+    z-index: 2;
+}
+
+.case-head h1 {
+    margin: 0;
+    color:#F2E5D8;
+    font-family: Heavitas;
+    padding: 0%;
+    line-height: 2vw;
+    margin-bottom: 1%;
+    font-weight: normal;
+    letter-spacing: .1vw;
+}
+
+.case-head h2 {
+    margin: 0;
+    font-size: 2vw;
+    color:rgba(255, 255, 255, 0.4);
+    font-family: Heavitas;
+    padding: 0%;
+    line-height: 2vw;
+    padding-bottom: 2%;
+    font-weight: normal;
+    letter-spacing: .1vw;
+}
+
+.case-head button{
     color: white;
     border: none;
-    background-color: rgba(40, 60, 79, 1.0);
     position: fixed;
     display: block;
     margin-left: 25%;
@@ -366,46 +399,14 @@ body {
     padding-top: .2%;
 }
 
-.page-back:hover {
-    background-color: rgba(40, 60, 79, 0.5);
-    cursor: pointer;
-}
-
-/*---------------ORGANIZATION---------------*/
-
-.case-head {
-    width: 100%;
-    padding-top: 7%;
-    background-image: url(../base-images/TexturedVignette-blue.png);
-    background-color: #365673;
-    background-position: center;
-    background-size: cover;
-    position: fixed;
-    text-align: center;
-    padding-bottom:0%;
-    z-index: 2;
-}
-.case-head h1 {
-    margin: 0;
-    font-size: 4vw;
-    color:#F2E5D8;
-    font-family: Heavitas;
-    padding: 0%;
-    line-height: 2vw;
-    margin-bottom: 1%;
-    font-weight: normal;
-    letter-spacing: .1vw;
-}
-.case-head h2 {
-    margin: 0;
-    font-size: 2vw;
-    color:#728FA8;
-    font-family: Heavitas;
-    padding: 0%;
-    line-height: 2vw;
-    padding-bottom: 2%;
-    font-weight: normal;
-    letter-spacing: .1vw;
+.case-content.org h2 {
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    font-weight:800;
+    letter-spacing: .025vw;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    padding-left: 0%;
 }
 
 .case-section:first-child {
@@ -417,44 +418,7 @@ body {
     background-color: #F2E5D8;
     padding-left: 25%;
     padding-right: 25%;
-}
-
-.case-section h1:first-child{
-    color: #283C4F;
-    font-family: Pockota;
-    font-size: 2.5vw;
-    margin: 0;
-    padding-top: 2%;
-    padding-left: 2%;
-}
-
-#divider{
-    display: block;
-    position: absolute;
-    background-color: #365673;
-    height: 0.5%;
-    width: 46%;
-    border-radius:3vw;
-}
-
-.column{
-    display: inline-block;
-    width:45%;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 2%;
-    padding-bottom: 0%;
-}
-
-h2 {
-    color: #365673;
-    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
-    font-weight:800;
-    letter-spacing: .025vw;
-    margin-bottom: 0%;
-    margin-top: 0%;
-    padding-left: 0%;
+    padding-bottom: 0.5%;
 }
 
 p {
@@ -464,6 +428,15 @@ p {
     font-size: .9vw;
     line-height: 1.25vw;
     margin-top: 1%;
+}
+
+.column{
+    display: inline-block;
+    width:45%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 0%;
 }
 
 .column ul {
@@ -485,14 +458,6 @@ li {
     font-size: .9vw;
     line-height: 1.25vw;
 
-}
-.case-section div:nth-child(3) {
-    padding-top: 2%;
-}
-
-img {
-    width: 100%;
-    padding-bottom: 2%;
 }
 
 .case-section button {
@@ -516,6 +481,117 @@ img {
 .case-section button:hover {
     background-color:#A65D42;
     cursor: pointer;
+}
+
+/*---------------ORGANIZATION---------------*/
+.case-head.org {
+    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-color: #365673;
+}
+
+.case-head.org h1 {
+    font-size: 4vw;
+    margin-bottom: 1%;
+}
+
+.case-head.org button{
+    background-color: rgba(40, 60, 79, 1.0);
+}
+
+.case-head.org button:hover {
+    background-color: rgba(40, 60, 79, 0.5);
+    cursor: pointer;
+}
+
+.case-section.org h1:first-child{
+    color: #283C4F;
+    font-family: Pockota;
+    font-size: 2.5vw;
+    margin: 0;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+#divider.org{
+    display: block;
+    position: absolute;
+    background-color: #365673;
+    height: 0.5%;
+    width: 46%;
+    border-radius:3vw;
+}
+
+.case-content.org h2 {
+    color: #365673;
+}
+
+.case-section div:nth-child(3) {
+    padding-top: 2%;
+}
+
+img {
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+
+/*---------------DEVELOPMENT---------------*/
+
+.case-head.dev {
+    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-color: #2C736C;
+}
+
+.case-head.dev h1 {
+
+    font-size: 3vw;
+}
+
+.case-head.dev button{
+    background-color: rgba(32, 84, 79, 1.0);
+}
+
+.case-head.dev button:hover {
+    background-color: rgba(32, 84, 79, .50);
+    cursor: pointer;
+}
+
+.case-section.dev h1:first-child{
+    color: #20544F;
+    font-family: Pockota;
+    font-size: 2.5vw;
+    margin: 0;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+#divider.dev{
+    display: block;
+    position: absolute;
+    background-color: #20544F;
+    height: 0.5%;
+    width: 46%;
+    border-radius:3vw;
+}
+
+.column{
+    display: inline-block;
+    width:45%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 0%;
+}
+
+.case-content.dev h2 {
+    color: #2C736C;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    font-weight:800;
+    letter-spacing: .025vw;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    padding-left: 0%;
 }
 
 #footer {
