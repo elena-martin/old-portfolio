@@ -530,7 +530,9 @@ li {
 }
 
 img {
-    width: 100%;
+    width: 95%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     padding-bottom: 2%;
 }
 
@@ -592,6 +594,169 @@ img {
     margin-bottom: 0%;
     margin-top: 0%;
     padding-left: 0%;
+}
+
+
+
+/*---------------PRE-DEVELOPMENT---------------*/
+
+.case-head.predev {
+    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-color: #D97B59;
+}
+
+.case-head.predev h1 {
+    font-size: 3.75vw;
+}
+
+.case-head.predev button{
+    background-color: rgba(166, 93, 66, 1.0);
+}
+
+.case-head.predev button:hover {
+    background-color: rgba(166, 93, 66, .50);
+    cursor: pointer;
+}
+
+.case-section.predev h1:first-child{
+    color: #A65D42;
+    font-family: Pockota;
+    font-size: 2.5vw;
+    margin: 0;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+#divider.predev{
+    display: block;
+    position: absolute;
+    background-color: #A65D42;
+    height: 0.5%;
+    width: 46%;
+    border-radius:3vw;
+}
+
+.case-content.predev h2 {
+    color: #D97B59;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    font-weight:800;
+    letter-spacing: .025vw;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    padding-left: 0%;
+}
+.columns-4 {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    padding-right: 2vw;
+}
+
+.columns-4:nth-child(3) {
+    position: absolute;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    padding-right: 0;
+    margin-top: 2.25vw;
+}
+
+.columns-4:nth-child(4) {
+    position: absolute;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-left:11vw;
+    text-align: center;
+    padding-right: 0;
+    margin-top: 7.25vw;
+}
+
+.columns-4:nth-child(5) {
+    position: absolute;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-left: 22vw;
+    text-align: center;
+    padding-right: 0;
+    margin-top: 2.25vw;
+}
+
+.columns-4 h3 {
+    color: #D97B59;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-size: 1.25vw;
+    font-weight:800;
+    letter-spacing: .025vw;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    padding-left: 0%;
+    padding-top: .5vw;
+}
+
+#col-1{
+    width: 13.5vw;
+    display: inline-block;
+    margin: 0;
+    padding-right: 2vw
+}
+
+#col-1 {
+    margin: 0;
+}
+
+#toggle{
+    padding: 0%;
+    width: 240px;
+    display: block;
+    margin: 0px;
+    background-color: #D97B59;
+    margin-left: .85vw;
+}
+
+#toggle input{
+    width: 240px;
+    display: none;
+    margin: 0px;
+    background-color: #D97B59;
+}
+
+#toggle a{
+    color:#F2E5D8;
+    font-size: 1.25vw;
+    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    display: inline-block;
+    margin: 0px;
+    background-color: #D97B59;
+    text-align: center;
+    padding-top: .5vw;
+    padding-bottom: .35vw;
+}
+
+#toggle a:first-of-type{
+    width:120px;
+}
+
+#toggle a:last-of-type{
+    width:120px;
+    border-left: 2px solid #A65D42;
+    margin-left: -6px;
+}
+
+#toggle a:hover{
+    background-color: #A65D42;
+    cursor: pointer;
+}
+
+.concept-phone {
+    width: 185px;
+    height: 369px;
+    padding: 0;
 }
 
 #footer {

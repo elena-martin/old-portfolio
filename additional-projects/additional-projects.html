@@ -34,7 +34,6 @@
             
             <section id="graphic-design" class="port-section">
                 <h1>Graphic Design</h1>
-                <!--<iframe width="100%" height="400px" style="margin-top: -20px; border: none; display: none;" src="https://elena-martin.github.io/portfolio-gfx/" id="gfx-frame"></iframe>-->
                 <a class="slideshow-nav-left gfx" onclick="prevSlide(event);"></a>
                 <a class="slideshow-nav-right gfx" onclick="nextSlide(event);"></a>
 
@@ -43,20 +42,19 @@
                         <h2>THUMBNAILS & BANNERS</h2>
                         <div id="gfx-slide1" class="gfx-slide">
                             <figure id="yt-thumbnail" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/Thumbnail1.png" class="gallery__img" alt="YouTube Thumbnail"><p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client</p>
+                                <img src="./gfx/Thumbnail1.png" class="gallery__img" alt="YouTube Thumbnail"><p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 1280px × 720px </p>
                             </figure>
                             <figure id="avjlift-sig" class="gallery-fig" onclick="lightboxOpen()">
-                                <span class="hoverText"></span>
-                                <img src="./gfx/Av-JLift-Sig.png" class="gallery__img" alt="AVJLift Forum Signature"><p class="gallery-desc" style="display: none;">User signature for use on the Tactical Gaming forums</p>
+                                <img src="./gfx/Av-JLift-Sig.png" class="gallery__img" alt="AVJLift Forum Signature"><p class="gallery-desc" style="display: none;">User signature for use on the Tactical Gaming forums&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 600px × 200px </p>
                             </figure>
                             <figure id="mikko-sig" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/mikkosig.png" class="gallery__img" alt="Mikko Forum Signature"><p class="gallery-desc" style="display: none;">User signature for use on the Tactical Gaming forums</p>
+                                <img src="./gfx/mikkosig.png" class="gallery__img" alt="Mikko Forum Signature"><p class="gallery-desc" style="display: none;">User signature for use on the Tactical Gaming forums&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 520px × 120px</p>
                             </figure>
                             <figure id="hellfire-squad-pb" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/Hellfire-PB.png" class="gallery__img" alt="Hellfire Squad Banner"><p class="gallery-desc" style="display: none;">Digital banner for use on the Tactical Gaming forums</p>
+                                <img src="./gfx/Hellfire-PB.png" class="gallery__img" alt="Hellfire Squad Banner"><p class="gallery-desc" style="display: none;">Digital banner for use on the Tactical Gaming forums&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 520px × 120px</p>
                             </figure>
                             <figure id="totally-80s-squad-pb" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/Totally-80-s-PB.png" class="gallery__img" alt="Totally 80's Squad Banner"><p class="gallery-desc" style="display: none;">Digital banner for use on the Tactical Gaming forums</p>
+                                <img src="./gfx/Totally-80-s-PB.png" class="gallery__img" alt="Totally 80's Squad Banner"><p class="gallery-desc" style="display: none;">Digital banner for use on the Tactical Gaming forums&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 520px × 120px</p>
                             </figure>
                         </div>
                     </label>
@@ -88,14 +86,14 @@
                         <h2>CARDS, LABELS & SIGNS</h2>
                         <div id="gfx-slide3" class="gfx-slide">
                             <figure id="pff-card-back" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/pff-card-back.png" class="gallery__img" alt="Promotional Card - Back"><p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (1/2) - 2019</p>
+                                <img src="./gfx/pff-card-back.png" class="gallery__img" alt="Promotional Card - Back"><p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (1/2) - 2019&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 5" × 7"</p>
                             </figure>
                             <figure id="pff-card-front" class="gallery-fig" onclick="lightboxOpen()">
                                 <span class="hoverText"></span>
-                                <img src="./gfx/pff-card-front.png" class="gallery__img" alt="Promotional Card - Front"><p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (2/2) - 2019</p>
+                                <img src="./gfx/pff-card-front.png" class="gallery__img" alt="Promotional Card - Front"><p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (2/2) - 2019&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 5" × 7"</p>
                             </figure>
                             <figure id="ben-sign" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/ben-sign.png" class="gallery__img" alt="Class of 2020 Yard Sign"><p class="gallery-desc" style="display: none;">Yard sign for graduates of Oak Ridge High School - 2020</p>
+                                <img src="./gfx/ben-sign.png" class="gallery__img" alt="Class of 2020 Yard Sign"><p class="gallery-desc" style="display: none;">Yard sign for graduates of Oak Ridge High School - 2020&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 24" × 18"</p>
                             </figure>
                         </div>
                     </label>
@@ -184,6 +182,7 @@
             /*----- CREATE IMG LIGHTBOX -----*/
             const boxContent = document.createElement("div");
             boxContent.id = "boxContent";
+            boxContent.setAttribute("onclick","lightboxClose();")
 
             const boxImg = document.createElement("img");
             boxImg.id = "boxImg";
@@ -216,10 +215,11 @@
 
                 document.body.insertBefore(lightbox, nav);
 
+                lightbox.appendChild(closeLightbox);
                 lightbox.appendChild(boxContent);
-                boxContent.appendChild(closeLightbox);
                 boxContent.appendChild(boxImg);
-                boxContent.appendChild(imgContent);
+                lightbox.appendChild(imgContent);
+                
                 imgContent.appendChild(imgTitle);
                 imgContent.appendChild(imgDesc);
 
@@ -318,10 +318,11 @@
             }
 
             function slideBack2(){
-                if (currentSlide == 1){
+                if (currentSlide == 1 || currentSlide == 3 ){
                     currentSlide = 2;
                     console.log(currentSlide);
-                } else{
+                }
+                else{
                     currentSlide -= 1;
                     console.log(currentSlide)
                 }
@@ -338,14 +339,17 @@
             }
 
             function slideNext2(){
-                if (currentSlide == 2){
+                if (currentSlide == 2 || currentSlide == 3 ){
                     currentSlide = 1;
                     console.log(currentSlide);
-                } else{
+                } 
+                else{
                     currentSlide += 1;
                     console.log(currentSlide);
                 }
             }
+
+            /*---------- OPEN DATA VIS PDFs----------*/
 
             function openPDF1(){
                 window.open('./data-vis/PersonaliPhoneStats.pdf');
@@ -364,11 +368,57 @@
             function lightboxOpen(){
                 lightbox.style = "display: block";
                 boxImg.setAttribute("target", "_blank");
+                disableScroll();
             }
 
             function lightboxClose(){
                 lightbox.style = "display: none";
                 boxImg.setAttribute("target", "_blank");
+                enableScroll();
+            }
+
+            /*----------DISABLE SCROLL IN LIGHTBOX----------*/
+
+            // left: 37, up: 38, right: 39, down: 40,
+            // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+            var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+            function preventDefault(e) {
+            e.preventDefault();
+            }
+
+            function preventDefaultForScrollKeys(e) {
+            if (keys[e.keyCode]) {
+                preventDefault(e);
+                return false;
+            }
+            }
+
+            // modern Chrome requires { passive: false } when adding event
+            var supportsPassive = false;
+            try {
+            window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+                get: function () { supportsPassive = true; } 
+            }));
+            } catch(e) {}
+
+            var wheelOpt = supportsPassive ? { passive: false } : false;
+            var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+            //Disable
+            function disableScroll() {
+                window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+                window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+                window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+                window.addEventList
+            };
+
+            //Enable
+            function enableScroll() {
+                window.removeEventListener('DOMMouseScroll', preventDefault, false);
+                window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+                window.removeEventListener('touchmove', preventDefault, wheelOpt);
+                window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
             }
         </script>
     </body>
