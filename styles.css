@@ -1,13 +1,13 @@
 :root {
-    --nav-div:0.5vw;
-    --h1a: 3vw;
-    --h1lh: 3.3vw;
-    --spacing1: .08vw;
-    --spacing2: .25vw;
-    --p1: .85vw;
-    --pa: 1vw;
-    --pb: 1.15vw;
-    --pc: 1.25vw;
+    --nav-div:10.25px;
+    --h1a: 61.45px;
+    --h1lh: 67.5px;
+    --spacing1: 1.5px;
+    --spacing2: 5.12px;
+    --p1: 17.5px;
+    --pa: 20.5px;
+    --pb: 23.5px;
+    --pc: 25.5px;
     --pd: 1.5vw;
     --pe: 1.75vw;
     --pf: 2vw;
