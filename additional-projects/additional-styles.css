@@ -1,6 +1,26 @@
+:root {
+    --nav-div:10.25px;
+    --h1a: 61.45px;
+    --h1lh: 67.5px;
+    --spacing1: 1.5px;
+    --spacing2: 5.12px;
+    --p1: 17.5px;
+    --pa: 20.5px;
+    --pb: 23.5px;
+    --pc: 25.5px;
+    --pd: 30.5px;
+    --pe: 36px;
+    --pf: 41px;
+    --pageheadtxt-w: 75%;
+    --pageheadtxt-h2: 102.5px;
+    --pageheadtxt-h2-lh: 92px;
+    --base-safearea-padding: 25%;
+}
+
 #nav{
     z-index: 5;
 }
+
 .port-section {
     width: 50%;
     height: 450px;

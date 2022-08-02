@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 5px;
+  position: relative;
+}
+
+#filter {
+  width: calc(100vw - 17px);
+  height: 60px;
+  display: inline-block;
+  background-color: #283C4F;
+  padding: 10px;
+  margin: -5px;
+  padding-left: 30px;
+  margin-top: -5px;
+}
+
+#filter h3 {
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #F2E5D8;
+  font-size: 1.5em;
+  padding-right: 10px;
+  padding-top: 7px;
+}
+
+#hamburger {
+  display: inline-block;
+  position: absolute;
+  background-color: #365673;
+  width: 40px;
+  height: 39px;
+  padding-top:10px;
+  padding-bottom: 9px;
+  padding-left:10px;
+  padding-right:10px;
+  margin: 0 auto;
+}
+
+#hamburger:hover {
+  background-color: rgba(54, 86, 115, 0.6);
+  cursor: pointer;
+}
+
+#hamburger div {
+  position: relative;
+  background-color: #ffffff;
+  height: 3px;
+  width: 20px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#hamburger div:last-of-type {
+  margin-bottom: 0px;
+}
+
+#filter-options {
+  width: calc(100vw - 17px);
+  height: 60px;
+  display: inline-block;
+  background-color: #365673;
+  margin-left: -5px;
+  padding-left: 30px;
+  margin-top: 5px;
+}
+
+section.filter:first-of-type{
+  width: 58%;
+  display: inline-block;
+  padding: 20px;
+  background-color: #365673;
+  padding-bottom: 9px;
+  padding-left: 0px;
+}
+
+section.filter:last-of-type{
+  width: 30%;
+  display: inline-block;
+  padding: 20px;
+  background-color: #365673;
+  padding-bottom: 9px;
+  padding-left: 0px;
+}
+
+section.filter h4 {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  display: inline-block;
+  line-height: .5em;
+}
+
+.toggle-filter a{
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #F2E5D8;
+  padding-right: 15px;
+  display: inline-block;
+}
+
+
+#gallery {
+  display: grid;
+  margin-top: 15px;
+  height: calc(100vh - 10px);
+  grid-template: repeat(12, 1fr)/repeat(12, 1fr);
+  grid-gap: 0.5em;
+}
+@media (max-width: 800px) {
+  #gallery {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #gallery > div {
+    width: 48%;
+    margin: 1%;
+  }
+}
+@media (max-width: 800px) and (max-width: 350px) {
+  #gallery > div {
+    width: 98%;
+  }
+}
+#gallery > div{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+#gallery > div:nth-child(6n+1) {
+  grid-column: span 4;
+  grid-row: span 4;
+}
+#gallery > div:nth-child(2) {
+  grid-column: span 6;
+  grid-row: span 6;
+}
+#gallery > div:nth-child(4) {
+  grid-column: span 2;
+  grid-row: span 4;
+}
+#gallery > div > a {
+  opacity: 0;
+  position: absolute;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.4);
+  font: bold 3em "Helvetica";
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  transition: all ease 1s;
+  padding-bottom: 5.5rem;
+}
+
+#gallery > div > a:nth-of-type(2) {
+  opacity: 0;
+  position: absolute;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.0);
+  font: 1.5em "Helvetica";
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  transition: all ease 1s;
+  padding-top: 5.5rem;
+}
+
+#gallery > div > img {
+  width: 100%;
+  min-height: 100%;
+  transition: all ease 1s;
+}
+#gallery > div:hover img {
+  filter: blur(4px);
+}
+#gallery > div:hover a {
+  opacity: 1;
+}
+#gallery > div {
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#gallery div,
+#gallery a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+[id^=lightbox-] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  opacity: 0;
+  transition: opacity 450ms ease-in-out;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+[id^=lightbox-]:target {
+  opacity: 1;
+  pointer-events: inherit;
+}
+[id^=lightbox-]:target img {
+  filter: blur(0);
+}
+[id^=lightbox-] .content {
+  max-width: 90%;
+  position: relative;
+  color: #fff;
+}
+[id^=lightbox-] .content:hover > a.close {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+[id^=lightbox-] .content:hover > .title {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+[id^=lightbox-] .content:hover > .title::after {
+  opacity: 1;
+}
+[id^=lightbox-] .content > * {
+  transition: all 450ms ease-in-out;
+}
+[id^=lightbox-] .title {
+  display: block;
+  margin: 0;
+  padding: 1em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(50%);
+  font-size: 1.5em;
+  opacity: 0;
+}
+[id^=lightbox-] .title::after {
+  content: " ";
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 350ms ease-in-out 250ms;
+  opacity: 0;
+  transform-origin: bottom;
+  mix-blend-mode: soft-light;
+}
+[id^=lightbox-] img {
+  max-height: 90vh;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  filter: blur(50px);
+}
+[id^=lightbox-] a.close {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0, 0);
+  opacity: 0;
+  transform-origin: right top;
+  text-decoration: none;
+  color: #fff;
+}
+[id^=lightbox-] a.close::after {
+  content: "X";
+}
