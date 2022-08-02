@@ -8,6 +8,7 @@
     var trycatcherror = document.getElementById('trycatcherror');
     var successEl = document.getElementById('success');
     var contentFrame = document.getElementById('contentFrame');
+    var att = document.querySelector("#attribution");
     
     // Sanity checks
 
@@ -119,6 +120,7 @@
             successEl.style.display = "inline";
             setTimeout(function() {
                 dialogWrap.style.display = "none";
+                att.style.display = "none";
             }, 1000);
         } catch (e) {
             invalidPassEl.style.display = "inline";

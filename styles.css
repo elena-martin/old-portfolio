@@ -1,21 +1,132 @@
 :root {
-    --nav-div:10px;
-    --h1a: 61.45px;
-    --h1lh: 67.5px;
-    --spacing1: 1.5px;
-    --spacing2: 5.12px;
-    --p1: 17.5px;
-    --pa: 20.5px;
-    --pb: 23.5px;
-    --pc: 25.5px;
-    --pd: 30.5px;
-    --pe: 36px;
-    --pf: 41px;
-    --pageheadtxt-w: 75%;
-    --pageheadtxt-h2: 102.5px;
-    --pageheadtxt-h2-lh: 92px;
-    --base-safearea-padding: 25%;
+    /*--- NAV ---*/
+    --nav-accents:10px;
+    --nav-icon-width: 10%;
+    --nav-icon-left: 20%;
+    --nav-ul-height: 4%;
+    --nav-li-padding-top-bottom: 15px;
+    --nav-li-padding-sides: 100px;
+    --nav-li-font-size: 20.5px;
+
+    /*--- HEADER ---*/
+    --header-height: 550px;
+    --header-padding-top: 70px;
+    --header-logo-height: 400px;
+    --header-logo-padding-top: 75px;
+
+    /*--- PAGE HEADS ---*/
+    --page-head-width: 800px;
+    --page-head-margin-left: 20%;
+    --page-head-padding-sides: 10%;
+    --page-head-text-width: 75%;
+    --page-head-text-margin: 10px;
+    --page-head-text-margin-left: 2.5%;
+    --page-head-text-h1-size: 61.45px;
+    --page-head-text-h2-size: 102.5px;
+    --page-head-text-h2-line-height: 92px;
+    --page-head-text-h2-margin-top: -10px;
+    --page-head-cactus-top: 10px;
+    --page-head-cactus-width: 155px;
+    --page-head-cactus-margin-right: 25px;
+
+    /*--- SECTION DIVIDER/INSTRUCTIONS ---*/
+    --divider-text-size: 25.5px;
+    --divider-text-padding: 15px;
+    --divider-text-padding-bottom: 10px;
+    --divider-text-spacing: 5px;
+
+    /*--- PAGE CONTENT ---*/
+    --page-h1-size: 61.45px;
+    --page-h1-margin-bottom: 8px;
+    --page-h2-size: 36px;
+    --page-h2-line-height: 41px;
+    --page-h2-margin-bottom: 10px;
+    --page-safearea-padding: 25%;
+    --section-width: 50%;
+
+    /*--- HOME PAGE CONTENT ---*/
+    --home-div-width: 50%;
+    --page-1st-div-padding-top: 60px;
+    --home-div-margin: -2px;
+    --page-1st-div-margin-top: 40px;
+    --home-page-select-h1-size: 61.45px;
+    --home-page-select-h1-margin-bottom: 20px;
+
+    --page-select-button-text-size: 20.5px;
+    --page-select-button-text-spacing:1.5px;
+    --page-select-button-padding-top-bottom: 15px;
+    --page-select-button-padding-sides: 65px;
+
+    /*--- ABOUT ME CONTENT ---*/
+    --about-padding-bottom: 20px;
+    --about-left-width: 55%;
+    --about-left-padding-left:50px;
+    --about-left-p-size: 17.5px;
+    --about-left-p-line-height: 23.5px;
+    --about-social-img-width: 8%;
+    --about-social-img-margin-left: 1%;
+    --about-right-width: 35%;
+    --about-right-img-border-radius: 205px;
+    --about-section-padding: 40px;
+    --about-section-h1-padding-left: 50px;
+
+    --about-section2-h3-size: 23.5px;
+    --about-section2-h3-line-height: 25.5px;
+    --about-section2-h3-margin-bottom: 15px;
+    --about-section2-h3-padding-top: 5px;
+    --about-section2-categories-height: 15%;
+    --about-section2-categories-width: 20%;
+    --about-section2-categories-padding-top: 15px;
+    --about-section2-categories-margin-left: 30px;
+    --about-section2-1st-category-margin-left: 20px;
+    --about-section2-ul-size: 17.5px;
+    --about-section2-ul-line-height: 25.5px;
+    --about-section2-ul-margin-top: 8px;
+
+    --about-section3-h1-padding-left: 55px;
+    --about-section3-column-width: 40%;
+    --about-section3-column-padding: 20px;
+    --about-section3-h3-h4-size: 23.5px;
+    --about-section3-h3-h4-line-height: 25.5px;
+    --about-section3-h3-margin-bottom: 5px;
+    --about-section3-h3-spacing: 1.5px;
+    --about-section3-h4-margin-bottom: 15px;
+    --about-p-size: 20.5px;
+    --about-p-line-height: 23.5px;
+    --about-section3-dividers-width: 111.5%;
+    --about-section3-dividers-height: 10px;
+    --about-section3-dividers-margin-left: -5.5%;
+    --about-section3-dividers-margin-top: 20px;
+    --about-section3-dividers-margin-bottom: 15px;
+
+    --about-foot-padding-top: 40px;
+    --about-foot-button-margin-top: 20px;
+    --about-foot-button-margin-bottom: 40px;
+
+    /*--- PORTFOLIO SELECT PAGE ---*/
+    --select-portfolio-padding: 60px;
+    --select-portfolio-margin: -2px;
+    --select-portfolio-margin-top: 40px;
+    --select-portfolio-h1-size: 61.45px;
+    --select-portfolio-h1-margin-bottom: 20px;
 }
+
+@font-face {
+    font-family: Heavitas;
+    src: url(./fonts/Heavitas.ttf);
+}
+
+@font-face {
+    font-family: Proxima Nova;
+    src: url(./fonts/Proxima\ Nova\ Font.otf);
+}
+
+@media (max-width: 800px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+  }
+
+/*---------------BASE CSS START (vw = 2048px)---------------*/
+
 html {
     background-color: #365673;
     width: 100%;
@@ -33,29 +144,28 @@ body {
 }
 #nav-divider {
     width: 100%;
-    height: var(--nav-div);
+    height: var(--nav-accents);
     background-color: #FCC069;
     border-bottom: solid #F29544 10px;
 }
 
 #icon {
     position: absolute;
-    width: 10%;
+    width: var(--nav-icon-width);
     height: 100%;
-    left: 20%;
+    left: var(--nav-icon-left);
     z-index: 2;
     cursor: pointer;
 }
 
 #nav ul {
-    height: 4%; 
+    height: var(--nav-ul-height); 
     width: 100%;
     list-style-type: none;
     position: relative;
     text-align: center;
-    padding-inline-start: 0%;
+    padding-inline-start: 0;
     margin: 0;
-    padding-top: 0%;
     background-image: url(./images/TexturedVignette.png);
     background-size: cover;
     background-color: #283C4F;
@@ -65,13 +175,13 @@ body {
     display: inline-block;
     position: relative;
     color: #F2E5D8;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-top: var(--nav-li-padding-top-bottom);
+    padding-bottom: var(--nav-li-padding-top-bottom);
+    padding-left: var(--nav-li-padding-sides);
+    padding-right: var(--nav-li-padding-sides);
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: var(--pa);
+    font-size: var(--nav-li-font-size);
 }
 
 #nav ul li a{
@@ -92,24 +202,25 @@ body {
 #nav ul li a:active{
     color: #728FA8;
 }
+
 /*---------------HEADER (ALL PAGES)---------------*/
 #header {
     width: 100%;
-    height: 550px; 
+    height: var(--header-height); 
     background-color: #F2E5D8;
     text-align: center;
     background-image: url(./base-images/Desert-Banner.png);
     background-size:contain;
     background-position: bottom;
     background-repeat: no-repeat;
-    padding-top: 70px;
+    padding-top: var(--header-padding-top);
     z-index: 2;
 }
 
 #logo {
-    height: 400px;
+    height: var(--header-logo-height);
     position: relative;
-    padding-top: 75px;
+    padding-top: var(--header-logo-padding-top);
 }
 
 /*---------------PAGE CONTENT (ALL PAGES)---------------*/
@@ -126,57 +237,47 @@ body {
 }
 
 .page-head {
-    width: 800px;
-    margin-left: 20%;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-
-@font-face {
-    font-family: Heavitas;
-    src: url(./fonts/Heavitas.ttf);
-}
-@font-face {
-    font-family: Proxima Nova;
-    src: url(./fonts/Proxima\ Nova\ Font.otf);
+    width: var(--page-head-width);
+    margin-left: var(--page-head-margin-left);
+    padding-left: var(--page-head-padding-sides);
+    padding-right: var(--page-head-padding-sides);
 }
 
 .header-text {
-    width: var(--pageheadtxt-w);
+    width: var(--page-head-text-width);
     display: inline-block;
     position: relative;
-    margin: 2%;
-    margin-left: 2.5%;
+    margin: var(--page-head-text-margin);
+    margin-left: var(--page-head-text-margin-left);
 }
 
 .header-text h1{
     margin: 0;
-    font-size: var(--h1a);
+    font-size: var(--page-head-text-h1-size);
     color:#283C4F;
     font-family: Heavitas;
     font-weight: normal;
-    padding: 0%;
+    padding: 0;
     
 }
 
 .header-text h2{
     margin: 0;
     margin-block-start: 0;
-    padding: 0%;
-    font-size: var(--pageheadtxt-h2);
+    padding: 0;
+    font-size: var(--page-head-text-h2-size);
     color:#365673;
     font-family: Heavitas;
-    line-height: var(--pageheadtxt-h2-lh);
-    margin-top: -10px;
+    line-height: var(--page-head-text-h2-line-height);
+    margin-top: var(--page-head-text-h2-margin-top);
 }
 
 .header-image {
     display: inline-block;
     position: absolute;
-    top:10px;
-    width: 155px;
-    margin-right: 25px;
+    top: var(--page-head-cactus-top);
+    width: var(--page-head-cactus-width);
+    margin-right: var(--page-head-cactus-margin-right);
 }
 
 .header-image img {
@@ -192,40 +293,40 @@ body {
     position: absolute;
     z-index: 2;
 }
+
 .section-div-text{
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
     color: white;
-    font-size: var(--pc);
-    padding: 15px;
-    padding-bottom: 10px;
+    font-size: var(--divider-text-size);
+    padding: var(--divider-text-padding);
+    padding-bottom: var(--divider-text-padding-bottom);
     margin: 0;
     font-weight:bolder;
-    letter-spacing: var(--spacing2);
+    letter-spacing: var(--divider-text-spacing);
 }
 
 #page-content section h1 {
     margin: 0;
-    font-size: var(--h1a);
+    font-size: var(--page-h1-size);
     color:#F2E5D8;
     font-family: Heavitas;
-    line-height: var(--h1a);
-    margin-bottom: 8px;
+    line-height: var(--page-h1-size);
+    margin-bottom: var(--page-h1-margin-bottom);
     font-weight: normal;
     
 }
 
 #page-content section h2 {
     margin: 0;
-    font-size: var(--pe);
+    font-size: var(--page-h2-size);
     color:rgba(255, 255, 255, 0.4);
     font-family: Heavitas;
-    padding: 0%;
-    line-height: var(--pf);
-    margin-bottom: 10px;
+    padding: 0;
+    line-height: var(--page-h2-line-height);
+    margin-bottom: var(--page-h2-margin-bottom);
     font-weight: normal;
     display:block;
 }
-
 
 /*---------------HOME PAGE CONTENT---------------*/
 
@@ -241,35 +342,35 @@ body {
     background-size: cover;
     background-position: center;
     z-index: 1;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    margin: -2px;
-    margin-top: 40px;
-    width: 50%;
+    width: var(--home-div-width);
+    padding-top: var(--page-1st-div-padding-top);
+    padding-bottom: var(--page-1st-div-padding-top);
+    margin: var(--home-div-margin);
+    margin-top: var(--page-1st-div-margin-top);
 }
 
 #select-page-home div h1{
     margin: 0;
-    font-size: var(--h1a);
+    font-size: var(--home-page-select-h1-size);
     color:#F2E5D8;
     font-family: Heavitas;
-    padding: 0%;
-    line-height: var(--h1a);
-    margin-bottom: 20px;
+    padding: 0;
+    line-height: var(--home-page-select-h1-size);
+    margin-bottom: var(--home-page-select-h1-margin-bottom);
     font-weight: normal;
 }
 
 #select-page-home div button{
     margin: 0;
-    font-size: var(--pa);
+    font-size: var(--page-select-button-text-size);
     color:white;
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
     font-weight: bolder;
-    letter-spacing: var(--spacing1);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 65px;
-    padding-right: 65px;
+    letter-spacing: var(--page-select-button-text-spacing);
+    padding-top: var(--page-select-button-padding-top-bottom);
+    padding-bottom: var(--page-select-button-padding-top-bottom);
+    padding-left: var(--page-select-button-padding-sides);
+    padding-right: var(--page-select-button-padding-sides);
     cursor: pointer;
 }
 
@@ -306,33 +407,31 @@ body {
 /*---------------ABOUT PAGE CONTENT---------------*/
 
 #about-header-text {
-    width: var(--pageheadtxt-w);
+    width: var(--page-head-text-width);
     display: inline-block;
     position: relative;
-    margin: 10px;
-    margin-left: 2.5%;
-    margin-bottom: 2.5;
+    margin: var(--page-head-text-margin);
+    margin-left: var(--page-head-text-margin-left);
 }
-
 
 /*---------------ABOUT ME - INTRO---------------*/
 
 #elena-m {
-    width: 50%;
-    padding-left: var(--base-safearea-padding);
-    padding-right: var(--base-safearea-padding);
+    width: var(--section-width);
+    padding-left: var(--page-safearea-padding);
+    padding-right: var(--page-safearea-padding);
     background-image: url(./base-images/TexturedVignette-blue.png);
     background-size: cover;
     background-position: center;
     background-color: #365673;
-    margin-top: 40px;
-    padding-top: 60px;
-    padding-bottom: 20px;
+    margin-top: var(--page-1st-div-margin-top);
+    padding-top: var(--page-1st-div-padding-top);
+    padding-bottom: var(--about-padding-bottom);
 }
 
 #left{
-    width: 55%;
-    padding-left: 50px;
+    width: var(--about-left-width);
+    padding-left: var(--about-left-padding-left);
     margin: 0;
     display: inline-block
 }
@@ -342,142 +441,142 @@ body {
 }
 
 #left p {
-    font-size: var(--p1);
+    font-size: var(--about-left-p-size);
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
-    line-height: var(--pb);
+    line-height: var(--about-left-p-line-height);
     color: white;
 }
 
 #social img {
     display: inline-block;
-    width:8%;
-    margin-left: 1%;
+    width:var(--about-social-img-width);
+    margin-left: var(--about-social-img-margin-left);
 }
 
 #right {
-    width:35%;
+    width:var(--about-right-width);
     display: inline-block;
-    margin-left: 0%;
-    top: 0%;
+    margin-left: 0;
+    top: 0;
 }
 
 #right img {
     width: 100%;
     display: inline-block;
-    border-radius: 10vw;
+    border-radius: var(--about-right-img-border-radius);
 }
 
 /*---------------ABOUT ME - WHAT I DO---------------*/
 
 #what-i-do {
-    width: 50%;
-    padding-left: var(--base-safearea-padding);
-    padding-right: var(--base-safearea-padding);
+    width: var(--section-width);
+    padding-left: var(--page-safearea-padding);
+    padding-right: var(--page-safearea-padding);
     background-size: cover;
     background-position: center;
     margin-top: 0%;
-    padding-bottom: 40px;
+    padding-top: var(--about-section-padding);
+    padding-bottom: var(--about-section-padding);
     background-image: url(./base-images/TexturedVignette-blue.png);
     background-color: #2C736C;
-    padding-top: 40px;
 }
 
 #what-i-do h1 {
-    padding-left: 50px;
+    padding-left: var(--about-section-h1-padding-left);
 }
 
 #what-i-do h3 {
     margin: 0;
-    font-size: var(--pb);
+    font-size: var(--about-section2-h3-size);
     color:white;
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
-    line-height: var(--pc);
-    margin-bottom: 15px;
+    line-height: var(--about-section2-h3-line-height);
+    margin-bottom: var(--about-section2-h3-margin-bottom);
     font-weight: bolder;
     display:block;
     text-align: center;
-    padding-top: 5px;
+    padding-top: var(--about-section2-h3-padding-top);
 }
 
 #what-i-do-categories{
     width: 100%;
     display: inline-block;
-    height: 15%;
+    height: var(--about-section2-categories-height);
 }
 
 #what-i-do-categories div{
-    width: 20%;
+    width: var(--about-section2-categories-width);
     background-color:#20544F;
     display: inline-block;
     padding-left: 0px;
     padding-right: 0px;
-    padding-top: 15px;
-    margin-left: 30px;
+    padding-top: var(--about-section2-categories-padding-top);
+    margin-left: var(--about-section2-categories-margin-left);
 }
 
 #what-i-do-categories:first-of-type{
-    margin-left: 20px;
+    margin-left: var(--about-section2-1st-category-margin-left);
 }
 
 #what-i-do-categories ul {
     color:#F2E5D8;
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
-    font-size: var(--p1);
-    line-height: var(--pc);
-    margin-top: 8px;
+    font-size: var(--about-section2-ul-size);
+    line-height: var(--about-section2-ul-line-height);
+    margin-top: var(--about-section2-ul-margin-top);
 }
 
 /*---------------ABOUT ME - WHERE I LEARNED---------------*/
 
 #where-i-learned {
-    width: 50%;
-    padding-left: var(--base-safearea-padding);
-    padding-right: var(--base-safearea-padding);
+    width: var(--section-width);
+    padding-left: var(--page-safearea-padding);
+    padding-right: var(--page-safearea-padding);
     background-size: cover;
     background-position: center;
-    margin-top: 0%;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin-top: 0;
+    padding-top: var(--about-section-padding);
+    padding-bottom: var(--about-section-padding);
     background-image: url(./base-images/TexturedVignette-orange.png);
     background-color:#D97B59;
 }
 
 #where-i-learned h1 {
-    padding-left: 5%;
+    padding-left: var(--about-section3-h1-padding-left);
 }
 
 .column {
     display:inline-block;
-    width: 40%;
-    padding: 0%;
-    margin: 0%;
-    padding-left: 5%;
+    width: var(--about-section3-column-width);
+    padding: 0;
+    margin: 0;
+    padding-left: var(--about-section-h1-padding-left);
 }
 
 .column div {
-    padding: 5%;
+    padding: var(--about-section3-column-padding);
     background-color:#A65D42;
 }
 
 .column div h3 {
     margin: 0;
-    font-size: var(--pb);
+    font-size: var(--about-section3-h3-h4-size);
     color:white;
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
-    line-height: var(--pc);
-    margin-bottom: 5px;
+    line-height: var(--about-section3-h3-h4-line-height);
+    margin-bottom: var(--about-section3-h3-margin-bottom);
     font-weight: bolder;
     display:block;
     text-align: left;
-    letter-spacing: var(--spacing1);
+    letter-spacing: var(--about-section3-h3-spacing);
 }
 .column div h4 {
     margin: 0;
-    font-size: var(--pb);
+    font-size: var(--about-section3-h3-h4-size);
     color:white;
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
-    line-height: var(--pc);
-    margin-bottom: 15px;
+    line-height: var(--about-section3-h3-h4-line-height);
+    margin-bottom: var(--about-section3-h4-margin-bottom);
     font-weight: normal;
     display:block;
     text-align: left;
@@ -485,10 +584,10 @@ body {
 
 .column div p {
     margin: 0;
-    font-size: var(--pa);
+    font-size: var( --about-p-size);
     color:#F2E5D8;
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
-    line-height: var(--pb);
+    line-height: var(--about-p-line-height);
     margin-bottom: 0px;
     font-weight: normal;
     display:block;
@@ -496,53 +595,53 @@ body {
 }
 
 .column div div {
-    width:111.5%;
-    height: 10px;
+    width: var(--about-section3-dividers-width);
+    height: var(--about-section3-dividers-height);
     padding: 0px;
     background-color: #D97B59;
-    margin-left: -5.5%;
-    margin-top: 20px;
-    margin-bottom: 15px;
+    margin-left: var(--about-section3-dividers-margin-left);
+    margin-top: var(--about-section3-dividers-margin-top);
+    margin-bottom: var(--about-section3-dividers-margin-bottom);
     border: none;
 }
 
 /*---------------ABOUT ME - PAGE FOOTER---------------*/
 
 #about-me-foot {
-    width: 50%;
-    padding-top: 40px;
-    padding-left: var(--base-safearea-padding);
-    padding-right: var(--base-safearea-padding);
+    width: var(--section-width);
+    padding-top: var(--about-foot-padding-top);
+    padding-left: var(--page-safearea-padding);
+    padding-right: var(--page-safearea-padding);
     text-align: center;
 }
 
 #about-me-foot p {
     margin: 0;
-    font-size: var(--pa);
+    font-size: var(--about-p-size);
     color:#283C4F;
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
-    line-height: var(--pb);
+    line-height: var(--about-p-line-height);
     margin-bottom: 0px;
     font-weight: bold;
     display:block;
 }
 #about-me-foot button{
-    font-size: var(--pa);
+    font-size: var(--page-select-button-text-size);
     color:white;
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
     font-weight: bolder;
-    letter-spacing: var(--spacing1);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
+    letter-spacing: var(--page-select-button-text-spacing);
+    padding-top: var(--page-select-button-padding-top-bottom);
+    padding-bottom: var(--page-select-button-padding-top-bottom);
+    padding-left: var(--page-select-button-padding-sides);
+    padding-right: var(--page-select-button-padding-sides);
     cursor: pointer;
 }
 
 #about-me-foot button {
     border: none;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: var(--about-foot-button-margin-top);
+    margin-bottom: var(--about-foot-button-margin-bottom);
     background-color: #2C736C;
 }
 
@@ -564,37 +663,37 @@ body {
     background-size: cover;
     background-position: center;
     z-index: 1;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    margin: -2px;
-    margin-top: 40px;
-    width: 50%;
+    padding-top: var(--select-portfolio-padding);
+    padding-bottom: var(--select-portfolio-padding);
+    margin: var(--select-portfolio-margin);
+    margin-top: var(--select-portfolio-margin-top);
+    width: var(--section-width);
 }
 
 #select-page-port div h1{
     margin: 0;
-    font-size:var(--h1a);
+    font-size:var(--select-portfolio-h1-size);
     color:#F2E5D8;
     font-family: Heavitas;
-    padding: 0%;
-    line-height: 65px;
+    padding: 0;
+    line-height: var(--select-portfolio-h1-size);
     font-weight: normal;
 }
 #select-page-port div h1:last-of-type{
-    margin-bottom: 20px;
+    margin-bottom: var(--select-portfolio-h1-margin-bottom);
 }
 
 #select-page-port div button{
     margin: 0;
-    font-size: var(--pa);
+    font-size: var(--page-select-button-text-size);
     color:white;
     font-family: Proxima Nova, Arial, Helvetica, sans-serif;
     font-weight: bolder;
-    letter-spacing: var(--spacing1);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 65px;
-    padding-right: 65px;
+    letter-spacing: var(--page-select-button-text-spacing);
+    padding-top: var(--page-select-button-padding-top-bottom);
+    padding-bottom: var(--page-select-button-padding-top-bottom);
+    padding-left: var(--page-select-button-padding-sides);
+    padding-right: var(--page-select-button-padding-sides);
     cursor: pointer;
 }
 
@@ -610,119 +709,24 @@ body {
 
 #select-page-port div:first-child button{
     border: none;
-    margin: 2px;
     background-color: rgba(32, 84, 79, 0.6);
 }
 
 #select-page-port div:first-child button:hover{
     border: none;
-    margin: 2px;
     background-color: rgba(32, 84, 79, 1.0);
 }
 
 #select-page-port div:last-child button{
     border: none;
-    margin: 2px;
     background-color: rgba(164, 92, 65, 0.6);
 }
 
 #select-page-port div:last-child button:hover{
     background-color: rgba(164, 92, 65, 1.0);
     border: none;
-    margin: 2px;
     opacity: 100%;
 }
-
-/*---------------PORTFOLIO PASSWORD PAGE---------------
-
-#pw-lightbox {
-    width: 100%;
-    height: 100%;
-    background-color: #283C4F;
-}
-
-#pw-content{
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    width: 200px;
-    height: 200px;
-    background-color:#365673;
-}
-
-#pw-content h1{
-    margin: 0;
-    font-size:var(--h1a);
-    color:#F2E5D8;
-    font-family: Heavitas;
-    padding: 0%;
-    line-height: var(--h1a);
-    font-weight: normal;
-    text-align: center;
-    margin-top: 30%;
-}
-
-#pw-content h2:first-of-type{
-    margin: 0;
-    font-size: var(--pb);
-    color:#F2E5D8;
-    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
-    padding: 0%;
-    line-height: var(--pb);
-    font-weight:normal;
-    text-align: center;
-    margin-top: 1%;
-}
-
-#pw-lock{
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 7%;
-    text-align: center;
-}
-#pw-lock input {
-    font-size: 1vw;
-    padding: 1%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
-}
-
-#request{
-    position: absolute;
-    top: 68.5%;
-    left: 30%;
-    width: 40vw;
-    height: 11.5vh;
-    background-color:#365673;
-}
-
-#request h2{
-    margin: 0;
-    font-size: var(--p1);
-    color:#F2E5D8;
-    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
-    padding: 0%;
-    line-height: var(--pb);
-    font-weight:normal;
-    text-align: center;
-    margin-top: 3%;
-}
-
-#pw-request{
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 2%;
-    padding-bottom: 3%;
-    text-align: center;
-}
- #pw-request input{
-    font-size: .75vw;
-    padding: .5%;
-    padding-left: 1%;
-    padding-right: 1%;
- }*/
-
 
 /*---------------SITE FOOTER (ALL PAGES)---------------*/
 
