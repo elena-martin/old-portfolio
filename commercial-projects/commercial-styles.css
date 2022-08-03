@@ -324,7 +324,7 @@ li {
     padding-left: var(--case-section-h1-padding-left);
 }
 
-img {
+.case-content img {
     width: var(--case-section-img-width);
     padding-left: var(--case-section-img-padding-sides);
     padding-right: var(--case-section-img-padding-sides);

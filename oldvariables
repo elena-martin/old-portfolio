@@ -325,4 +325,5 @@
 }
 
 
-
+var att = document.querySelector("#attribution");
+att.style.display = "none";
