@@ -192,7 +192,7 @@
   </head>
   <body>
     <div id="lock">
-        <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
+        <iframe id="contentFrame" style="border: 0" allowfullscreen></iframe>
         <div id="dialogWrap">
         <div id="dialogWrapCell">
             <div id="mainDialog">
@@ -227,10 +227,10 @@
             </div>
             <div id="pwRequest">
                 <h2>Don't have my resume? Request the password below</h2>
-                <input type="text" placeholder="Your Name" id="name" required="true">
-                <input type="email" placeholder="Your Email" id="email" required="true">
-                <input type="text" placeholder="Your Company" id="company" required="true">
-                <input type="button" value="Submit" formmethod="post" onclick="requestPW()">
+                <input type="text" placeholder="Your Name" id="name" required>
+                <input type="email" placeholder="Your Email" id="email" required>
+                <input type="text" placeholder="Your Company" id="company" required>
+                <input type="button" value="Submit" onclick="requestPW()">
             </div>
             <div id="pwRequested" style="display: none;">
                 <h2>Password Requested!</h2>
