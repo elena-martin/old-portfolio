@@ -284,7 +284,7 @@
     margin-bottom: 0;
 }
 
-li {
+.case-content li {
     font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     margin: var(--case-content-column-li-margin);
     margin-left: var(--case-content-column-li-margin-left);
