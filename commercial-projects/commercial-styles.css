@@ -2,7 +2,7 @@
     /*--- PAGE SELECT ---*/
     --case-study-select-width: 33.3%;
     --case-study-select-padding-top: 60px;
-    --case-study-select-padding-bottom: 50px;
+    --case-study-select-padding-bottom: 60px;
     --case-study-select-margin-top: 40px;
     --case-study-select-margin:-.15%;
 
@@ -34,11 +34,14 @@
 
     /*--- CASE STUDY HEADERS ---*/
     --case-head-padding-top: 105px;
+    --case-head-h1-line-height: 72px;
+    --case-head-h1-spacing: 2px;
+    --case-head-h1-margin-bottom: 0;
     --case-head-h2-size: 41px;
     --case-head-h2-line-height: 35px;
     --case-head-h2-padding-bottom: 2%;
     --case-head-h2-spacing: 2px;
-    --case-head-h1-margin-bottom: 0;
+    
 
     --case-head-button-margin-left: 25%;
     --case-head-button-margin-top: -2.5%;
@@ -122,17 +125,6 @@
 
     --concept-video-phone-width: 185px;
     --concept-video-phone-height: 369px;
-}; 
-
-#select-page div h1{
-    margin: 0;
-    font-size: var(--case-study-h1-size);
-    color:#F2E5D8;
-    font-family: Heavitas;
-    padding: 0;
-    line-height: var(--case-study-h1-size);
-    margin-bottom: var(--case-study-h1-margin-bottom);
-    font-weight: normal;
 }
 
 #select-page {
@@ -213,67 +205,12 @@
     letter-spacing: var(--org-2nd-h1-spacing);
 }
 
-#select-page div button{
-    margin: 0;
-    font-size: var(--page-select-button-text-size);
-    color:white;
-    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    letter-spacing: var(--page-select-button-text-spacing);
-    padding-top: var(--page-select-button-padding-top-bottom);
-    padding-bottom: var(--page-select-button-padding-top-bottom);
-    padding-left: var(--page-select-button-padding-sides);
-    padding-right: var(--page-select-button-padding-sides);
-    cursor: pointer;
-}
-
 #select-page div:first-child{
-    background-image: url(../base-images/TexturedVignette-blue.png);
-    background-color: #365673;
     margin-right: var(--case-study-select-margin);
 }
 
-#select-page div:nth-child(2){
-    background-image: url(../base-images/TexturedVignette-blue.png);
-    background-color: #2C736C;
-    
-}
-
 #select-page div:last-child{
-    background-image: url(../base-images/TexturedVignette-orange.png);
-    background-color: #D97B59;
     margin-left: var(--case-study-select-margin);
-}
-
-#select-page div:first-child button{
-    border: none;
-    background-color: rgba(40, 60, 79, 0.6);
-}
-
-#select-page div:first-child button:hover{
-    border: none;
-    background-color: rgba(40, 60, 79, 1.0);
-}
-
-
-#select-page div:nth-child(2) button{
-    border: none;
-    background-color: rgba(32, 84, 79, 0.6);
-}
-
-#select-page div:nth-child(2) button:hover{
-    border: none;
-    background-color: rgba(32, 84, 79, 1.0);
-}
-
-#select-page div:last-child button{
-    border: none;
-    background-color: rgba(164, 92, 65, 0.6);
-}
-#select-page div:last-child button:hover{
-    background-color: rgba(164, 92, 65, 1.0);
-    border: none;
-    opacity: 100%;
 }
 
 .case-head {
@@ -302,7 +239,7 @@
 }
 
 .case-content h2 {
-    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     font-size: var(--case-content-h2-size);
     font-weight:var(--case-content-h2-weight);
     letter-spacing: var(--case-content-h2-spacing);
@@ -331,7 +268,7 @@
 }
 
 .case-section p {
-    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     margin: var(--case-content-p-margin);
     margin-left: 0;
     font-size: var(--case-content-p-size);
@@ -340,7 +277,7 @@
 }
 
 li {
-    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     margin: var(--case-content-column-li-margin);
     margin-left: var(--case-content-column-li-margin-left);
     font-size: var(--case-content-p-size);
@@ -353,7 +290,7 @@ li {
     font-size: var(--case-section-button-size);
     letter-spacing: var(--case-section-button-spacing);
     font-weight: bold;
-    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     border: none;
     padding-left: var(--case-section-button-padding-sides);
     padding-right: var(--case-section-button-padding-sides);
@@ -430,7 +367,7 @@ img {
     color: #365673;
 }
 
-#divider.org{
+.divider.org{
     display: block;
     background-color: #365673;
     position: absolute;
@@ -485,7 +422,7 @@ img {
     margin-top: 20px;
 }
 
-#divider.dev{
+.divider.dev{
     display: block;
     background-color: #2C736C;
     position: absolute;
@@ -604,7 +541,7 @@ img {
 
 .columns-4 h3 {
     color: #D97B59;
-    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     font-size: var(--concept-columns-h3-size);
     font-weight:bold;
     letter-spacing: var(--concept-columns-h3-spacing);
@@ -645,7 +582,7 @@ img {
 #toggle a{
     color:#F2E5D8;
     font-size: var(--concept-toggle-a-size);
-    font-family: Proxima Nova, Arial, Helvetica, sans-serif;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     display: inline-block;
     margin: 0;
     background-color: #D97B59;

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Elena Martin | About Me</title>
+        <title>Elena Martin | Additional Projects</title>
         <link rel="stylesheet" href="../styles.css">
         <link rel="stylesheet" href="./additional-styles.css">
+        <meta charset="UTF-8">
     </head>
     <body onload="load();">
         <div id="nav">
-            <a href="../index.html"><img id="icon" src="../base-images/Icon - 2022.svg"></a>
+            <a href="../index.html"><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
             <ul>
                 <li><a href="../about-me.html">ABOUT ME</a></li>
                 <li><a href="../portfolio.html">PORTFOLIO</a></li>
@@ -15,7 +17,7 @@
         </div>
         
         <div id="header">
-            <img id="logo" src="../base-images/Wordmark - 2022.svg">
+            <img id="logo" src="../base-images/Wordmark-2022.svg" alt="Website Logo">
         </div>
         
         <div id="page-content" id="lightbox">
@@ -25,11 +27,11 @@
                     <h2>Projects</h2>
                 </div>
                 <div class = "header-image">
-                    <img src="../base-images/Cacti.png">
+                    <img src="../base-images/Cacti.png" alt="Cactus Ornament">
                 </div>
             </div>
             <div class="section-divider">
-                <p class="section-div-text">⇩&nbsp&nbspSCROLL TO VIEW CATEGORIES&nbsp-&nbspCLICK&nbspTO&nbspLEARN&nbspMORE&nbsp&nbsp⇩</p>
+                <p class="section-div-text">⇩&nbsp;&nbsp;SCROLL TO VIEW CATEGORIES&nbsp;-&nbsp;CLICK&nbsp;TO&nbsp;LEARN&nbsp;MORE&nbsp;&nbsp;⇩</p>
             </div>
             
             <section id="graphic-design" class="port-section">
@@ -38,27 +40,27 @@
                 <a class="slideshow-nav-right gfx" onclick="nextSlide(event);"></a>
 
                 <div id="gfx-slideshow" class="lightbox" onclick="getFigure(event)">
-                    <label title="slide-1" class="slides gfx">
+                    <div title="slide-1" class="slides gfx">
                         <h2>THUMBNAILS & BANNERS</h2>
                         <div id="gfx-slide1" class="gfx-slide">
                             <figure id="yt-thumbnail" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/Thumbnail1.png" class="gallery__img" alt="YouTube Thumbnail"><p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 1280px × 720px </p>
+                                <img src="./gfx/Thumbnail1.png" class="gallery__img" alt="YouTube Thumbnail"><p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
                             </figure>
                             <figure id="avjlift-sig" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/Av-JLift-Sig.png" class="gallery__img" alt="AVJLift Forum Signature"><p class="gallery-desc" style="display: none;">User signature for use on the Tactical Gaming forums&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 600px × 200px </p>
+                                <img src="./gfx/Av-JLift-Sig.png" class="gallery__img" alt="AVJLift Forum Signature"><p class="gallery-desc" style="display: none;">User signature for use on the Tactical Gaming forums&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 600px × 200px </p>
                             </figure>
                             <figure id="mikko-sig" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/mikkosig.png" class="gallery__img" alt="Mikko Forum Signature"><p class="gallery-desc" style="display: none;">User signature for use on the Tactical Gaming forums&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 520px × 120px</p>
+                                <img src="./gfx/mikkosig.png" class="gallery__img" alt="Mikko Forum Signature"><p class="gallery-desc" style="display: none;">User signature for use on the Tactical Gaming forums&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 520px × 120px</p>
                             </figure>
                             <figure id="hellfire-squad-pb" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/Hellfire-PB.png" class="gallery__img" alt="Hellfire Squad Banner"><p class="gallery-desc" style="display: none;">Digital banner for use on the Tactical Gaming forums&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 520px × 120px</p>
+                                <img src="./gfx/Hellfire-PB.png" class="gallery__img" alt="Hellfire Squad Banner"><p class="gallery-desc" style="display: none;">Digital banner for use on the Tactical Gaming forums&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 520px × 120px</p>
                             </figure>
                             <figure id="totally-80s-squad-pb" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/Totally-80-s-PB.png" class="gallery__img" alt="Totally 80's Squad Banner"><p class="gallery-desc" style="display: none;">Digital banner for use on the Tactical Gaming forums&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 520px × 120px</p>
+                                <img src="./gfx/Totally-80-s-PB.png" class="gallery__img" alt="Totally 80's Squad Banner"><p class="gallery-desc" style="display: none;">Digital banner for use on the Tactical Gaming forums&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 520px × 120px</p>
                             </figure>
                         </div>
-                    </label>
-                    <label title="slide-2" class="slides gfx">
+                    </div>
+                    <div title="slide-2" class="slides gfx">
                         <h2>LOGOS & BRANDING</h2>
                         <div id="gfx-slide2" class="gfx-slide">
                             <figure id="scarlet-witch-logo" class="gallery-fig" onclick="lightboxOpen()">
@@ -81,22 +83,22 @@
                                 <img src="./gfx/GAT-logo.png" class="gallery__img" alt="Girl About Town Logo"><p class="gallery-desc" style="display: none;">Logo design for Girl About Town - 2019</p>
                             </figure>
                         </div>
-                    </label>
-                    <label title="slide-3" class="slides gfx">
+                    </div>
+                    <div title="slide-3" class="slides gfx">
                         <h2>CARDS, LABELS & SIGNS</h2>
                         <div id="gfx-slide3" class="gfx-slide">
                             <figure id="pff-card-back" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/pff-card-back.png" class="gallery__img" alt="Promotional Card - Back"><p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (1/2) - 2019&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 5" × 7"</p>
+                                <img src="./gfx/pff-card-back.png" class="gallery__img" alt="Promotional Card - Back"><p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (1/2) - 2019&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 5" × 7"</p>
                             </figure>
                             <figure id="pff-card-front" class="gallery-fig" onclick="lightboxOpen()">
                                 <span class="hoverText"></span>
-                                <img src="./gfx/pff-card-front.png" class="gallery__img" alt="Promotional Card - Front"><p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (2/2) - 2019&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 5" × 7"</p>
+                                <img src="./gfx/pff-card-front.png" class="gallery__img" alt="Promotional Card - Front"><p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (2/2) - 2019&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 5" × 7"</p>
                             </figure>
                             <figure id="ben-sign" class="gallery-fig" onclick="lightboxOpen()">
-                                <img src="./gfx/ben-sign.png" class="gallery__img" alt="Class of 2020 Yard Sign"><p class="gallery-desc" style="display: none;">Yard sign for graduates of Oak Ridge High School - 2020&nbsp&nbsp&nbsp|&nbsp&nbsp&nbspSize Requirement: 24" × 18"</p>
+                                <img src="./gfx/ben-sign.png" class="gallery__img" alt="Class of 2020 Yard Sign"><p class="gallery-desc" style="display: none;">Yard sign for graduates of Oak Ridge High School - 2020&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 24" × 18"</p>
                             </figure>
                         </div>
-                    </label>
+                    </div>
                 </div>
                 <div class="slide-indicators">
                     <span class="gfx slide-1" style="margin-left: -2%;"></span>
@@ -111,24 +113,23 @@
                 <a class="slideshow-nav-right git" onclick="nextSlide(event);"></a>
 
                 <div id="git-slideshow" class="lightbox" onclick="getFigure(event)">
-                    <label title="slide-1" class="slides git">
+                    <div title="slide-1" class="slides git">
                         <h2>TWITCH BOT</h2>
                         <div id="git-slide1" class="git-slide">
-                            <h1 style="color: #20544F; padding-top: 10%;padding-bottom: 10%;">COMING SOON</h1>
+                            <h1 style="color: #20544F; padding-top: 10%; padding-bottom: 10%;">COMING SOON</h1>
                         </div>
-                    </label>
-                    <label title="slide-2" class="slides git">
+                    </div>
+                    <div title="slide-2" class="slides git">
                         <h2>INTERACTIVE MAP</h2>
-                        <div id="gfx-slide2" class="git-slide">
-                            <h1 style="color: #20544F; padding-top: 10%;padding-bottom: 10%;">COMING SOON</h1>
+                        <div id="git-slide2" class="git-slide">
+                            <h1 style="color: #20544F; padding-top: 10%; padding-bottom: 10%;">COMING SOON</h1>
                         </div>
-                    </label>
-                    </label>
+                    </div>
                 </div>
 
                 <div class="slide-indicators">
-                    <span class="git slide-1" style="margin-left:0%;" style="visibility: hidden"></span>
-                    <span class="git slide-2" style="margin-left:2%;" style="visibility: hidden"></span>
+                    <span class="git slide-1" style="margin-left:0%; visibility: hidden"></span>
+                    <span class="git slide-2" style="margin-left:2%; visibility: hidden"></span>
                 </div>
             </section>
 
@@ -138,30 +139,30 @@
                 <a class="slideshow-nav-right data-vis" onclick="nextSlide(event);"></a>
 
                 <div id="data-vis-slideshow" class="lightbox" onclick="getFigure(event)">
-                    <label title="slide-1" class="slides gfx">
+                    <div title="slide-1" class="slides gfx">
                         <h2>PERSONAL IPHONE STATISTICS</h2>
                         <div id="datavis-slide1" class="datavis-slide" onclick="openPDF1()">
-                            <img src="./data-vis/iphone-stats.png">
+                            <img src="./data-vis/iphone-stats.png" alt="View 'iPhone Statistics' Data Visualization">
                             <h3>Analyzing My Screen Time</h3>
                             <p>Created for educational purposes</p>
                         </div>
-                    </label>
-                    <label title="slide-2" class="slides gfx">
+                    </div>
+                    <div title="slide-2" class="slides gfx">
                         <h2>Console Wars</h2>
                         <div id="datavis-slide2" class="datavis-slide" onclick="openPDF2()">
-                            <img src="./data-vis/king-mario.png">
+                            <img src="./data-vis/king-mario.png" alt="View 'Console Wars' Data Visualization">
                             <h3>Analyzing Gaming Console Sales</h3>
                             <p>Created for educational purposes</p>
                         </div>
-                    </label>
-                    <label title="slide-3" class="slides gfx" onclick="openPDF3()">
+                    </div>
+                    <div title="slide-3" class="slides gfx" onclick="openPDF3()">
                         <h2>COMMON WORKPLACE INJURIES</h2>
                         <div id="datavis-slide3" class="datavis-slide">
-                            <img src="./data-vis/workplace-injuries.png">
+                            <img src="./data-vis/workplace-injuries.png" alt="View 'Workplace Injuries' Data Visualization">
                             <h3>Raising Injury Awareness</h3>
                             <p>Created for a client</p>
                         </div>
-                    </label>
+                    </div>
                 </div>
 
                 <div class="slide-indicators">
