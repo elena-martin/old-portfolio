@@ -17,8 +17,6 @@
 
     /*--- PAGE HEADS ---*/
     --page-head-width: 800px;
-    --page-head-margin-left: 20%;
-    --page-head-padding-sides: 10%;
     --page-head-text-width: 75%;
     --page-head-text-margin: 10px;
     --page-head-text-margin-left: 2.5%;
@@ -28,7 +26,7 @@
     --page-head-text-h2-margin-top: -10px;
     --page-head-cactus-top: 10px;
     --page-head-cactus-width: 155px;
-    --page-head-cactus-margin-right: 25px;
+    --page-head-cactus-margin-right: 0;
 
     /*--- SECTION DIVIDER/INSTRUCTIONS ---*/
     --divider-text-size: 25.5px;
@@ -45,18 +43,19 @@
     --page-safearea-padding: 25%;
     --section-width: 50%;
 
+    --page-select-button-text-size: 20.5px;
+    --page-select-button-text-spacing:1.5px;
+    --page-select-button-padding-top-bottom: 15px;
+    --page-select-button-padding-sides: 65px;
+    --page-select-button-margin-top-bottom: -20px;
+
     /*--- HOME PAGE CONTENT ---*/
     --home-div-width: 50%;
     --page-1st-div-padding-top: 60px;
     --home-div-margin: -2px;
     --page-1st-div-margin-top: 40px;
     --home-page-select-h1-size: 61.45px;
-    --home-page-select-h1-margin-bottom: 20px;
-
-    --page-select-button-text-size: 20.5px;
-    --page-select-button-text-spacing:1.5px;
-    --page-select-button-padding-top-bottom: 15px;
-    --page-select-button-padding-sides: 65px;
+    --home-page-select-h1-margin-bottom: 25px;
 
     /*--- ABOUT ME CONTENT ---*/
     --about-padding-bottom: 20px;
@@ -111,7 +110,7 @@
     --select-portfolio-1st-margin-left: 0px;
     --select-portfolio-margin-top: 40px;
     --select-portfolio-h1-size: 61.45px;
-    --select-portfolio-h1-margin-bottom: 20px;
+    --select-portfolio-h1-margin-bottom: 30px;
 
     /*--- FOOTER ---*/
     --footer-padding: 20px;
@@ -127,7 +126,7 @@
     /*--- PAGE SELECT ---*/
     --case-study-select-width: 33.3%;
     --case-study-select-padding-top: 60px;
-    --case-study-select-padding-bottom: 50px;
+    --case-study-select-padding-bottom: 60px;
     --case-study-select-margin-top: 40px;
     --case-study-select-margin:-.15%;
 
@@ -139,7 +138,7 @@
     --concepts-h1-margin-bottom: 20px;
     --concepts-h1-margin-top: 5px;
 
-    --dev-1st-h1-size: 75px;
+    --dev-1st-h1-size: 70px;
     --dev-1st-h1-line-height: 35px;
     --dev-1st-h1-margin-top-bottom:20px;
 
@@ -158,12 +157,15 @@
     --org-2nd-h1-spacing: 2px;
 
     /*--- CASE STUDY HEADERS ---*/
-    --case-head-padding-top: 105px;
+    --case-head-padding-top: 115px;
+    --case-head-h1-line-height: 72px;
+    --case-head-h1-spacing: 2px;
+    --case-head-h1-margin-bottom: 0;
     --case-head-h2-size: 41px;
     --case-head-h2-line-height: 35px;
     --case-head-h2-padding-bottom: 2%;
     --case-head-h2-spacing: 2px;
-    --case-head-h1-margin-bottom: 0;
+    
 
     --case-head-button-margin-left: 25%;
     --case-head-button-margin-top: -2.5%;
@@ -222,6 +224,9 @@
     --case-divider-width: 46%;
     --case-divider-radius: 20px;
 
+    --prototype-margin-top: 30px;
+
+    --concepts-section-margin-bottom: 30px;
     --concept-columns-padding-right: 41px;
     --concept-columns-padding-top: 35px;
     --concept-columns-h3-size: 25.5px;
@@ -247,7 +252,7 @@
 
     --concept-video-phone-width: 185px;
     --concept-video-phone-height: 369px;
-};
+}
 
 
 
@@ -269,8 +274,7 @@
     --section-h2-margin-bottom: 15px;
 
     /*--- SLIDESHOW CONTROLS ---*/
-    --slideshow-arrows: 60px solid transparent;
-    --slideshow-arrows-margin-top: 45px; 
+    --slideshow-arrows-margin-top: 300px; 
     --slideshow-arrows-position: 27.5%;
     --slideshow-arrows-data-vis-margin-top: 13%; 
 
@@ -284,7 +288,6 @@
     --slide-width: 70%;
     --slide-grid-gap: 10px;
     --slide-margin-left: 15%;
-    --slide-print-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 
     /*--- DATA VIS ---*/
     --slide-datavis-width: 50%;
@@ -302,8 +305,7 @@
     --lightbox-content-padding: 10.25px;
     --lightbox-content-margin-top: 25%;
     --lightbox-content-max-height: 410px;
-    --lightbox-content-top: 
-    ;
+    --lightbox-content-top: 0;
     --lightbox-content-left: 50%;
 
     --lightbox-imgContent-width: 1965px;
@@ -320,7 +322,7 @@
 
     --lightbox-close-size: 40px;
     --lightbox-close-x: 82px;
-    --lightbox-close-margin-top: 15px;
+    --lightbox-close-margin-top: 5%;
     --lightbox-close-right: 4%;
 }
 
