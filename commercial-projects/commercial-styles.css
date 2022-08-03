@@ -14,7 +14,7 @@
     --concepts-h1-margin-bottom: 20px;
     --concepts-h1-margin-top: 5px;
 
-    --dev-1st-h1-size: 75px;
+    --dev-1st-h1-size: 70px;
     --dev-1st-h1-line-height: 35px;
     --dev-1st-h1-margin-top-bottom:20px;
 
@@ -33,7 +33,7 @@
     --org-2nd-h1-spacing: 2px;
 
     /*--- CASE STUDY HEADERS ---*/
-    --case-head-padding-top: 105px;
+    --case-head-padding-top: 115px;
     --case-head-h1-line-height: 72px;
     --case-head-h1-spacing: 2px;
     --case-head-h1-margin-bottom: 0;
@@ -100,6 +100,9 @@
     --case-divider-width: 46%;
     --case-divider-radius: 20px;
 
+    --prototype-margin-top: 30px;
+
+    --concepts-section-margin-bottom: 30px;
     --concept-columns-padding-right: 41px;
     --concept-columns-padding-top: 35px;
     --concept-columns-h3-size: 25.5px;
@@ -224,11 +227,13 @@
     z-index: 2;
 }
 
-.case-head button{
+.page-back {
     color: white;
     border: none;
     position: fixed;
     display: block;
+    text-decoration: none;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     margin-left: var(--case-head-button-margin-left);
     margin-top: var(--case-head-button-margin-top);
     font-size: var(--case-head-button-font-size);
@@ -259,7 +264,6 @@
     padding-left: var(--case-section-padding-sides);
     padding-right: var(--case-section-padding-sides);
     padding-bottom: var(--case-section-padding-bottom);
-    
 }
 
 .case-section div {
@@ -276,6 +280,10 @@
     margin-top: var(--case-content-p-margin-top);
 }
 
+.case-section:last-of-type p:last-of-type{
+    margin-bottom: 0;
+}
+
 li {
     font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     margin: var(--case-content-column-li-margin);
@@ -284,13 +292,15 @@ li {
     line-height: var(--case-content-p-line-height);
 }
 
-.case-section button {
+.back-to-commercial {
+    display: inline-block;
     color: white;
     background-color: #D97B59;
     font-size: var(--case-section-button-size);
     letter-spacing: var(--case-section-button-spacing);
     font-weight: bold;
     font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+    text-decoration: none;
     border: none;
     padding-left: var(--case-section-button-padding-sides);
     padding-right: var(--case-section-button-padding-sides);
@@ -301,7 +311,7 @@ li {
     margin-left: var(--case-section-button-margin-left);
 }
 
-.case-section button:hover {
+.back-to-commercial:hover {
     background-color:#A65D42;
     cursor: pointer;
 }
@@ -345,26 +355,22 @@ img {
     letter-spacing: var(--case-head-h2-spacing);
 }
 
+.case-head.org a{
+    background-color: rgba(40, 60, 79, 1.0);
+}
+
+.case-head.org a:hover {
+    background-color: rgba(40, 60, 79, 0.5);
+    cursor: pointer;
+}
+
 .case-head.org {
     background-image: url(../base-images/TexturedVignette-blue.png);
     background-color: #365673;
 }
 
-.case-head.org button{
-    background-color: rgba(40, 60, 79, 1.0);
-}
-
-.case-head.org button:hover {
-    background-color: rgba(40, 60, 79, 0.5);
-    cursor: pointer;
-}
-
 .case-content.org h1{
     color: #283C4F;
-}
-
-.case-content.org h2 {
-    color: #365673;
 }
 
 .divider.org{
@@ -376,11 +382,16 @@ img {
     border-radius: var(--case-divider-radius);
 }
 
+.case-content.org h2 {
+    color: #365673;
+}
+
+
 /*---------------DEVELOPMENT---------------*/
 
 .case-head.dev h1 {
     margin: 0;
-    font-size: var(--case-head-predev-h1-size);
+    font-size: var(--case-head-dev-h1-size);
     color:#F2E5D8;
     font-family: Heavitas;
     padding: 0;
@@ -408,21 +419,20 @@ img {
     background-color: #2C736C;
 }
 
-.case-head.dev button{
+.case-head.dev a {
     background-color: rgba(32, 84, 79, 1.0);
 }
 
-.case-head.dev button:hover {
+.case-head.dev a:hover {
     background-color: rgba(32, 84, 79, .50);
     cursor: pointer;
 }
 
-.case-content.dev h2 {
-    color: #2C736C;
-    margin-top: 20px;
+.case-content.dev h1{
+    color: #20544F;
 }
 
-.divider.dev{
+.divider.dev {
     display: block;
     background-color: #2C736C;
     position: absolute;
@@ -431,11 +441,16 @@ img {
     border-radius: var(--case-divider-radius);
 }
 
-.case-content.dev h1{
-    color: #20544F;
+.case-content.dev h2 {
+    color: #2C736C;
 }
 
-
+#lil-baby {
+    display: block;
+    margin: auto;
+    border: none;
+    margin-top: var(--prototype-margin-top);
+}
 
 /*---------------PRE-DEVELOPMENT---------------*/
 
@@ -467,24 +482,20 @@ img {
     background-color: #D97B59;
 }
 
-.case-section.predev img:last-of-type {
-    margin-bottom: 30px;
+.case-section.predev h1{
+    color: #A65D42;
 }
 
-.case-head.predev button{
+.case-head.predev a{
     background-color: rgba(166, 93, 66, 1.0);
 }
 
-.case-head.predev button:hover {
+.case-head.predev a:hover {
     background-color: rgba(166, 93, 66, .50);
     cursor: pointer;
 }
 
-.case-section.predev h1:first-child{
-    color: #A65D42;
-}
-
-#divider.predev{
+.divider.predev{
     display: block;
     position: absolute;
     background-color: #D97B59;
@@ -495,6 +506,10 @@ img {
 
 .case-content.predev h2 {
     color: #D97B59;
+}
+
+.case-section.predev img:last-of-type {
+    margin-bottom: var(--concepts-section-margin-bottom);
 }
 
 .columns-4 {
