@@ -16,8 +16,6 @@
 
     /*--- PAGE HEADS ---*/
     --page-head-width: 800px;
-    --page-head-margin-left: 20%;
-    --page-head-padding-sides: 10%;
     --page-head-text-width: 75%;
     --page-head-text-margin: 10px;
     --page-head-text-margin-left: 2.5%;
@@ -27,7 +25,7 @@
     --page-head-text-h2-margin-top: -10px;
     --page-head-cactus-top: 10px;
     --page-head-cactus-width: 155px;
-    --page-head-cactus-margin-right: 25px;
+    --page-head-cactus-margin-right: 0;
 
     /*--- SECTION DIVIDER/INSTRUCTIONS ---*/
     --divider-text-size: 25.5px;
@@ -104,11 +102,17 @@
     --about-foot-button-margin-bottom: 40px;
 
     /*--- PORTFOLIO SELECT PAGE ---*/
+    --select-portfolio-width: 50%;
     --select-portfolio-padding: 60px;
-    --select-portfolio-margin: -2px;
+    --select-portfolio-margin: -4px;
+    --select-portfolio-1st-margin-left: 0px;
     --select-portfolio-margin-top: 40px;
     --select-portfolio-h1-size: 61.45px;
     --select-portfolio-h1-margin-bottom: 20px;
+
+    /*--- FOOTER ---*/
+    --footer-padding: 20px;
+    --footer-left: 40px;
 }
 
 @font-face {
@@ -121,9 +125,7 @@
     src: url(./fonts/Proxima\ Nova\ Font.otf);
 }
 
-@media (max-width: 800px) {
-    /* CSS that should be displayed if width is equal to or less than 800px goes here */
-  }
+
 
 /*---------------BASE CSS START (vw = 2048px)---------------*/
 
@@ -234,13 +236,12 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     text-align: left;
+    margin: 0 auto;
 }
 
 .page-head {
     width: var(--page-head-width);
-    margin-left: var(--page-head-margin-left);
-    padding-left: var(--page-head-padding-sides);
-    padding-right: var(--page-head-padding-sides);
+    margin: 0 auto;
 }
 
 .header-text {
@@ -360,7 +361,7 @@ body {
     font-weight: normal;
 }
 
-#select-page-home div button{
+.select-page div button{
     margin: 0;
     font-size: var(--page-select-button-text-size);
     color:white;
@@ -658,18 +659,6 @@ body {
     text-align: center;
 }
 
-#select-page-port div{
-    display: inline-block;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    padding-top: var(--select-portfolio-padding);
-    padding-bottom: var(--select-portfolio-padding);
-    margin: var(--select-portfolio-margin);
-    margin-top: var(--select-portfolio-margin-top);
-    width: var(--section-width);
-}
-
 #select-page-port div h1{
     margin: 0;
     font-size:var(--select-portfolio-h1-size);
@@ -679,9 +668,28 @@ body {
     line-height: var(--select-portfolio-h1-size);
     font-weight: normal;
 }
+
 #select-page-port div h1:last-of-type{
     margin-bottom: var(--select-portfolio-h1-margin-bottom);
 }
+
+#select-page-port div{
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    padding-top: var(--select-portfolio-padding);
+    padding-bottom: var(--select-portfolio-padding);
+    margin-left: var(--select-portfolio-margin);
+    margin-top: var(--select-portfolio-margin-top);
+    width: var(--select-portfolio-width);
+}
+
+#select-page-port div:first-child{
+    margin-left: var(--select-portfolio-1st-margin-left);;
+};
+
+
 
 #select-page-port div button{
     margin: 0;
@@ -734,9 +742,9 @@ body {
     position: relative;
     width: 100%;
     height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left:var(--base-safearea-padding);
+    padding-top: var(--footer-padding);
+    padding-bottom: var(--footer-padding);
+    padding-left:var(--footer-left);
     text-align: left;
     background-color: #283C4F;
 }
@@ -745,5 +753,5 @@ body {
     color: #F2E5D8;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    padding: 0%;
+    padding: 0;
 }
