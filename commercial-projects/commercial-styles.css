@@ -1,35 +1,36 @@
+/*--- Base Resolution (2048 x 1034) ---*/
 :root {
     /*--- PAGE SELECT ---*/
-    --case-study-select-width: 33.3%;
+    --case-study-select-width: 33.29%;
     --case-study-select-padding-top: 60px;
     --case-study-select-padding-bottom: 60px;
-    --case-study-select-margin-top: 40px;
-    --case-study-select-margin:-.15%;
+    --case-study-select-margin-top: 0px;
+    --case-study-select-margin:-.2%;
 
     --case-study-select-h1-size: 61.45px;
     --case-study-select-h1-margin-bottom: 20px;
 
     --concepts-h1-size: 61.45px;
-    --concepts-h1-line-height: 58px;
-    --concepts-h1-margin-bottom: 20px;
+    --concepts-h1-line-height: 57px;
+    --concepts-h1-margin-bottom: 25px;
     --concepts-h1-margin-top: 5px;
 
     --dev-1st-h1-size: 70px;
     --dev-1st-h1-line-height: 35px;
     --dev-1st-h1-margin-top-bottom:20px;
 
-    --dev-2nd-h1-size: 45px;
+    --dev-2nd-h1-size: 41px;
     --dev-2nd-h1-line-height: 40px;
-    --dev-2nd-h1-margin-bottom:25px;
+    --dev-2nd-h1-margin-bottom:30px;
     --dev-2nd-h1-spacing: 2px;
 
     --org-1st-h1-size: 75px;
-    --org-1st-h1-line-height: 35px;
+    --org-1st-h1-line-height: 40px;
     --org-1st-h1-margin-top-bottom:20px;
 
     --org-2nd-h1-size: 41px;
     --org-2nd-h1-line-height: 35px;
-    --org-2nd-h1-margin-bottom:25px;
+    --org-2nd-h1-margin-bottom:30px;
     --org-2nd-h1-spacing: 2px;
 
     /*--- CASE STUDY HEADERS ---*/
@@ -39,7 +40,7 @@
     --case-head-h1-margin-bottom: 0;
     --case-head-h2-size: 41px;
     --case-head-h2-line-height: 35px;
-    --case-head-h2-padding-bottom: 2%;
+    --case-head-h2-padding-bottom: 40px;
     --case-head-h2-spacing: 2px;
     
 
@@ -54,7 +55,7 @@
     --case-section-width: 50%;
     --case-section-top: 20%;
     --case-section-padding-sides: 25%;
-    --case-section-padding-bottom: 5px;
+    --case-section-padding-bottom: 20px;
     --case-section-div-padding: 2%;
 
     --case-content-h2-size: 30.7px;
@@ -100,6 +101,8 @@
     --case-divider-width: 46%;
     --case-divider-radius: 20px;
 
+    --org-column-width: 45.75%;
+
     --prototype-margin-top: 30px;
 
     --concepts-section-margin-bottom: 30px;
@@ -130,6 +133,42 @@
     --concept-video-phone-height: 369px;
 }
 
+/*--- Resolutions: 1536 x 864, 1920 x 1080 ---*/
+@media only screen and (max-width: 1920.5px) {
+    :root {
+        --case-study-select-width: 33.29%;
+        --case-study-select-margin:-.21%;
+
+        --case-head-button-margin-top: -3%;
+        --case-head-button-margin-left: 25%;
+        --case-section-width: 50%;
+        --case-section-padding-sides: 25%;
+
+        --case-divider-width:46%;
+        --case-content-1st-section:290px;
+    }
+}
+
+/*--- Resolutions: 1440 x 900, 1366 x 768 ---*/
+@media only screen and (max-width: 1440.5px) {
+    :root {
+        --case-study-select-width: 33.27%;
+        --case-study-select-margin:-.28%;
+
+        --case-head-button-margin-top: -4%;
+        --case-head-button-margin-left: 17.5%;
+        --case-section-width: 70%;
+        --case-section-padding-sides: 15%;
+
+        --case-divider-width:66%;
+        --case-content-1st-section:270px;
+    }
+}
+
+body{
+    background-color:#F2E5D8;
+}
+
 #select-page {
     width: 100%;
     position: relative;
@@ -146,6 +185,7 @@
     padding-bottom: var(--case-study-select-padding-bottom);
     margin-top: var(--case-study-select-margin-top);
     width: var(--case-study-select-width);
+    margin-left: 0;
 }
 
 .concepts h1{
@@ -252,6 +292,7 @@
     padding-left: 0;
     margin-bottom: -5px;
     margin-top: 25px;
+    margin-block-start: 15px;
 }
 
 .case-section:first-child {
@@ -386,6 +427,13 @@
     color: #365673;
 }
 
+.case-section div.column {
+    width: var(--org-column-width);
+    padding-left: var(--case-section-div-padding);
+    padding-right: var(--case-section-div-padding);
+    height: 100%;
+    margin: 0 auto;
+}
 
 /*---------------DEVELOPMENT---------------*/
 
@@ -478,7 +526,7 @@
 }
 
 .case-head.predev {
-    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-image: url(../base-images/TexturedVignette-orange.png);
     background-color: #D97B59;
 }
 

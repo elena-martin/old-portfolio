@@ -1,0 +1,93 @@
+/*---------------- GENERIC STYLES VARIABLES ----------------*/
+
+/*--- Resolutions: 1536 x 864, 1920 x 1080 ---*/
+@media only screen and (max-width: 1920.5px) {
+    :root {
+        --nav-icon-left: 20%;
+
+        --header-height: 530px;
+        --header-logo-height: 480px;
+        --header-padding-top: 120px;
+
+        --section-width: 60%;
+        --page-safearea-padding: 20%;
+
+        --about-right-width: 30%;
+        --about-left-width: 55%;
+    }
+}
+
+/*--- Resolutions: 1440 x 900, 1366 x 768 ---*/
+@media only screen and (max-width: 1440.5px) {
+    :root {
+        --nav-icon-left: 20%;
+
+        --header-height: 420px;
+        --header-logo-height:380px;
+        --header-padding-top: 110px;
+
+        --section-width: 80%;
+        --page-safearea-padding: 10%;
+
+        --about-right-width: 30%;
+        --about-left-width: 55%;
+    }
+}
+
+/*---------------- ADDITIONAL STYLES VARIABLES ----------------*/
+
+/*--- Resolutions: 1536 x 864, 1920 x 1080 ---*/
+@media only screen and (max-width: 1920.5px) {
+    :root {
+        --slideshow-arrows-margin-top: 200px; 
+        --slideshow-arrows-position: 23.5%; 
+        --slideshow-arrow-size: 65px solid transparent;
+
+        --lightbox-content-margin-top: 25%;
+    }
+}
+
+/*--- Resolutions: 1440 x 900, 1366 x 768 ---*/
+@media only screen and (max-width: 1440.5px) {
+    :root {
+        --slideshow-arrows-margin-top: 200px; 
+        --slideshow-arrows-position: 15.5%; 
+        --slideshow-arrow-size: 70px solid transparent;
+
+        --lightbox-content-margin-top: 35%;
+    }
+}
+
+/*---------------- COMMERCIAL STYLE VARIABLES ----------------*/
+
+/*--- Resolutions: 1536 x 864, 1920 x 1080 ---*/
+@media only screen and (max-width: 1920.5px) {
+    :root {
+        --case-study-select-width: 33.29%;
+        --case-study-select-margin:-.21%;
+
+        --case-head-button-margin-top: -3%;
+        --case-head-button-margin-left: 25%;
+        --case-section-width: 50%;
+        --case-section-padding-sides: 25%;
+
+        --case-divider-width:46%;
+        --case-content-1st-section:290px;
+    }
+}
+
+/*--- Resolutions: 1440 x 900, 1366 x 768 ---*/
+@media only screen and (max-width: 1440.5px) {
+    :root {
+        --case-study-select-width: 33.27%;
+        --case-study-select-margin:-.28%;
+
+        --case-head-button-margin-top: -4%;
+        --case-head-button-margin-left: 17.5%;
+        --case-section-width: 70%;
+        --case-section-padding-sides: 15%;
+
+        --case-divider-width:66%;
+        --case-content-1st-section:270px;
+    }
+}
