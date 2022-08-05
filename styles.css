@@ -155,10 +155,8 @@ body {
     border: none;
     position: fixed;
     z-index: 6;
-    opacity: 1.0;
     transition-duration: .5s;
     transition-property: opacity;
-    display: block;
 }
 
 .toggle-preloader{

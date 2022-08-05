@@ -1,13 +1,13 @@
 /*--- PRELOADER ---*/
-let loader = "";
+let loader = ""
 
-let thisURL="";
+let thisURL=""
 let baseURL = "";
 
 let docURL = document.URL;
 let relativeURL = "";
 
-let loadStart="";
+let loadStart=""
 let loadEnd="";
 
 let content = "";
@@ -35,8 +35,9 @@ function preLoad(){
         loader.src="./preloader.html";
         content.prepend(loader);
         console.log("tried 2nd url")
-    };
+    }
 };
+
 
 
 function init(){
