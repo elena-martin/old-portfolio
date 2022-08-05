@@ -1,4 +1,4 @@
-/*--- Base Resolution (2048 x 1034) ---*/
+/*--- Base Desktop Resolution (2048 x 1034) ---*/
 :root {
     /*--- PAGE SELECT ---*/
     --case-study-select-width: 33.29%;
@@ -131,38 +131,6 @@
 
     --concept-video-phone-width: 185px;
     --concept-video-phone-height: 369px;
-}
-
-/*--- Resolutions: 1536 x 864, 1920 x 1080 ---*/
-@media only screen and (max-width: 1920.5px) {
-    :root {
-        --case-study-select-width: 33.29%;
-        --case-study-select-margin:-.21%;
-
-        --case-head-button-margin-top: -3%;
-        --case-head-button-margin-left: 25%;
-        --case-section-width: 50%;
-        --case-section-padding-sides: 25%;
-
-        --case-divider-width:46%;
-        --case-content-1st-section:290px;
-    }
-}
-
-/*--- Resolutions: 1440 x 900, 1366 x 768 ---*/
-@media only screen and (max-width: 1440.5px) {
-    :root {
-        --case-study-select-width: 33.27%;
-        --case-study-select-margin:-.28%;
-
-        --case-head-button-margin-top: -4%;
-        --case-head-button-margin-left: 17.5%;
-        --case-section-width: 70%;
-        --case-section-padding-sides: 15%;
-
-        --case-divider-width:66%;
-        --case-content-1st-section:270px;
-    }
 }
 
 body{
@@ -673,4 +641,51 @@ body{
     width: var(--concept-video-phone-width);
     height: var(--concept-video-phone-height);
     padding: 0;
+}
+
+/*--- Desktop Resolutions: 1536 x 864, 1920 x 1080 ---*/
+@media screen and (max-width: 1920.5px) and (min-width: 1536.5px) {
+    :root {
+        --case-study-select-width: 33.29%;
+        --case-study-select-margin:-.21%;
+
+        --case-head-button-margin-top: -3%;
+        --case-head-button-margin-left: 25%;
+        --case-section-width: 50%;
+        --case-section-padding-sides: 25%;
+
+        --case-divider-width:46%;
+        --case-content-1st-section:290px;
+    }
+}
+
+@media screen and (max-width: 1536.5px) and (min-width: 1440.5px) {
+    :root {
+        --case-study-select-width: 33.29%;
+        --case-study-select-margin:-.21%;
+
+        --case-head-button-margin-top: -3%;
+        --case-head-button-margin-left: 20%;
+        --case-section-width: 60%;
+        --case-section-padding-sides: 20%;
+
+        --case-divider-width:56%;
+        --case-content-1st-section:290px;
+    }
+}
+
+/*--- Desktop Resolutions: 1440 x 900, 1366 x 768 ---*/
+@media screen and (max-width: 1440.5px) {
+    :root {
+        --case-study-select-width: 33.27%;
+        --case-study-select-margin:-.28%;
+
+        --case-head-button-margin-top: -4%;
+        --case-head-button-margin-left: 17.5%;
+        --case-section-width: 70%;
+        --case-section-padding-sides: 15%;
+
+        --case-divider-width:66%;
+        --case-content-1st-section:290px;
+    }
 }

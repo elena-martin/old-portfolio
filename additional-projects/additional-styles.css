@@ -1,4 +1,4 @@
-/*--- Base Resolution (2048 x 1034) ---*/
+/*--- Base Desktop Resolution (2048 x 1034) ---*/
 :root {
     --section-width: 50%;
     --page-safearea-padding: 25%;
@@ -78,28 +78,6 @@
     --lightbox-close-x: 82px;
     --lightbox-close-margin-top: 5%;
     --lightbox-close-right: 4%;
-}
-
-/*--- Resolutions: 1536 x 864, 1920 x 1080 ---*/
-@media only screen and (max-width: 1920.5px) {
-    :root {
-        --slideshow-arrows-margin-top: 200px; 
-        --slideshow-arrows-position: 23.5%; 
-        --slideshow-arrow-size: 65px solid transparent;
-
-        --lightbox-content-margin-top: 25%;
-    }
-}
-
-/*--- Resolutions: 1440 x 900, 1366 x 768 ---*/
-@media only screen and (max-width: 1440.5px) {
-    :root {
-        --slideshow-arrows-margin-top: 200px; 
-        --slideshow-arrows-position: 15.5%; 
-        --slideshow-arrow-size: 70px solid transparent;
-
-        --lightbox-content-margin-top: 35%;
-    }
 }
 
 #nav{
@@ -518,15 +496,11 @@ figure{
     position: relative;
 }
 
-#boxContent button {
-    text-align: right;
-}
-
 #boxContent img{
     max-width: 100%;
     max-height: var(--lightbox-content-max-height);
     position: fixed;
-    margin-top: var(--lightbox-image-margin-top);
+    margin-top: var(--lightbox-content-margin-top);
     left: var(--lightbox-content-left);
     transform: translate(-50%, -50%);
 }
@@ -579,5 +553,65 @@ figure{
 #close-lightbox:hover {
     background-color: transparent;
     cursor: pointer;
+}
+
+/*--- Desktop Resolution: 1920 x 1080 ---*/
+@media screen and (orientation: landscape) and (max-width: 1920.5px) and (min-width: 1536.5px){
+    :root {
+        --slideshow-arrows-margin-top: 200px; 
+        --slideshow-arrows-position: 23.5%; 
+        --slideshow-arrow-size: 65px solid transparent;
+
+        --lightbox-content-margin-top: 25%;
+        --lightbox-close-margin-top:5%;
+    }
+}
+
+/*--- Desktop Resolution: 1536 x 864 ---*/
+@media screen and (orientation: landscape) and (max-width: 1536.5px) and (min-width: 1440.5px){
+    :root {
+        --slideshow-arrows-margin-top: 200px; 
+        --slideshow-arrows-position: 19.5%; 
+        --slideshow-arrow-size: 65px solid transparent;
+
+        --lightbox-content-margin-top: 25%;
+        --lightbox-close-margin-top:5%;
+    }
+}
+
+/*--- Desktop Resolutions: 1440 x 900, 1366 x 768 ---*/
+@media screen and (orientation: landscape) and (max-width: 1440.5px) and (min-width: 1280.5px){
+    :root {
+        --slideshow-arrows-margin-top: 200px; 
+        --slideshow-arrows-position: 15.5%; 
+        --slideshow-arrow-size: 70px solid transparent;
+
+        --lightbox-content-margin-top: 24%;
+        --lightbox-close-margin-top:5%;
+    }
+}
+
+/*--- Tablet Resolutions: 1024 x 768, 1280 x 800 Landscape---*/
+
+@media screen and (max-width: 1280.5px) and (min-width: 1024.5px)  {
+    :root {
+        --slideshow-arrows-margin-top: 200px; 
+        --slideshow-arrows-position: 15%; 
+        --slideshow-arrow-size: 70px solid transparent;
+
+        --lightbox-content-margin-top: 27%;
+        --lightbox-close-margin-top:7%;
+    }
+}
+
+@media screen and (max-width: 1024.5px) and (min-width: 1020px) {
+    :root {
+        --slideshow-arrows-margin-top: 200px; 
+        --slideshow-arrows-position: 8%; 
+        --slideshow-arrow-size: 70px solid transparent;
+
+        --lightbox-content-margin-top: 32%;
+        --lightbox-close-margin-top:7%;
+    }
 }
   

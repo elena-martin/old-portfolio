@@ -1,4 +1,4 @@
-/*--- Base Resolution (2048 x 1034) ---*/
+/*--- Base Desktop Resolution (2048 x 1034) ---*/
 :root {
     --full-width: 100%;
     /*--- NAV ---*/
@@ -45,6 +45,8 @@
     --page-safearea-padding: 25%;
     --section-width: 50%;
 
+    --section-divider-width: 100%;
+
     --page-select-button-text-size: 20.5px;
     --page-select-button-text-spacing:1.5px;
     --page-select-button-padding-top-bottom: 15px;
@@ -69,6 +71,7 @@
     --about-social-img-width: 8%;
     --about-social-img-margin-left: 1%;
     --about-right-width: 35%;
+    --about-right-padding-left: 0px;
     --about-right-img-border-radius: 100%;
     --about-section-padding: 40px;
     --about-section-h1-padding-left: 50px;
@@ -121,39 +124,6 @@
     --footer-left: 40px;
 }
 
-/*--- Resolutions: 1536 x 864, 1920 x 1080 ---*/
-@media only screen and (max-width: 1920.5px) {
-    :root {
-        --nav-icon-left: 20%;
-
-        --header-height: 530px;
-        --header-logo-height: 480px;
-        --header-padding-top: 120px;
-
-        --section-width: 60%;
-        --page-safearea-padding: 20%;
-
-        --about-right-width: 30%;
-        --about-left-width: 55%;
-    }
-}
-
-/*--- Resolutions: 1440 x 900, 1366 x 768 ---*/
-@media only screen and (max-width: 1440.5px) {
-    :root {
-        --nav-icon-left: 20%;
-
-        --header-height: 420px;
-        --header-logo-height:380px;
-        --header-padding-top: 110px;
-
-        --section-width: 80%;
-        --page-safearea-padding: 10%;
-
-        --about-right-width: 30%;
-        --about-left-width: 55%;
-    }
-}
 
 @font-face {
     font-family: Heavitas;
@@ -331,7 +301,7 @@ body {
 .section-divider{
     display: block;
     margin: 0;
-    width: 100%;
+    width: var(--section-divider-width);
     background-color: #283C4F;
     text-align: center;
     z-index: 2;
@@ -527,6 +497,7 @@ div.orange {
 #right {
     width: var(--about-right-width);
     display: inline-block;
+    padding-left: var(--about-right-padding-left);
 }
 
 #right img {
@@ -777,6 +748,96 @@ div.orange {
     padding: 0;
 }
 
-@media only screen and (max-width: 800px) {
-    
-  }
+/*--- Desktop Resolution: 1920 x 1080 ---*/
+@media screen and (max-width: 1920.5px) and (min-width: 1536.5px) {
+    :root {
+        --nav-icon-left: 20%;
+
+        --header-height: 530px;
+        --header-logo-height: 480px;
+        --header-padding-top: 120px;
+
+        --section-width: 60%;
+        --page-safearea-padding: 20%;
+
+        --about-right-width: 30%;
+        --about-left-width: 55%;
+        --about-section3-dividers-width: 110%;
+        --about-section3-dividers-margin-left: -5%
+    }
+}
+
+/*--- Desktop Resolution: 1536 x 864 ---*/
+@media screen and (max-width: 1536.5px) and (min-width: 1440.5px) {
+    :root {
+        --nav-icon-left: 20%;
+
+        --header-height: 530px;
+        --header-logo-height: 480px;
+        --header-padding-top: 120px;
+
+        --section-width: 70%;
+        --page-safearea-padding: 15%;
+
+        --about-right-width: 30.5%;
+        --about-left-width: 55%;
+        --about-section3-dividers-width: 110.5%;
+        --about-section3-dividers-margin-left: -5.25%
+    }
+}
+
+/*--- Desktop Resolutions: 1440 x 900, 1366 x 768 ---*/
+@media screen and (max-width: 1440.5px) and (min-width: 1280.5px){
+    :root {
+        --nav-icon-left: 20%;
+
+        --header-height: 420px;
+        --header-logo-height:380px;
+        --header-padding-top: 110px;
+
+        --section-width: 80%;
+        --page-safearea-padding: 10%;
+
+        --about-right-width: 30%;
+        --about-left-width: 55%;
+        --about-section3-dividers-width: 109%;
+        --about-section3-dividers-margin-left: -4.5%
+    }
+}
+
+/*--- Tablet Resolutions: 1024 x 768, 1280 x 800 (Landscape) ---*/
+@media screen and (max-width: 1280.5px) and (min-width: 1024.5px) {
+    :root {
+        --nav-icon-left: 10%;
+
+        --header-height: 420px;
+        --header-logo-height:380px;
+        --header-padding-top: 110px;
+
+        --section-width: 80%;
+        --page-safearea-padding: 10%;
+
+        --about-right-width: 27%;
+        --about-right-padding-left: 50px;
+        --about-section3-dividers-width: 109%;
+        --about-section3-dividers-margin-left: -4.5%
+    }
+}
+
+@media screen and (max-width: 1024.5px) and (min-width: 768.5px) {
+    :root {
+        --nav-icon-left: 10%;
+
+        --header-height: 420px;
+        --header-logo-height:380px;
+        --header-padding-top: 110px;
+
+        --section-width: 96%;
+        --page-safearea-padding: 2%;
+
+        --about-right-width: 27%;
+        --about-right-padding-left: 50px;
+        --about-section3-dividers-width: 109%;
+        --about-section3-dividers-margin-left: -4.5%
+    }
+}

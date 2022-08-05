@@ -1,7 +1,7 @@
 /*---------------- GENERIC STYLES VARIABLES ----------------*/
 
-/*--- Resolutions: 1536 x 864, 1920 x 1080 ---*/
-@media only screen and (max-width: 1920.5px) {
+/*--- Desktop Resolutions: 1536 x 864, 1920 x 1080 ---*/
+@media screen and (max-width: 1920.5px) and (min-width: 1440.5px) {
     :root {
         --nav-icon-left: 20%;
 
@@ -17,8 +17,8 @@
     }
 }
 
-/*--- Resolutions: 1440 x 900, 1366 x 768 ---*/
-@media only screen and (max-width: 1440.5px) {
+/*--- Desktop Resolutions: 1440 x 900, 1366 x 768 ---*/
+@media screen and (max-width: 1440.5px) and (min-width: 1280.5px){
     :root {
         --nav-icon-left: 20%;
 
@@ -44,6 +44,7 @@
         --slideshow-arrow-size: 65px solid transparent;
 
         --lightbox-content-margin-top: 25%;
+        --lightbox-close-margin-top:5%;
     }
 }
 
@@ -55,6 +56,7 @@
         --slideshow-arrow-size: 70px solid transparent;
 
         --lightbox-content-margin-top: 35%;
+        --lightbox-close-margin-top:5%;
     }
 }
 
