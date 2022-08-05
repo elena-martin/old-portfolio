@@ -10,8 +10,7 @@ let relativeURL = "";
 let loadStart=""
 let loadEnd=""
 
-
-function init(){
+function preLoad(){
     loadStart = window.performance.timing.domContentLoadedEventStart
     console.log(loadStart);
     let content = document.body;
@@ -34,6 +33,10 @@ function init(){
         content.prepend(loader);
         console.log("tried 2nd url")
     };
+}
+
+
+function init(){
 
     setTimeout(() => {
         loader.style.opacity = "0"
