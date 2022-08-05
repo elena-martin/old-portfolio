@@ -149,6 +149,22 @@ body {
     margin: 0 auto;
 }
 
+#preloader {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: fixed;
+    z-index: 6;
+    opacity: 1.0;
+    transition-duration: .5s;
+    transition-property: opacity;
+    display: block;
+}
+
+.toggle-preloader{
+    display: none;
+}
+
 /*---------------NAVIGATION (ALL PAGES)---------------*/
 #nav {
     width: var(--full-width);

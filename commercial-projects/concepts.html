@@ -5,8 +5,16 @@
         <link rel="stylesheet" href="../styles.css">
         <link rel="stylesheet" href="./commercial-styles.css">
         <meta charset="UTF-8">
+        <script src="../script.js"></script>
     </head>
-    <body onload="load(); loadContent();">
+    <body onload="loadContent();">
+        <script>
+            window.addEventListener('load', (event) => {
+                init();
+                load();
+            });
+        </script>
+
         <div id="nav">
             <a href="../index.html"><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
             <ul>
@@ -114,6 +122,5 @@
             }
             
         </script>
-        <script src="../script.js"></script>
     </body>
 </html>

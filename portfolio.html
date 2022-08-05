@@ -4,8 +4,15 @@
         <title>Elena Martin | Portfolio</title>
         <link rel="stylesheet" href="./styles.css">
         <meta charset="UTF-8">
+        <script src="./script.js"></script>
     </head>
     <body onload=loadContent();>
+        <script>
+            window.addEventListener('load', (event) => {
+                init();
+            });
+        </script>
+        
         <div id="nav">
             <a href="index.html"><img id="icon" src="./base-images/Icon-2022.svg" alt="Website Icon"></a>
             <ul>
@@ -49,6 +56,5 @@
         <div id="footer">
             <p>© Copyright 2022 Elena Martin</p>
         </div>
-        <script src="./script.js"></script>
     </body>
 </html>
