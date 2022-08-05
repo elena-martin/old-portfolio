@@ -10,7 +10,7 @@ let relativeURL = "";
 let loadStart=""
 let loadEnd=""
 
-function preLoad(){
+(function preLoad(){
     loadStart = window.performance.timing.domContentLoadedEventStart
     console.log(loadStart);
     let content = document.body;
@@ -33,7 +33,7 @@ function preLoad(){
         content.prepend(loader);
         console.log("tried 2nd url")
     };
-}
+});
 
 
 function init(){
