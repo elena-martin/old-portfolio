@@ -1,19 +1,22 @@
 /*--- PRELOADER ---*/
-let loader = ""
+let loader = "";
 
-let thisURL=""
+let thisURL="";
 let baseURL = "";
 
 let docURL = document.URL;
 let relativeURL = "";
 
-let loadStart=""
-let loadEnd=""
+let loadStart="";
+let loadEnd="";
 
-(function preLoad(){
+let content = "";
+
+function preLoad(){
+    content = document.body;
     loadStart = window.performance.timing.domContentLoadedEventStart
     console.log(loadStart);
-    let content = document.body;
+    
     console.log("loaded");
 
     loader = document.createElement('iframe');
@@ -33,7 +36,7 @@ let loadEnd=""
         content.prepend(loader);
         console.log("tried 2nd url")
     };
-});
+};
 
 
 function init(){
