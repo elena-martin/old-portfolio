@@ -7,8 +7,13 @@ let baseURL = "";
 let docURL = document.URL;
 let relativeURL = "";
 
+let loadStart=""
+let loadEnd=""
+
 
 function init(){
+    loadStart = window.performance.timing.domContentLoadedEventStart
+    console.log(loadStart);
     let content = document.body;
     console.log("loaded");
 
@@ -28,8 +33,7 @@ function init(){
         loader.src="./preloader.html";
         content.prepend(loader);
         console.log("tried 2nd url")
-    }
-
+    };
 
     setTimeout(() => {
         loader.style.opacity = "0"
@@ -38,11 +42,9 @@ function init(){
         loader.style.display = "none"
     }, "2000");
 
-    
+    loadEnd = window.performance.timing.domContentLoadedEventEnd;
+    console.log(loadEnd);
 };
-
-const path = require('path');
-let url = path1 = path.relative("portfolio/", document)
 
 function getLocation(){
     console.log(window.location.pathname);
