@@ -6,13 +6,12 @@
         <link rel="stylesheet" href="./commercial-styles.css">
         <meta charset="UTF-8">
         <script src="../script.js"></script>
+        <link rel="preload" href="./preloader.html" as="document">
     </head>
     <body onload="loadContent();">
         <script>
-            preLoad();
             window.addEventListener('load', (event) => {
                 init();
-                load();
             });
         </script>
         <div id="nav">

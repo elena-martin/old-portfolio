@@ -14,13 +14,11 @@ let content = "";
 
 function preLoad(){
     content = document.body;
-    loadStart = window.performance.timing.domContentLoadedEventStart
     console.log(loadStart);
     
     console.log("loaded");
 
-    loader = document.createElement('iframe');
-    loader.id="preloader";
+    loader = document.getElementById('preloader');
 
     console.log(loader);
     thisURL = loader.src.toString();
@@ -38,21 +36,48 @@ function preLoad(){
     }
 };
 
-
-
 function init(){
-
+    loader = document.getElementById('preloader');
+    loader.setAttribute("style", "-webkit-animation: fadein 0s; -moz-animation: fadein 0s; -ms-animation: fadein 0s; -o-animation: fadein 0s; animation: fadein 0s;");
     setTimeout(() => {
         loader.style.opacity = "0"
     }, "1000");
     setTimeout(() => {
         loader.style.display = "none"
     }, "2000");
-
-    loadEnd = window.performance.timing.domContentLoadedEventEnd;
-    console.log(loadEnd);
 };
+
 
 function getLocation(){
     console.log(window.location.pathname);
 };
+
+
+function pageTransition(){
+    loader.setAttribute("style", "-webkit-animation: fadein 1s; -moz-animation: fadein 1s; -ms-animation: fadein 1s; -o-animation: fadein 1s; animation: fadein 1s;");
+    loader.style.opacity = "1.0";
+    console.log(loader.style.opacity)
+    setTimeout(() => {
+        loader.style.display = "block"
+    }, "1000");
+};
+
+
+function viewPortfolio(){
+    pageTransition();
+    setTimeout(() => {
+        relativeURL = docURL.replace("index.html", "portfolio.html")
+        window.open(relativeURL, target="_self")
+        console.log(relativeURL)
+    }, "1000");
+    
+}
+
+function viewAbout(){
+    pageTransition();
+    setTimeout(() => {
+        relativeURL = docURL.replace("index.html", "about-me.html")
+        window.open(relativeURL, target="_self")
+        console.log(relativeURL)
+    }, "1000");
+}

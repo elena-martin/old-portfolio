@@ -5,16 +5,16 @@
         <link rel="stylesheet" href="./styles.css">
         <meta charset="UTF-8">
         <script src="./script.js"></script>
+        <link rel="preload" href="./preloader.html" as="document">
     </head>
     
     <body>
         <script>
-            preLoad();
             window.addEventListener('load', (event) => {
                 init();
-                loadContent();
             });
         </script>
+        <iframe src="./preloader.html" id="preloader"></iframe>
         <div id="nav">
             <a href="index.html"><img id="icon" src="./base-images/Icon-2022.svg" alt="Website Icon"></a>
             <ul>
@@ -134,7 +134,7 @@
             <section id="about-me-foot">
                 <h1 style="color: #D97B59; line-height: 60px;">There's more to see!</h1>
                 <p>Now that you know a little bit about me, why not check out my work?</p>
-                <a href="portfolio.html" class="view-page footer">View Portfolio</a>
+                <a onclick=preLoad(); href="portfolio.html" class="view-page footer">View Portfolio</a>
                 <p></p>
             </section>
         </div>
