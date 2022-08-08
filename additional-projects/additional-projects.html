@@ -11,13 +11,15 @@
         <script>
             window.addEventListener('load', (event) => {
                 init();
+                load();
             });
         </script>
+        <iframe src="../preloader.html" id="preloader"></iframe>
         <div id="nav">
             <a href="../index.html"><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
             <ul>
-                <li><a href="../about-me.html">ABOUT ME</a></li>
-                <li><a href="../portfolio.html">PORTFOLIO</a></li>
+                <li><a onclick=viewAbout();>ABOUT ME</a></li>
+                <li><a onclick=viewPortfolio();>PORTFOLIO</a></li>
             </ul>
             <div id="nav-divider"></div>
         </div>
@@ -183,7 +185,6 @@
         <div id="footer">
             <p>© Copyright 2022 Elena Martin</p>
         </div>
-
         <script src="../gallery-script.js"></script>
     </body>
 </html>
