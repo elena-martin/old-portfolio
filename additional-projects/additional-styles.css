@@ -613,7 +613,6 @@ figure{
 }
 
 #close-lightbox:hover {
-    background-color: transparent;
     cursor: pointer;
 }
 
