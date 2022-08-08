@@ -62,13 +62,20 @@ function pageTransition(){
     }, "1000");
 };
 
+function viewHome(){
+    pageTransition();
+    setTimeout(() => {
+        window.open("https://portfolio.elenamartinaz.com/index.html", target="_self")
+        console.log("Home")
+    }, "1000");
+    
+}
 
 function viewPortfolio(){
     pageTransition();
     setTimeout(() => {
-        relativeURL = docURL.replace("index.html", "portfolio.html")
-        window.open(relativeURL, target="_self")
-        console.log(relativeURL)
+        window.open("https://portfolio.elenamartinaz.com/portfolio.html", target="_self")
+        console.log("Portfolio")
     }, "1000");
     
 }
@@ -76,8 +83,15 @@ function viewPortfolio(){
 function viewAbout(){
     pageTransition();
     setTimeout(() => {
-        relativeURL = docURL.replace("index.html", "about-me.html")
-        window.open(relativeURL, target="_self")
-        console.log(relativeURL)
+        window.open("https://portfolio.elenamartinaz.com/about-me.html", target="_self")
+        console.log("About Me")
+    }, "1000");
+}
+
+function viewAdditionalProj(){
+    pageTransition();
+    setTimeout(() => {
+        window.open("https://portfolio.elenamartinaz.com/additional-projects/additional-projects.html", target="_self")
+        console.log("Additional Projects")
     }, "1000");
 }
