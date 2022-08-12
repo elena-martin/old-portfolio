@@ -24,6 +24,6 @@ jobs:
     
     steps:
       - name: Pass the received secret to an action
-        uses: ./.github/actions/my-action
+        uses: ./.github/actions/main
         with:
           token: ${{ secrets.access-token }}
