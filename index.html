@@ -55,19 +55,5 @@
         <div id="footer">
             <p>© Copyright 2022 Elena Martin</p>
         </div>
-
-        <script type="module">
-            // Octokit.js
-            // https://github.com/octokit/core.js#readme
-            const octokit = new Octokit({
-            auth: ''
-            })
-
-            await octokit.request('GET/repositories/515724020/environments/github-pages/secrets/COMMERCIAL_PROJECTS', {
-            repository_id: '515724020',
-            environment_name: 'github-pages',
-            secret_name: 'COMMERCIAL_PROJECTS'
-            })
-        </script>
     </body>
 </html>
