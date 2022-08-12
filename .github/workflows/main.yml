@@ -27,7 +27,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: curl \
-              -H "Accept: application/vnd.github+json" \ 
-              -H "Authorization: token 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" \
-              https://api.github.com/repos/elena-martin/portfolio/actions/secrets
+        run: gh api \
+          -H "Accept: application/vnd.github+json" \
+          /repositories/REPOSITORY_ID/environments/ENVIRONMENT_NAME/secrets/SECRET_NAME
+          env:
+            GITHUB_TOKEN: ${{ secrets.COMMERCIAL_PROJECTS }}
