@@ -95,3 +95,5 @@ function viewAdditionalProj(){
         console.log("Additional Projects")
     }, "1000");
 }
+
+
