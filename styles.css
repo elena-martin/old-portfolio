@@ -78,7 +78,7 @@ body {
     margin: 0 auto;
 }
 
-body div {
+#nav, #header, #page-content {
     -webkit-animation: fadein .5s; 
     -moz-animation: fadein .5s;
     -ms-animation: fadein .5s; 
