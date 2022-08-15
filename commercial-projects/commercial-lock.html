@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
+    <script src="../script.js"></script>
     <title>Password Protected Page</title>
     <style>
         html, body {
@@ -192,6 +193,12 @@
   </head>
   <body>
     <div id="lock">
+        <script>
+            window.addEventListener('load', (event) => {
+                init();
+            });
+        </script>
+        <iframe src="../preloader.html" id="preloader"></iframe>
         <iframe id="contentFrame" style="border: 0" allowfullscreen></iframe>
         <div id="dialogWrap">
         <div id="dialogWrapCell">

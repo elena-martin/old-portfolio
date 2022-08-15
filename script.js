@@ -47,6 +47,7 @@ function init(){
     }, "2000");
 };
 
+/*----------- PAGE TRANSITIONS -----------*/
 
 function getLocation(){
     thisURL = document.URL.toString();
@@ -82,22 +83,6 @@ function viewHome(){
     
 }
 
-function viewPortfolio(){
-    pageTransition();
-    getLocation();
-    setTimeout(() => {
-        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
-            window.open("../portfolio.html", target="_self")
-            content.prepend(loader);
-            console.log("tried 1st url")
-        } else {
-            window.open("./portfolio.html", target="_self")
-            content.prepend(loader);
-            console.log("tried 2nd url")
-        }
-    }, "1000");
-}
-
 function viewAbout(){
     pageTransition();
     getLocation();
@@ -128,4 +113,18 @@ function viewAdditionalProj(){
     }, "1000");
 }
 
-
+function viewPortfolio(){
+    pageTransition();
+    getLocation();
+    setTimeout(() => {
+        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
+            window.open("../portfolio.html", target="_self")
+            content.prepend(loader);
+            console.log("tried 1st url")
+        } else {
+            window.open("./portfolio.html", target="_self")
+            content.prepend(loader);
+            console.log("tried 2nd url")
+        }
+    }, "1000");
+}

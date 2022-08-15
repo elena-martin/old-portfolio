@@ -11,9 +11,10 @@
     <body>
         <script>
             window.addEventListener('load', (event) => {
-                loadContent();
+                init();
             });
         </script>
+        <iframe src="../preloader.html" id="preloader"></iframe>
         <div id="nav">
             <a onclick=viewHome();><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
             <ul>
@@ -25,7 +26,7 @@
         <div class="case-head dev">
             <h1>Product Development</h1>
             <h2>Prepping a Product</h2>
-            <a href="./commercial.html" class="page-back">🠬 Back</a>
+            <a onclick=backPage(); class="page-back">🠬 Back</a>
         </div>
         <div class="case-content dev">
             <section class="case-section dev">
@@ -54,11 +55,22 @@
                     <p>Use the navigation buttons on the prototype below to view a simulated user flow!</p>
                     <span ><iframe width="327" height="600" src="https://xd.adobe.com/embed/8f3b9b2a-f4ac-4e58-ba1d-8b1761e87f06-da68/?fullscreen" id="lil-baby" allowfullscreen></iframe></span>
                 </div>
-                <a href="./commercial.html" class="back-to-commercial">🠬 Back to Commercial Projects</a>
+                <a onclick=backPage(); class="back-to-commercial">🠬 Back to Commercial Projects</a>
             </section>
         </div>
         <div id="footer">
             <p>© Copyright 2022 Elena Martin</p>
         </div>
+        <script>
+            function backPage(){
+                pageTransition();
+                getLocation();
+                setTimeout(() => {
+                        window.open("commercial-lock.html", target="_self")
+                        content.prepend(loader);
+                        console.log("Back to Commercial Portfolio")
+                }, "2000");
+            }
+        </script>
     </body>
 </html>

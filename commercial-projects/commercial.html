@@ -12,7 +12,6 @@
         <script>
             window.addEventListener('load', (event) => {
                 init();
-                loadContent();
             });
         </script>
         <iframe src="../preloader.html" id="preloader"></iframe>
@@ -46,16 +45,16 @@
                 <div class="organization blue">
                     <h1>PROJECT</h1>
                     <h1>ORGANIZATION</h1>
-                    <a href="./organization.html" class="view-page blue">View Page</a>
+                    <a onclick=viewOrg(); class="view-page blue">View Page</a>
                 </div>
                 <div class="development green">
                     <h1>PRODUCT</h1>
                     <h1>DEVELOPMENT</h1>
-                    <a href="./development.html" class="view-page green">View Page</a>
+                    <a onclick=viewDev(); class="view-page green">View Page</a>
                 </div>
                 <div class="concepts orange">
                     <h1>CONCEPTS<br>+ PRE-DEV</h1>
-                    <a href="./concepts.html" class="view-page orange">View Page</a>
+                    <a onclick=viewConcepts(); class="view-page orange">View Page</a>
                 </div>
             </div>
         </div>
@@ -63,6 +62,36 @@
         <div id="footer">
             <p>© Copyright 2022 Elena Martin</p>
         </div>
-        <script src="../script.js"></script>
+        
+        <script>
+            function viewOrg(){
+                pageTransition();
+                getLocation();
+                setTimeout(() => {
+                        window.open("organization.html", target="_self")
+                        content.prepend(loader);
+                        console.log("Organization")
+                }, "1000");
+            }
+            function viewDev(){
+                pageTransition();
+                getLocation();
+                setTimeout(() => {
+                        window.open("development.html", target="_self")
+                        content.prepend(loader);
+                        console.log("Development")
+                }, "1000");
+            }
+            function viewConcepts(){
+                pageTransition();
+                getLocation();
+                setTimeout(() => {
+                        window.open("concepts.html", target="_self")
+                        content.prepend(loader);
+                        console.log("Concepts")
+                }, "1000");
+            }
+            
+        </script>
     </body>
 </html>

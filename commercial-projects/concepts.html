@@ -11,10 +11,11 @@
     <body>
         <script>
             window.addEventListener('load', (event) => {
-                loadContent();
+                init();
+                load();
             });
         </script>
-
+        <iframe src="../preloader.html" id="preloader"></iframe>
         <div id="nav">
             <a onclick=viewHome();><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
             <ul>
@@ -26,7 +27,7 @@
         <div class="case-head predev">
             <h1>Pre-Development</h1>
             <h2>Presenting Concepts</h2>
-            <a href="./commercial.html" class="page-back">🠬 Back</a>
+            <a onclick=backPage(); class="page-back">🠬 Back</a>
         </div>
         <div class="case-content predev">
             <section class="case-section predev">
@@ -89,7 +90,7 @@
                         <p>for Coke Zero Sugar</p>
                     </section>
                 </div>
-                <a href="./commercial.html" class="back-to-commercial">🠬 Back to Commercial Projects</a>
+                <a onclick=backPage(); class="back-to-commercial">🠬 Back to Commercial Projects</a>
             </section>
         </div>
         <div id="footer">
@@ -119,6 +120,16 @@
 
             function load(){
                 toggleWin();
+            };
+
+            function backPage(){
+                pageTransition();
+                getLocation();
+                setTimeout(() => {
+                        window.open("commercial-lock.html", target="_self")
+                        content.prepend(loader);
+                        console.log("Back to Commercial Portfolio")
+                }, "1000");
             }
             
         </script>

@@ -11,9 +11,10 @@
     <body>
         <script>
             window.addEventListener('load', (event) => {
-                loadContent();
+                init();
             });
         </script>
+        <iframe src="../preloader.html" id="preloader"></iframe>
         <div id="nav">
             <a onclick=viewHome();><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
             <ul>
@@ -25,7 +26,7 @@
         <div class="case-head org">
             <h1>Organization</h1>
             <h2>Evaluating & Improving</h2>
-            <a href="./commercial.html" class="page-back">🠬 Back</a>
+            <a onclick=backPage(); class="page-back">🠬 Back</a>
         </div>
         <div class="case-content org">
             <section class="case-section org">
@@ -77,12 +78,22 @@
                 <h1>Implementation</h1>
                 <div class="divider org"></div>
                 <p>As of April 2022, implementation of this structure is still underway. However, the use of these flows has allowed several users to accurately organize & label hundreds of folders and files, resulting in an increase in productivity. I will update this section with my post-implementation observations and conclusions as soon as the project is complete.</p>
-                <a href="./commercial.html" class="back-to-commercial">🠬 Back to Commercial Projects</a>
+                <a onclick=backPage(); class="back-to-commercial">🠬 Back to Commercial Projects</a>
             </section>
         </div>
         <div id="footer">
             <p>© Copyright 2022 Elena Martin</p>
         </div>
-        <script src="../script.js"></script>
+        <script>
+            function backPage(){
+                pageTransition();
+                getLocation();
+                setTimeout(() => {
+                        window.open("commercial-lock.html", target="_self")
+                        content.prepend(loader);
+                        console.log("Back to Commercial Portfolio")
+                }, "1000");
+            }
+        </script>
     </body>
 </html>
