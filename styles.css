@@ -133,7 +133,7 @@ body {
     text-align: center;
     padding-inline-start: 0;
     margin: 0;
-    background-image: url(./images/TexturedVignette.png);
+    background-image: url(./images/TexturedVignette.webp);
     background-size: cover;
     background-color: #283C4F;
 }
@@ -176,7 +176,7 @@ body {
     height: 500px; 
     background-color: #F2E5D8;
     text-align: center;
-    background-image: url(./base-images/Desert-Banner.png);
+    background-image: url(./base-images/Desert-Banner.webp);
     background-size:contain;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -358,17 +358,17 @@ body {
 }
 
 div.blue {
-    background-image: url(./base-images/TexturedVignette.png);
+    background-image: url(./base-images/TexturedVignette.webp);
     background-color: #365673;
 }
 
 div.green {
-    background-image: url(./base-images/TexturedVignette.png);
+    background-image: url(./base-images/TexturedVignette.webp);
     background-color: #2C736C;
 }
 
 div.orange {
-    background-image: url(./base-images/TexturedVignette-orange.png);
+    background-image: url(./base-images/TexturedVignette-orange.webp);
     background-color: #D97B59;
 }
 
@@ -423,7 +423,7 @@ div.orange {
     width: 50%;
     padding-left: 25%;
     padding-right: 25%;
-    background-image: url(./base-images/TexturedVignette-blue.png);
+    background-image: url(./base-images/TexturedVignette-blue.webp);
     background-size: cover;
     background-position: center;
     background-color: #365673;
@@ -480,7 +480,7 @@ div.orange {
     margin-top: 0%;
     padding-top: 40px;
     padding-bottom: 40px;
-    background-image: url(./base-images/TexturedVignette-blue.png);
+    background-image: url(./base-images/TexturedVignette-blue.webp);
     background-color: #2C736C;
 }
 
@@ -541,7 +541,7 @@ div.orange {
     margin-top: 0;
     padding-top: 40px;
     padding-bottom: 40px;
-    background-image: url(./base-images/TexturedVignette-orange.png);
+    background-image: url(./base-images/TexturedVignette-orange.webp);
     background-color:#D97B59;
 }
 
