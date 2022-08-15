@@ -74,17 +74,17 @@
 }
 
 .port-section:first-of-type {
-    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-image: url(../base-images/TexturedVignette-blue.webp);
     background-color: #365673;
 }
 
 .port-section:nth-of-type(2) {
-    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-image: url(../base-images/TexturedVignette-blue.webp);
     background-color: #2C736C;
 }
 
 .port-section:nth-of-type(3) {
-    background-image: url(../base-images/TexturedVignette-orange.png);
+    background-image: url(../base-images/TexturedVignette-orange.webp);
     background-color: #D97B59;
 }
 
@@ -416,7 +416,7 @@ figure{
     height: 100%;
     display: block;
     position: fixed;
-    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-image: url(../base-images/TexturedVignette-blue.webp);
     background-position: center;
     background-color: rgba(40, 60, 79, 1.0);
     z-index: 5;

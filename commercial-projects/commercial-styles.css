@@ -242,7 +242,7 @@ body{
 }
 
 .case-head.org {
-    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-image: url(../base-images/TexturedVignette-blue.webp);
     background-color: #365673;
 }
 
@@ -286,7 +286,7 @@ body{
 
 
 .case-head.dev {
-    background-image: url(../base-images/TexturedVignette-blue.png);
+    background-image: url(../base-images/TexturedVignette-blue.webp);
     background-color: #2C736C;
 }
 
@@ -337,7 +337,7 @@ body{
 }
 
 .case-head.predev {
-    background-image: url(../base-images/TexturedVignette-orange.png);
+    background-image: url(../base-images/TexturedVignette-orange.webp);
     background-color: #D97B59;
 }
 
