@@ -349,8 +349,39 @@ figure{
 }
 
 /*-------------------- GIT --------------------*/
+.git-slide {
+    padding-left:15%;
+    padding-right:15%;
+}
+#twitch-content {
+    display: inline-block;
+    width: 40%;
+}
 
+#twitch-chat {
+    display: inline-block;
+    height: calc(100% + 15px);
+    width: 40%
+}
 
+#activate-bot {
+    display: inline-block;
+    font-size: 25.5px;
+    color:white;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 65px;
+    padding-right: 65px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: -15px;
+}
+#activate-bot:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
 /*-------------------- DATA VIS SLIDES --------------------*/
 
