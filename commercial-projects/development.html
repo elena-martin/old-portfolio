@@ -6,12 +6,18 @@
         <link rel="stylesheet" href="./commercial-styles.css">
         <meta charset="UTF-8">
         <script src="../script.js"></script>
+        <script src="../lock-script.js"></script>
         <link rel="preload" href="./preloader.html" as="document">
     </head>
     <body>
         <script>
             window.addEventListener('load', (event) => {
                 init();
+                if (sessionStorage.entered === 'true'){
+                    return
+                } else {
+                    window.open("./commercial.html", target="_self")
+                }
             });
         </script>
         <iframe src="../preloader.html" id="preloader"></iframe>
@@ -66,7 +72,7 @@
                 pageTransition();
                 getLocation();
                 setTimeout(() => {
-                        window.open("commercial-lock.html", target="_self")
+                        window.open("commercial.html", target="_self")
                         content.prepend(loader);
                         console.log("Back to Commercial Portfolio")
                 }, "2000");
