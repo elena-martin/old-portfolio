@@ -123,6 +123,7 @@ if (sessionStorage.entered === 'true'){
             setTimeout(function() {
                 dialogWrap.style.display = "none";
                 att.style.display = "none";
+                window.open("./commercial.html", target="_self")
             }, 1000);
 
         } catch (e) {
