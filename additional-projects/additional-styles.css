@@ -92,6 +92,7 @@
     display: inline-block;
     font-size: 62px;
     margin-bottom: 0;
+    line-height: 55px;
 }
 
 .slides div {
