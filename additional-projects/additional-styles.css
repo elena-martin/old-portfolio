@@ -492,10 +492,6 @@ figure{
     position: absolute;
 }
 
-#close-lightbox:hover {
-    cursor: pointer;
-}
-
 /*-------------------- ACCESSIBILITY --------------------*/
 
 /*--- Desktop Resolution: 1920 x 1080 ---*/

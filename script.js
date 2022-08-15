@@ -49,7 +49,10 @@ function init(){
 
 
 function getLocation(){
-    console.log(window.location.pathname);
+    thisURL = document.URL.toString();
+    baseURL = thisURL.replace("/preloader.html", "");
+    relativeURL = docURL.replace(baseURL, "");
+    console.log(thisURL);
 };
 
 
@@ -64,35 +67,64 @@ function pageTransition(){
 
 function viewHome(){
     pageTransition();
+    getLocation();
     setTimeout(() => {
-        window.open("https://portfolio.elenamartinaz.com/index.html", target="_self")
-        console.log("Home")
+        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
+            window.open("../index.html", target="_self")
+            content.prepend(loader);
+            console.log("tried 1st url")
+        } else {
+            window.open("./index.html", target="_self")
+            content.prepend(loader);
+            console.log("tried 2nd url")
+        }
     }, "1000");
     
 }
 
 function viewPortfolio(){
     pageTransition();
+    getLocation();
     setTimeout(() => {
-        window.open("https://portfolio.elenamartinaz.com/portfolio.html", target="_self")
-        console.log("Portfolio")
+        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
+            window.open("../portfolio.html", target="_self")
+            content.prepend(loader);
+            console.log("tried 1st url")
+        } else {
+            window.open("./portfolio.html", target="_self")
+            content.prepend(loader);
+            console.log("tried 2nd url")
+        }
     }, "1000");
-    
 }
 
 function viewAbout(){
     pageTransition();
+    getLocation();
     setTimeout(() => {
-        window.open("https://portfolio.elenamartinaz.com/about-me.html", target="_self")
-        console.log("About Me")
+        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
+            window.open("../about-me.html", target="_self")
+            content.prepend(loader);
+            console.log("tried 1st url")
+        } else {
+            window.open("./about-me.html", target="_self")
+            content.prepend(loader);
+            console.log("tried 2nd url")
+        }
     }, "1000");
 }
 
 function viewAdditionalProj(){
     pageTransition();
+    getLocation();
     setTimeout(() => {
-        window.open("https://portfolio.elenamartinaz.com/additional-projects/additional-projects.html", target="_self")
-        console.log("Additional Projects")
+        if (thisURL.includes("/portfolio.html")){
+            window.open("additional-projects/additional-projects.html", target="_self")
+            content.prepend(loader);
+            console.log("tried 2nd url")
+        } else {
+            console.log("Error")
+        }
     }, "1000");
 }
 
