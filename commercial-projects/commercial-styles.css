@@ -218,7 +218,7 @@ body{
     font-size: 82px;
 }
 
-.case-head.org h2 {
+.case-head h2 {
     margin: 0;
     font-size: 41px;
     color:rgba(255, 255, 255, 0.4);
@@ -282,18 +282,6 @@ body{
     letter-spacing: 2px;
 }
 
-.case-head.dev h2 {
-    margin: 0;
-    font-size: 41px;
-    color:rgba(255, 255, 255, 0.4);
-    font-family: Heavitas;
-    padding: 0;
-    line-height: 35px;
-    padding-bottom: 40px;
-    font-weight: normal;
-    letter-spacing: 2px;
-}
-
 
 .case-head.dev {
     background-image: url(../base-images/TexturedVignette-blue.png);
@@ -342,18 +330,6 @@ body{
     font-family: Heavitas;
     padding: 0;
     line-height: 72px;
-    font-weight: normal;
-    letter-spacing: 2px;
-}
-
-.case-head.predev h2 {
-    margin: 0;
-    font-size: 41px;
-    color:rgba(255, 255, 255, 0.4);
-    font-family: Heavitas;
-    padding: 0;
-    line-height: 35px;
-    padding-bottom: 40px;
     font-weight: normal;
     letter-spacing: 2px;
 }
