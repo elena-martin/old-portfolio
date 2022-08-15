@@ -1,4 +1,4 @@
-/*-------------------- PAGE SETUP --------------------*/
+/*-------------------- SELECT PAGE SETUP --------------------*/
 
 body{
     background-color:#F2E5D8;
@@ -17,7 +17,7 @@ body{
     background-position: center;
     z-index: 1;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 65px;
     margin-top: 0px;
     width: 33.29%;
     margin-left: 0;
@@ -66,7 +66,7 @@ body{
     font-family: Heavitas;
     padding: 0px;
     line-height: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-weight: normal;
     margin-top: 20px;
 }
@@ -78,7 +78,7 @@ body{
     font-family: Heavitas;
     padding: 0;
     line-height: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
     font-weight: normal;
     letter-spacing: 2px;
 }
@@ -88,8 +88,10 @@ body{
 }
 
 #select-page div:last-child{
-    margin-left: -.2%;
+    margin-left: -.1%;
 }
+
+/*-------------------- PAGE SETUP --------------------*/
 
 .case-head {
     width: 100%;
@@ -386,7 +388,7 @@ body{
     margin: 0;
     text-align: center;
     padding-right: 0;
-    margin-top: -20px;
+    margin-top: 40px;
 }
 
 .columns-4:nth-child(4) {
@@ -423,9 +425,8 @@ body{
 }
 
 .columns-4:first-child h3:first-of-type {
-    margin-top: -20px;
+    margin-top: 15px;
 }
-
 
 #col-1{
     width: 276.5px;
