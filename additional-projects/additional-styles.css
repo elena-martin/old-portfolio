@@ -349,19 +349,40 @@ figure{
 }
 
 /*-------------------- GIT --------------------*/
-.git-slide {
+div.git-slide {
     padding-left:15%;
     padding-right:15%;
 }
-#twitch-content {
-    display: inline-block;
-    width: 40%;
+
+.git-slide h3 {
+    margin: 0;
+    font-size: 23.5px;
+    color:white;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+    line-height: 25.5px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+    display:block;
+    text-align: left;
+    letter-spacing: 1.5px;
 }
 
-#twitch-chat {
+.git-slide p {
+    margin: 0;
+    font-size: 18px;
+    color:#F2E5D8;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+    line-height: 25.5px;
+    margin-bottom: 5px;
+    display:block;
+    text-align: left;
+    letter-spacing: 1.5px;
+}
+
+#twitch-content {
     display: inline-block;
-    height: calc(100% + 15px);
-    width: 40%
+    width: 55%;
+    text-align: left;
 }
 
 #activate-bot {
@@ -377,11 +398,22 @@ figure{
     padding-right: 65px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.2);
-    margin-top: -15px;
+    text-align: center;
 }
+
 #activate-bot:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+#twitch-chat {
+    display: inline-block;
+    height: 300px;
+    width: 40%;
+    margin-bottom: -20px;
+    border: none;
+}
+
+
 
 /*-------------------- DATA VIS SLIDES --------------------*/
 
