@@ -349,9 +349,10 @@ figure{
 }
 
 /*-------------------- GIT --------------------*/
-div.git-slide {
-    padding-left:15%;
-    padding-right:15%;
+.git-slide {
+    display: inline-block;
+    width: 100%;
+    height: 300px;
 }
 
 .git-slide h3 {
@@ -373,16 +374,16 @@ div.git-slide {
     color:#F2E5D8;
     font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     line-height: 25.5px;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
     display:block;
     text-align: left;
     letter-spacing: 1.5px;
+    text-align: left;
 }
 
 #twitch-content {
     display: inline-block;
-    width: 55%;
-    text-align: left;
+    width: 45%;
 }
 
 #activate-bot {
@@ -408,12 +409,55 @@ div.git-slide {
 #twitch-chat {
     display: inline-block;
     height: 300px;
+    width: 30%;
+    margin-bottom: -33px;
+    border: none;
+    margin-left: 10px;
+}
+
+#botw-mockup {
+    display: inline-block;
+    width: auto;
+    height: 300px;
+}
+
+#botw-mockup img {
+    height: 100%;
+    width: auto;
+    border: none;
+    margin-left: 10px;
+    margin-bottom: -60px;
+    
+}
+
+#botw-content {
+    display: inline-block;
     width: 40%;
-    margin-bottom: -20px;
+    padding-left: 8%;
+    height: auto;
+}
+
+#view-botw {
+    display: inline-block;
+    font-size: 25.5px;
+    color:white;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 65px;
+    padding-right: 65px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-left: 5%;
     border: none;
 }
 
-
+#view-botw:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
 /*-------------------- DATA VIS SLIDES --------------------*/
 
