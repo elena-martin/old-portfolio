@@ -352,17 +352,25 @@ figure{
 .git-slide {
     display: inline-block;
     width: 100%;
-    height: 300px;
+    height: 100px;
+    
+}
+
+#qimo-logo {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 50%
 }
 
 #botw-site-logo {
-    margin-top: 20px;
+    margin-top: 35px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .git-slide h3 {
     margin: 0;
-    font-size: 23.5px;
+    font-size: 20px;
     color:white;
     font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     line-height: 25.5px;
@@ -379,7 +387,6 @@ figure{
     color:#F2E5D8;
     font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     line-height: 25.5px;
-    margin-bottom: 25px;
     display:block;
     text-align: left;
     letter-spacing: 1.5px;
@@ -389,62 +396,61 @@ figure{
 #twitch-content {
     display: inline-block;
     width: 45%;
+    margin-left:0;
 }
 
-#activate-bot {
-    display: inline-block;
-    font-size: 25.5px;
-    color:white;
+#twitch-content ul {
+    list-style-type: none;
+    text-indent: -10%;
+    margin: 0;
+    font-size: 18px;
+    color:#F2E5D8;
     font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
-    font-weight: bolder;
+    line-height: 25.5px;
+    margin-bottom: 25px;
+    display:block;
+    text-align: left;
     letter-spacing: 1.5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 65px;
-    padding-right: 65px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.2);
-    text-align: center;
+    text-align: left;
+    margin-top: 15px;
 }
 
-#activate-bot:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-#twitch-chat {
-    display: inline-block;
-    height: 325px;
-    width: 30%;
-    margin-bottom: -34px;
-    border: none;
-    margin-left: 10px;
-}
-
-#botw-mockup {
+#qimo-mockup, #botw-mockup {
     display: inline-block;
     width: auto;
-    height: 320px;
+    height: 250px;
+}
+
+#qimo-mockup img {
+    height: 100%;
+    width: auto;
+    border: none;
+    margin-left: -160px;
+    margin-bottom: -80px;
 }
 
 #botw-mockup img {
     height: 100%;
     width: auto;
     border: none;
-    margin-left: 10px;
-    margin-bottom: -25px;
-    
+    margin-left: -130px;
+    margin-bottom: -90px;
 }
 
 #botw-content {
     display: inline-block;
     width: 40%;
-    padding-left: 8%;
     height: auto;
+    margin-left:2%;
 }
 
-#view-botw {
+#botw-content p {
+    margin-bottom: 30px;
+}
+
+#view-botw, #view-qimo {
     display: inline-block;
-    font-size: 25.5px;
+    font-size: 20px;
     color:white;
     font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     font-weight: bolder;
@@ -455,12 +461,12 @@ figure{
     padding-right: 65px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin-left: 5%;
+    text-align: left;
     border: none;
+    margin-top: 0px;
 }
 
-#view-botw:hover {
+#view-botw:hover, #view-qimo:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
