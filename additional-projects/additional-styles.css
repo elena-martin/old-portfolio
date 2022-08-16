@@ -355,6 +355,11 @@ figure{
     height: 300px;
 }
 
+#botw-site-logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .git-slide h3 {
     margin: 0;
     font-size: 23.5px;
@@ -408,9 +413,9 @@ figure{
 
 #twitch-chat {
     display: inline-block;
-    height: 300px;
+    height: 325px;
     width: 30%;
-    margin-bottom: -33px;
+    margin-bottom: -34px;
     border: none;
     margin-left: 10px;
 }
@@ -418,7 +423,7 @@ figure{
 #botw-mockup {
     display: inline-block;
     width: auto;
-    height: 300px;
+    height: 320px;
 }
 
 #botw-mockup img {
@@ -426,7 +431,7 @@ figure{
     width: auto;
     border: none;
     margin-left: 10px;
-    margin-bottom: -60px;
+    margin-bottom: -25px;
     
 }
 
