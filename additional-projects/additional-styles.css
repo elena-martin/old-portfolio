@@ -168,7 +168,7 @@
 .slide-indicators {
     width: 100%;
     display: inline-block;
-    margin-top: 2.75%;
+    margin-top: 30px;
 }
 
 .slide-indicators span {
@@ -612,27 +612,186 @@ figure{
 
 /*-------------------- ACCESSIBILITY --------------------*/
 
-/*--- Desktop Resolution: 1920 x 1080 ---*/
-@media screen and (max-width: 1920.5px) and (min-width: 1536.5px){
+/*--- Desktop: 1920 x 1080 ---*/
+@media screen and (max-width: 1920.5px) and (min-width: 1536.5px) {
+    
+    /*NO EDITS*/
+
+}
+
+/*--- Desktop: 1536 x 864 ---*/
+@media screen and (max-width: 1536.5px) and (min-width: 1440.5px) {
+    .port-section {
+        display: block;
+        width: 60%;
+        height: auto;
+        padding-left: 20%;
+        padding-right: 20%;
+        background-size: cover;
+        background-position: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .slideshow-nav-right {
+        margin-top: 205px;
+        z-index: 4;
+        right: 22.5%;
+        border-left: 40px solid rgba(0, 0, 0, 0.25);
+    }
+
+    .slideshow-nav-left {
+        margin-top: 205px;
+        z-index: 4;
+        left: 22.5%;
+        border-right: 40px solid rgba(0, 0, 0, 0.25);
+    }
+
+    #boxContent img {
+        margin-top: 24.5%;
+    }
+}
+
+/*--- Desktop: 1440 x 900 ---*/
+@media screen and (max-width: 1440.5px) and (min-width: 1366.5px){
+    .port-section {
+        display: block;
+        width: 65%;
+        height: auto;
+        padding-left: 17.5%;
+        padding-right: 17.5%;
+        background-size: cover;
+        background-position: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .slideshow-nav-right {
+        margin-top: 205px;
+        z-index: 4;
+        right: 22.5%;
+        border-left: 40px solid rgba(0, 0, 0, 0.25);
+    }
+
+    .slideshow-nav-left {
+        margin-top: 205px;
+        z-index: 4;
+        left: 22.5%;
+        border-right: 40px solid rgba(0, 0, 0, 0.25);
+    }
+
+    #boxContent img {
+        margin-top: 27%;
+    }
+
+    #botw-content {
+        display: inline-block;
+        width: 40%;
+        height: auto;
+        margin-left: 4%;
+    }
+
+    #botw-mockup img {
+        height: 100%;
+        width: auto;
+        border: none;
+        margin-left: -151px;
+        margin-bottom: -99px;
+    }
+
+    #botw-site-logo {
+        margin-top: 35px;
+        margin-bottom: 30px;
+        width: 95%;
+    }
+
+    #qimo-logo {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        width: 60%;
+    }
+}
+
+/*--- Desktop: 1366 x 768 ---*/
+@media screen and (max-width: 1366.5px) and (min-width: 1280.5px){
+    .port-section {
+        display: block;
+        width: 70%;
+        height: auto;
+        padding-left: 15%;
+        padding-right: 15%;
+        background-size: cover;
+        background-position: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .slideshow-nav-right {
+        margin-top: 205px;
+        z-index: 4;
+        right: 20%;
+        border-left: 40px solid rgba(0, 0, 0, 0.25);
+    }
+
+    .slideshow-nav-left {
+        margin-top: 205px;
+        z-index: 4;
+        left: 20%;
+        border-right: 40px solid rgba(0, 0, 0, 0.25);
+    }
+
+    #boxContent img {
+        margin-top: 27%;
+    }
+
+    #botw-content {
+        display: inline-block;
+        width: 40%;
+        height: auto;
+        margin-left: 4%;
+    }
+
+    #botw-mockup img {
+        height: 100%;
+        width: auto;
+        border: none;
+        margin-left: -151px;
+        margin-bottom: -100px;
+    }
+
+    #botw-site-logo {
+        margin-top: 35px;
+        margin-bottom: 30px;
+        width: 95%;
+    }
+
+    #qimo-logo {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        width: 60%;
+    }
+}
+
+/*--- Tablet: 1280 x 800 ---*/
+@media screen and (max-width: 1280.5px) and (min-width: 1024.5px) {
     
 }
 
-/*--- Desktop Resolution: 1536 x 864 ---*/
-@media screen and (max-width: 1536.5px) and (min-width: 1440.5px){
- 
-}
-
-/*--- Desktop Resolutions: 1440 x 900, 1366 x 768 ---*/
-@media screen and (max-width: 1440.5px) and (min-width: 1280.5px){
+/*--- Tablet: 1024 x 768 ---*/
+@media screen and (max-width: 1024.5px) and (min-width: 768.5px) {
     
 }
 
-/*--- Tablet Resolutions: 1024 x 768, 1280 x 800 Landscape---*/
-
-@media screen and (max-width: 1280.5px) and (min-width: 1024.5px)  {
-    
-}
-
-@media screen and (max-width: 1024.5px) and (min-width: 1020px) {
+/*--- Mobile: 350 x 640 ---*/
+@media screen and (max-width: 1024.5px) and (min-width: 768.5px) {
     
 }

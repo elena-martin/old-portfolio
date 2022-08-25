@@ -417,12 +417,15 @@ div.orange {
     margin-left: 2.5%;
 }
 
-/*---------------ABOUT ME - INTRO---------------*/
-
-#elena-m {
+.about {
     width: 50%;
     padding-left: 25%;
     padding-right: 25%;
+}
+
+/*---------------ABOUT ME - INTRO---------------*/
+
+#elena-m {
     background-image: url(./base-images/TexturedVignette-blue.webp);
     background-size: cover;
     background-position: center;
@@ -472,9 +475,6 @@ div.orange {
 /*---------------ABOUT ME - WHAT I DO---------------*/
 
 #what-i-do {
-    width: 50%;
-    padding-left: 25%;
-    padding-right: 25%;
     background-size: cover;
     background-position: center;
     margin-top: 0%;
@@ -528,14 +528,28 @@ div.orange {
     font-size: 17.5px;
     line-height: 25.5px;
     margin-top: 8px;
+    padding-right: 10px;
 }
+
+#page-content section h5 {
+    font-size: 36px;
+    color:rgba(255, 255, 255, 0.4);
+    font-family: Heavitas;
+    padding: 0;
+    line-height: 41px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    display:block;
+    margin-left: 28px;
+    margin-block-start: 0;
+    margin-top: 11px;
+}
+
+
 
 /*---------------ABOUT ME - WHERE I LEARNED---------------*/
 
 #where-i-learned {
-    width: 50%;
-    padding-left: 25%;
-    padding-right: 25%;
     background-size: cover;
     background-position: center;
     margin-top: 0;
@@ -613,10 +627,7 @@ div.orange {
 /*---------------ABOUT ME - PAGE FOOTER---------------*/
 
 #about-me-foot {
-    width: 50%;
     padding-top: 40px;
-    padding-left: 25%;
-    padding-right: 25%;
     text-align: center;
 }
 
@@ -713,31 +724,232 @@ div.orange {
     padding: 0;
 }
 
-/*--- Desktop Resolution: 1920 x 1080 ---*/
-@media screen and (min-width: 1920.5px) {
-    
-}
-
-/*--- Desktop Resolution: 1920 x 1080 ---*/
+/*--- Desktop: 1920 x 1080 ---*/
 @media screen and (max-width: 1920.5px) and (min-width: 1536.5px) {
-    
+    /*-- ABOUT ME --*/
+    #left {
+        width: 58%;
+        display: inline-block;
+        padding-left: 3%;
+    }
+
+    #right{
+        width: 36%;
+        display: inline-block;
+    }
+
+    #what-i-do-categories:first-of-type {
+        margin-left: 0px;
+    }
+
+    #what-i-do-categories div{
+        width: 18%;
+        background-color:#20544F;
+        display: inline-block;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #page-content section h5 {
+        font-size: 36px;
+        color:rgba(255, 255, 255, 0.4);
+        font-family: Heavitas;
+        padding: 0;
+        line-height: 41px;
+        margin-bottom: 15px;
+        font-weight: normal;
+        display:block;
+        margin-left: 15px;
+        margin-block-start: 0;
+        margin-top: 11px;
+    }
 }
 
-/*--- Desktop Resolution: 1536 x 864 ---*/
+/*--- Desktop: 1536 x 864 ---*/
 @media screen and (max-width: 1536.5px) and (min-width: 1440.5px) {
-    
+    /*-- ABOUT PAGE --*/
+    .about {
+        width: 65%;
+        padding-left: 17.5%;
+        padding-right: 17.5%;
+    }
+
+    #left {
+        width: 58%;
+        display: inline-block;
+        padding-left: 3%;
+    }
+
+    #right{
+        width: 32%;
+        display: inline-block;
+    }
+
+    #what-i-do-categories:first-of-type {
+        margin-left: 0px;
+    }
+
+    #what-i-do-categories div{
+        width: 18%;
+        background-color:#20544F;
+        display: inline-block;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #page-content section h5 {
+        font-size: 36px;
+        color:rgba(255, 255, 255, 0.4);
+        font-family: Heavitas;
+        padding: 0;
+        line-height: 41px;
+        margin-bottom: 15px;
+        font-weight: normal;
+        display:block;
+        margin-left: 15px;
+        margin-block-start: 0;
+        margin-top: 11px;
+    }
 }
 
-/*--- Desktop Resolutions: 1440 x 900, 1366 x 768 ---*/
-@media screen and (max-width: 1440.5px) and (min-width: 1280.5px){
-    
+/*--- Desktop: 1440 x 900 ---*/
+@media screen and (max-width: 1440.5px) and (min-width: 1366.5px){
+    /*-- NAV & HOME --*/
+    #icons {
+        left: 20%;
+    }
+    /*-- ABOUT PAGE --*/
+    .about {
+        width: 65%;
+        padding-left: 17.5%;
+        padding-right: 17.5%;
+    }
+    #left {
+        width: 62%;
+        display: inline-block;
+        padding-left: 3%;
+    }
+    #right{
+        width: 32%;
+        display: inline-block;
+    }
+    #what-i-do-categories:first-of-type {
+        margin-left: 0px;
+    }
+    #what-i-do-categories div{
+        width: 19%;
+        background-color:#20544F;
+        display: inline-block;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 19px;
+    }
+    #page-content section h5 {
+        font-size: 36px;
+        color:rgba(255, 255, 255, 0.4);
+        font-family: Heavitas;
+        padding: 0;
+        line-height: 41px;
+        margin-bottom: 15px;
+        font-weight: normal;
+        display:block;
+        margin-left: 15px;
+        margin-block-start: 0;
+        margin-top: 11px;
+    }
+    .column div {
+        padding: 20px;
+        background-color: #A65D42;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .column div div {
+        width: 111.5%;
+        height: 10px;
+        padding: 0px;
+        background-color: #D97B59;
+        margin-left: -5.7%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border: none;
+    }
 }
 
-/*--- Tablet Resolutions: 1024 x 768, 1280 x 800 (Landscape) ---*/
+/*--- Desktop: 1366 x 768 ---*/
+@media screen and (max-width: 1366.5px) and (min-width: 1280.5px){
+    /*-- NAV & HOME --*/
+    #icon {
+        left: 15%;
+    }
+    /*-- ABOUT PAGE --*/
+    .about {
+        width: 70%;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    #left {
+        width: 62%;
+        display: inline-block;
+        padding-left: 3%;
+    }
+    #right{
+        width: 33.5%;
+        display: inline-block;
+        margin-left: -15px;
+    }
+    #what-i-do-categories:first-of-type {
+        margin-left: 0px;
+    }
+    #what-i-do-categories div{
+        width: 19%;
+        background-color:#20544F;
+        display: inline-block;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 19px;
+    }
+    #page-content section h5 {
+        font-size: 36px;
+        color:rgba(255, 255, 255, 0.4);
+        font-family: Heavitas;
+        padding: 0;
+        line-height: 41px;
+        margin-bottom: 15px;
+        font-weight: normal;
+        display:block;
+        margin-left: 15px;
+        margin-block-start: 0;
+        margin-top: 11px;
+    }
+    .column div {
+        padding: 20px;
+        background-color: #A65D42;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .column div div {
+        width: 111.5%;
+        height: 10px;
+        padding: 0px;
+        background-color: #D97B59;
+        margin-left: -5.7%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border: none;
+    }
+}
+
+/*--- Tablet: 1280 x 800 ---*/
 @media screen and (max-width: 1280.5px) and (min-width: 1024.5px) {
     
 }
 
+/*--- Tablet: 1024 x 768 ---*/
+@media screen and (max-width: 1024.5px) and (min-width: 768.5px) {
+    
+}
+
+/*--- Mobile: 350 x 640 ---*/
 @media screen and (max-width: 1024.5px) and (min-width: 768.5px) {
     
 }
