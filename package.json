@@ -1,6 +1,7 @@
 {
   "type": "module",
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "jquery": "^3.6.0",
     "path": "^0.12.7",
     "require": "^0.4.4",
