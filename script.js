@@ -172,6 +172,7 @@ function reportbugOpen(){
         }
     }, "1000");
     document.body.insertBefore(popup, document.body.children[1])
+    popup.setAttribute("style", "transform: opacity (1.0)");
     setTimeout(() => {
         console.log(popup.parentNode);
     }, "1000");
