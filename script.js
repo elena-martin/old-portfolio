@@ -1,3 +1,5 @@
+
+
 /*--- PRELOADER ---*/
 const nav = document.getElementById("nav");
 let loader = ""
@@ -37,6 +39,8 @@ function preLoad(){
     }
 };
 
+let base = ""
+
 function init(){
     loader = document.getElementById('preloader');
     loader.setAttribute("src","./preloader.html");
@@ -47,6 +51,7 @@ function init(){
     setTimeout(() => {
         loader.style.display = "none"
     }, "2000");
+    base = this.window;
 };
 
 /*----------- PAGE TRANSITIONS -----------*/
@@ -148,29 +153,31 @@ function viewPortfolio(){
 
 
 let popupID = "report-bug";
-let del = document.getElementById("report-bug");
 
-function loadbug(){
-};
 
 const popup = document.createElement("IFRAME");
 popup.src="./report-bug.html"
 popup.id=popupID;
 
+var toggleBox = {"active":false}
+
 function reportbugOpen(){
     document.body.insertBefore(popup, document.body.children[1])
-    
+    popup.setAttribute("style", "-webkit-animation: fadein 1s; -moz-animation: fadein 1s; -ms-animation: fadein 1s; -o-animation: fadein 1s; animation: fadein 1s;");
     setTimeout(() => {
-        popup.style.opacity = "1.0";
-        console.log(popup);
-        popup.style.display = "block";
+        console.log(popup.parentNode);
     }, "1000");
 }
 
-var base = window[0]
-
 function closeBox(){
-    console.log(window.parent.document);
+    let base = window.parent.document
+    let del = base.getElementById("report-bug");
+    del.setAttribute("style", "-webkit-animation: fadeout 1s; -moz-animation: fadeout 1s; -ms-animation: fadeout 1s; -o-animation: fadeout 1s; animation: fadeout 1s;");
+    setTimeout(() => {
+        console.log("Success!")
+        popup.style.display = "none";
+        base.body.removeChild(del);
+    }, "1000");
 }
 
 function reportbugClose(){ 
@@ -182,3 +189,10 @@ function reportbugClose(){
     }, "1000");
 };
 
+if (toggleBox.active == false){
+    window.close();
+}
+
+
+const localize = {"Content-Security-Policy":"file:///D:/Coding/GitHub%20Repositories/portfolio/"}
+new Headers(localize);
