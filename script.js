@@ -172,12 +172,12 @@ function reportbugOpen(){
         } else {
             popup.src="./report-bug.html"
         }
-    }, "1000");
+    }, "10");
     document.body.insertBefore(popup, document.body.children[1])
-    popup.style.opacity = "1.0"
+    popup.style.opacity = "1.0";
+    popup.style.display = "block";
     setTimeout(() => {
         console.log(popup.parentNode);
-        popup.style.display = "block";
     }, "1000");
 }
 
