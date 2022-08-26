@@ -162,6 +162,8 @@ popup.id=popupID;
 
 var toggleBox = {"active":false}
 
+popup.setAttribute("style", "-webkit-animation: fadein .5s; -moz-animation: fadein .5s; -ms-animation: fadein .5s; -o-animation: fadein .5s; animation: fadein .5s;");
+
 function reportbugOpen(){
     getLocation();
     setTimeout(() => {
@@ -172,7 +174,7 @@ function reportbugOpen(){
         }
     }, "1000");
     document.body.insertBefore(popup, document.body.children[1])
-    popup.setAttribute("style", "opacity: (1.0)");
+    popup.setAttribute("style", "-webkit-animation: fadeout .5s; -moz-animation: fadeout .5s; -ms-animation: fadeout .5s; -o-animation: fadeout .5s; animation: fadeout .5s;");
     setTimeout(() => {
         console.log(popup.parentNode);
     }, "1000");
