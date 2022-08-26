@@ -185,8 +185,8 @@ function reportbugOpen(){
 function closeBox(){
     let base = window.parent.document
     let del = base.getElementById("report-bug");
-    popup.style.opacity = "0.0"
-    popup.style.animation = "fadeout 1s";
+    del.style.opacity = "0.0"
+    del.style.animation = "fadeout 1s";
     setTimeout(() => {
         console.log("Success!")
         popup.style.display = "none";
