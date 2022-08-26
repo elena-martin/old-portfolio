@@ -92,9 +92,7 @@ body {
     border: none;
     position: fixed;
     z-index: 6;
-    transition-duration: 1s;
-    transition-property: opacity;
-    transition-timing-function: linear;
+    transition: opacity 1s ease-in-out,
 }
 
 .toggle-preloader{

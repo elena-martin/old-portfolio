@@ -202,10 +202,5 @@ function reportbugClose(){
     }, "1000");
 };
 
-if (toggleBox.active == false){
-    window.close();
-}
-
-
 const localize = {"Content-Security-Policy":"file:///D:/Coding/GitHub%20Repositories/portfolio/"}
 new Headers(localize);
