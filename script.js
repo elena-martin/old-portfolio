@@ -1,4 +1,5 @@
 /*--- PRELOADER ---*/
+const nav = document.getElementById("nav");
 let loader = ""
 
 let thisURL=""
@@ -38,6 +39,7 @@ function preLoad(){
 
 function init(){
     loader = document.getElementById('preloader');
+    loader.setAttribute("src","./preloader.html");
     loader.setAttribute("style", "-webkit-animation: fadein 0s; -moz-animation: fadein 0s; -ms-animation: fadein 0s; -o-animation: fadein 0s; animation: fadein 0s;");
     setTimeout(() => {
         loader.style.opacity = "0"
@@ -58,6 +60,7 @@ function getLocation(){
 
 
 function pageTransition(){
+    loader.setAttribute("src","./preloader.html")
     loader.setAttribute("style", "-webkit-animation: fadein 1s; -moz-animation: fadein 1s; -ms-animation: fadein 1s; -o-animation: fadein 1s; animation: fadein 1s;");
     loader.style.opacity = "1.0";
     console.log(loader.style.opacity)
@@ -141,4 +144,41 @@ function viewPortfolio(){
             console.log("tried 2nd url")
         }
     }, "1000");
+};
+
+
+let popupID = "report-bug";
+let del = document.getElementById("report-bug");
+
+function loadbug(){
+};
+
+const popup = document.createElement("IFRAME");
+popup.src="./report-bug.html"
+popup.id=popupID;
+
+function reportbugOpen(){
+    document.body.insertBefore(popup, document.body.children[1])
+    
+    setTimeout(() => {
+        popup.style.opacity = "1.0";
+        console.log(popup);
+        popup.style.display = "block";
+    }, "1000");
 }
+
+var base = window[0]
+
+function closeBox(){
+    console.log(window.parent.document);
+}
+
+function reportbugClose(){ 
+    window[0].alert ('success')
+    setTimeout(() => {
+        popup.style.opacity = "0.0";
+        console.log(popup);
+        popup.style.display = "none";
+    }, "1000");
+};
+
