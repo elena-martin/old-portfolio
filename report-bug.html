@@ -248,7 +248,8 @@
                     <textarea placeholder="Click to type" id="message" name="msg" class="report" rows="4" cols="72" onfocus="validate();" required></textarea><br>
                     
                     <p id="invalid">Please enter valid responses in the highlighted areas.</p>
-                    <input type="submit" id="submit-report" value="Submit" onclick="reportIssue();">
+                    <input type="submit" id="submithandler" style = "position:absolute;top:0;left:-9999px;width:1px;height:1px">
+                    <a id="submit-report" onclick="reportIssue();">Submit</a>
                 </form>
                 <div id="submitted" class="error">
                     <h3>Thanks for letting us know! We'll do our best to address this ASAP.</h3>
