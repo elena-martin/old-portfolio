@@ -175,6 +175,7 @@ function reportbugOpen(){
     }, "10");
     document.body.insertBefore(popup, document.body.children[1])
     popup.style.opacity = "1.0";
+    popup.style.animation = "fadein 1s";
     popup.style.display = "block";
     setTimeout(() => {
         console.log(popup.parentNode);
@@ -185,6 +186,8 @@ function closeBox(){
     let base = window.parent.document
     let del = base.getElementById("report-bug");
     del.style.opacity = "0.0"
+    del.style.animation = "fadeout 1s";
+    del.setAttribute()
     setTimeout(() => {
         console.log("Success!")
         popup.style.display = "none";
