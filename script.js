@@ -163,7 +163,6 @@ var toggleBox = {"active":false}
 
 function reportbugOpen(){
     document.body.insertBefore(popup, document.body.children[1])
-    popup.setAttribute("style", "-webkit-animation: fadein 1s; -moz-animation: fadein 1s; -ms-animation: fadein 1s; -o-animation: fadein 1s; animation: fadein 1s;");
     setTimeout(() => {
         console.log(popup.parentNode);
     }, "1000");
