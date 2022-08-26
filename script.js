@@ -171,7 +171,7 @@ function reportbugOpen(){
 function closeBox(){
     let base = window.parent.document
     let del = base.getElementById("report-bug");
-    del.setAttribute("style", "-webkit-animation: fadeout 1s; -moz-animation: fadeout 1s; -ms-animation: fadeout 1s; -o-animation: fadeout 1s; animation: fadeout 1s;");
+    popup.setAttribute("style", "-webkit-animation: fadeout 1s; -moz-animation: fadeout 1s; -ms-animation: fadeout 1s; -o-animation: fadeout 1s; animation: fadeout 1s;");
     setTimeout(() => {
         console.log("Success!")
         popup.style.display = "none";
