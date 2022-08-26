@@ -174,7 +174,7 @@ function reportbugOpen(){
         }
     }, "1000");
     document.body.insertBefore(popup, document.body.children[1])
-    popup.style.opacity = "0.0"
+    popup.style.opacity = "1.0"
     setTimeout(() => {
         console.log(popup.parentNode);
         popup.style.display = "block";
@@ -184,7 +184,7 @@ function reportbugOpen(){
 function closeBox(){
     let base = window.parent.document
     let del = base.getElementById("report-bug");
-    del.style.opacity = "1.0"
+    del.style.opacity = "0.0"
     setTimeout(() => {
         console.log("Success!")
         popup.style.display = "none";
