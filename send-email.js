@@ -56,7 +56,8 @@ function reportIssue(){
     const invalid = document.getElementById("invalid");
 
     var windowSize = window.innerWidth.toString() + " x " + window.innerHeight.toString();
-    var browserInfo = navigator.userAgentData.brands[navigator.userAgentData.brands.length - 1].brand;
+    var browserInfo = navigator.userAgentData.brands[navigator.userAgentData.brands.length - 1];
+    var mobile = "Mobile Browser"    
 
     if (nameInput.validity.valid == false || emailInput.validity.valid == false || msgInput.validity.valid == false){
         if (emailInput.validity.valid == false) {
@@ -72,13 +73,23 @@ function reportIssue(){
         console.log("Error: Fill out the form");
         attempted = "true"
     } else {
-        var templateParams = {
-            name: nameInput.value,
-            replyto: emailInput.value,
-            message: msgInput.value,
-            window: windowSize,
-            browser: browserInfo
-        };
+        if (browserInfo != undefined){
+            var templateParams = {
+                name: nameInput.value,
+                replyto: emailInput.value,
+                message: msgInput.value,
+                window: windowSize,
+                browser: browserInfo
+            }
+        } else {
+            var templateParams = {
+                name: nameInput.value,
+                replyto: emailInput.value,
+                message: msgInput.value,
+                window: windowSize,
+                browser: mobile
+            };
+        }
         invalid.style.visibility = "hidden"
         sendEmail();
     }
@@ -86,11 +97,23 @@ function reportIssue(){
     function sendEmail(){
         emailjs.send('happy-place-email', 'bug-report-form', templateParams)
                     .then(function() {
-                        console.log('SUCCESS!'+ browserInfo);
-                        document.getElementById('submitted').style = "display: block";
-                        nameInput.value = "";
-                        emailInput.value = "";
-                        msgInput.value = "";
+                        if (browserInfo == undefined){
+                            console.log('SUCCESS! ' + mobile);
+                            document.getElementById('submitted').style = "display: block";
+                            nameInput.value = "";
+                            emailInput.value = "";
+                            msgInput.value = "";
+                        } else {
+                            console.log("Success" + browserInfo.brand)
+                            document.getElementById('submitted').style = "display: block";
+                            nameInput.value = "";
+                            emailInput.value = "";
+                            msgInput.value = "";document.getElementById('submitted').style = "display: block";
+                            nameInput.value = "";
+                            emailInput.value = "";
+                            msgInput.value = "";
+                        }
+                        
                     }, function(error) {
                         console.log('FAILED...', error);
                     });
