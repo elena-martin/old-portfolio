@@ -190,6 +190,7 @@ function closeBox(){
     setTimeout(() => {
         console.log("Success!")
         popup.style.display = "none";
+        base.body.removeChild(del);
     }, "1000");
 }
 
