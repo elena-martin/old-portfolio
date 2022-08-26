@@ -190,7 +190,7 @@ function closeBox(){
 
 function reportbugClose(){ 
     window[0].alert ('success');
-    del.setAttribute("style", "transform: opacity (0.0)"
+    del.setAttribute("style", "transform: opacity (0.0)");
     setTimeout(() => {
         popup.style.opacity = "0.0";
         console.log(popup);
