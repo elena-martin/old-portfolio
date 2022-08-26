@@ -2,6 +2,16 @@
     emailjs.init("tKIzuEHgvL05hklFn");
 })();
 
+window.onload = function() {
+    document.getElementById('reportArea').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        this.contact_number.value = Math.random() * 100000 | 0;
+        // these IDs from the previous steps
+        
+    });
+}
+
 let attempted = ""
 
 
@@ -44,7 +54,7 @@ function reportIssue(){
     const msgInput = document.getElementById("message");
     const inputs = document.getElementsByClassName("report");
     const invalid = document.getElementById("invalid");
-    validate();
+
     var windowSize = window.innerWidth.toString() + " x " + window.innerHeight.toString();
     var browserInfo = navigator.userAgentData.brands[navigator.userAgentData.brands.length - 1].brand;
 
@@ -75,10 +85,10 @@ function reportIssue(){
 
     function sendEmail(){
         emailjs.send('happy-place-email', 'bug-report-form', templateParams)
-        .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text, windowSize);
-        }, function(error) {
-            console.log('FAILED...', error);
-        });
+                    .then(function() {
+                        console.log('SUCCESS!'+ browserInfo);
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
     }
 };

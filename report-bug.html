@@ -226,7 +226,7 @@
     <div id="lock">
         <script>
             window.addEventListener('load', (event) => {
-               
+                emailjs.init("tKIzuEHgvL05hklFn");
             });
         </script>
         <div id="dialogWrap">
@@ -238,7 +238,7 @@
                     <h1>Report an Error</h1>
                     <h2>We're sorry something went wrong. Help us fix it!</h2>
                 </div>
-                <div id="reportArea">
+                <form id="reportArea">
                     <label>Your Name:</label>
                     <input type="text" placeholder="Click to type" id="name" class="report" onfocus="validate();" required>
                     <label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your Email:</label>
@@ -249,7 +249,7 @@
                     
                     <p id="invalid">Please enter valid responses in the highlighted areas.</p>
                     <input type="button" id="submit-report" value="Submit" onclick="reportIssue();">
-                </div>
+                </form>
                 <div id="submitted" class="error">
                     <h3>Thanks for letting us know! We'll do our best to address this ASAP.</h3>
                 </div>
