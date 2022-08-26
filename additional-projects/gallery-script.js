@@ -1,5 +1,3 @@
-const nav = document.getElementById("nav");
-
 /*----- SECTION IDs -----*/
 let graphics = document.getElementById("graphic-design");
 let git = document.getElementById("git");

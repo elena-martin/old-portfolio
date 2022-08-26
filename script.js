@@ -156,12 +156,21 @@ let popupID = "report-bug";
 
 
 const popup = document.createElement("IFRAME");
-popup.src="./report-bug.html"
+
+
 popup.id=popupID;
 
 var toggleBox = {"active":false}
 
 function reportbugOpen(){
+    getLocation();
+    setTimeout(() => {
+        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
+            popup.src="../report-bug.html"
+        } else {
+            popup.src="./report-bug.html"
+        }
+    }, "1000");
     document.body.insertBefore(popup, document.body.children[1])
     setTimeout(() => {
         console.log(popup.parentNode);
