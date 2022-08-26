@@ -87,7 +87,10 @@ function reportIssue(){
         emailjs.send('happy-place-email', 'bug-report-form', templateParams)
                     .then(function() {
                         console.log('SUCCESS!'+ browserInfo);
-                        document.getElementById('submitted').style = "display: block"
+                        document.getElementById('submitted').style = "display: block";
+                        nameInput.value = "";
+                        emailInput.value = "";
+                        msgInput.value = "";
                     }, function(error) {
                         console.log('FAILED...', error);
                     });
