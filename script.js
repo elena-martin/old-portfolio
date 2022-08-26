@@ -172,7 +172,7 @@ function reportbugOpen(){
         }
     }, "1000");
     document.body.insertBefore(popup, document.body.children[1])
-    popup.setAttribute("style", "transform: opacity (1.0)");
+    popup.setAttribute("style", "opacity: (1.0)");
     setTimeout(() => {
         console.log(popup.parentNode);
     }, "1000");
@@ -181,7 +181,7 @@ function reportbugOpen(){
 function closeBox(){
     let base = window.parent.document
     let del = base.getElementById("report-bug");
-    del.setAttribute("style", "transform: opacity (0.0)");
+    del.setAttribute("style", "opacity: (0.0)");
     setTimeout(() => {
         console.log("Success!")
         popup.style.display = "none";
