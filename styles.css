@@ -86,13 +86,23 @@ body {
     animation: fadein .5s;
 }
 
-#preloader, #report-bug {
+#preloader {
     width: 100%;
     height: 100%;
     border: none;
     position: fixed;
     z-index: 6;
-    transition: opacity 1s ease-in-out,
+    transition-duration: 1s;
+    transition-property: opacity;
+    transition-timing-function: linear;
+}
+#report-bug {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: fixed;
+    z-index: 6;
+    transition: opacity 2s ease-in-out,
 }
 
 .toggle-preloader{
