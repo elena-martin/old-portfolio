@@ -162,7 +162,7 @@ popup.id=popupID;
 
 var toggleBox = {"active":false}
 
-popup.setAttribute("style", "-webkit-animation: fadein .5s; -moz-animation: fadein .5s; -ms-animation: fadein .5s; -o-animation: fadein .5s; animation: fadein .5s;");
+
 
 function reportbugOpen(){
     getLocation();
@@ -174,16 +174,16 @@ function reportbugOpen(){
         }
     }, "1000");
     document.body.insertBefore(popup, document.body.children[1])
-    popup.setAttribute("style", "-webkit-animation: fadeout .5s; -moz-animation: fadeout .5s; -ms-animation: fadeout .5s; -o-animation: fadeout .5s; animation: fadeout .5s;");
+    popup.setAttribute("style", "-webkit-animation: fadein .5s; -moz-animation: fadein .5s; -ms-animation: fadein .5s; -o-animation: fadein .5s; animation: fadein .5s;");
     setTimeout(() => {
         console.log(popup.parentNode);
+        popup.setAttribute("style", "-webkit-animation: fadeout .5s; -moz-animation: fadeout .5s; -ms-animation: fadeout .5s; -o-animation: fadeout .5s; animation: fadeout .5s;");
     }, "1000");
 }
 
 function closeBox(){
     let base = window.parent.document
     let del = base.getElementById("report-bug");
-    del.setAttribute("style", "opacity: (0.0)");
     setTimeout(() => {
         console.log("Success!")
         popup.style.display = "none";
