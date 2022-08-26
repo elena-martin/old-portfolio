@@ -240,12 +240,12 @@
                 </div>
                 <form id="reportArea">
                     <label>Your Name:</label>
-                    <input type="text" placeholder="Click to type" id="name" class="report" onfocus="validate();" required>
+                    <input type="text" placeholder="Click to type" id="name" name="name"class="report" onfocus="validate();" required>
                     <label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your Email:</label>
-                    <input type="email" placeholder="Click to type" id="email" class="report" onfocus="validate();" required><br>
+                    <input type="email" placeholder="Click to type" id="email" name="email" class="report" onfocus="validate();" required><br>
                     
                     <label>Describe the Bug or Issue. Please be as thorough as possible.</label>
-                    <textarea placeholder="Click to type" id="message" class="report" rows="4" cols="72" onfocus="validate();" required></textarea><br>
+                    <textarea placeholder="Click to type" id="message" name="msg" class="report" rows="4" cols="72" onfocus="validate();" required></textarea><br>
                     
                     <p id="invalid">Please enter valid responses in the highlighted areas.</p>
                     <input type="button" id="submit-report" value="Submit" onclick="reportIssue();">
