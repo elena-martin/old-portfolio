@@ -87,6 +87,7 @@ function reportIssue(){
         emailjs.send('happy-place-email', 'bug-report-form', templateParams)
                     .then(function() {
                         console.log('SUCCESS!'+ browserInfo);
+                        document.getElementById('submitted').style = "display: block"
                     }, function(error) {
                         console.log('FAILED...', error);
                     });
