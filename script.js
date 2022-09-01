@@ -43,6 +43,7 @@ function preLoad(){
 let base = ""
 
 function init(){
+    checkMobile();
     loader = document.getElementById('preloader');
     loader.setAttribute("src","./preloader.html");
     loader.setAttribute("style", "-webkit-animation: fadein 0s; -moz-animation: fadein 0s; -ms-animation: fadein 0s; -o-animation: fadein 0s; animation: fadein 0s;");
@@ -154,8 +155,6 @@ function viewPortfolio(){
 
 
 let popupID = "report-bug";
-
-
 const popup = document.createElement("IFRAME");
 
 
@@ -194,6 +193,28 @@ function closeBox(){
         base.body.removeChild(del);
     }, "1000");
 }
+
+function checkMobile(){
+    let mobile = ""
+    let browserInfo = navigator.userAgentData.brands[navigator.userAgentData.brands.length - 1];
+    let report = document.getElementById('footer').children[1];
+    
+    if (browserInfo != undefined){
+        mobile = false;
+    } else {
+        mobile = true;
+    };
+    
+    if (mobile == true){
+        report.style.display = "none"
+        console.log(report.style.display)
+        console.log('Mobile User')
+    } else if (mobile == false){
+        report.style.display = "inline-block"
+        console.log(report.style.display)
+        console.log('Desktop User')
+    };
+ }
 
 function reportbugClose(){ 
     window[0].alert ('success');
