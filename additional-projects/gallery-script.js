@@ -324,31 +324,31 @@ function botwCarousel(){
         botwImages.style.height = "100%"
     }
     if (i == 1){
-        botwImages.src = "./git/botw/botw-ss-1.png"
+        botwImages.src = "./git/botw/botw-ss-1.webp"
         indicators5[4].style.opacity = "0.3"
         indicators5[0].style.opacity = "0.75"
         console.log(botwImages.src);
     }
     if (i == 2){
-        botwImages.src = "./git/botw/botw-ss-2.png"
+        botwImages.src = "./git/botw/botw-ss-2.webp"
         indicators5[0].style.opacity = "0.3"
         indicators5[1].style.opacity = "0.75"
         console.log(botwImages.src);
     }
     if (i == 3){
-        botwImages.src = "./git/botw/botw-ss-3.png"
+        botwImages.src = "./git/botw/botw-ss-3.webp"
         indicators5[1].style.opacity = "0.3"
         indicators5[2].style.opacity = "0.75"
         console.log(botwImages.src);
     }
     if (i == 4){
-        botwImages.src = "./git/botw/botw-ss-4.png"
+        botwImages.src = "./git/botw/botw-ss-4.webp"
         indicators5[2].style.opacity = "0.3"
         indicators5[3].style.opacity = "0.75"
         console.log(botwImages.src);
     }
     if (i == 5){
-        botwImages.src = "./git/botw/botw-ss-5.png"
+        botwImages.src = "./git/botw/botw-ss-5.webp"
         indicators5[3].style.opacity = "0.3"
         indicators5[4].style.opacity = "0.75"
         console.log(botwImages.src);
@@ -389,6 +389,16 @@ function lightboxClose(){
     setTimeout(() => {
         lightbox.style = "display: none";
     }, "500");
+}
+
+function gitOpen(){
+    pageTransition();
+    const frame = document.createElement("IFRAME");
+    document.body.insertBefore(frame, nav);
+    loader.setAttribute("src", "./interactive-map.html");
+}
+function gitClose(){
+    
 }
 
 /*----------DISABLE SCROLL IN LIGHTBOX----------*/

@@ -3,7 +3,9 @@
     <head>
         <title>Elena Martin | Organization</title>
         <link rel="stylesheet" href="../styles.css">
+        <!--<link rel="stylesheet" href="../additional-projects/git/git-page-styles.css">-->
         <link rel="stylesheet" href="./commercial-styles.css">
+        
         <meta charset="UTF-8">
         <script src="../script.js"></script>
         <script src="../lock-script.js"></script>
@@ -98,8 +100,9 @@
                 pageTransition();
                 getLocation();
                 setTimeout(() => {
-                    history.back()
-                    console.log("Back to Commercial Portfolio")
+                        window.open("commercial.html", target="_self")
+                        content.prepend(loader);
+                        console.log("Back to Commercial Portfolio")
                 }, "1000");
             }
         </script>
