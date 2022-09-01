@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Elena Martin | Organization</title>
+        <title>Elena Martin | Interactive Map</title>
         <link rel="stylesheet" href="../styles.css">
-        <link rel="stylesheet" href="./commercial-styles.css">
+        <link rel="stylesheet" href="./git/git-page-styles.css">
         <meta charset="UTF-8">
         <script src="../script.js"></script>
         <script src="../lock-script.js"></script>
@@ -12,14 +12,8 @@
     </head>
     <body>
         <script>
-
             window.addEventListener('load', (event) => {
                 init();
-                if (sessionStorage.entered === 'true'){
-                    return
-                } else {
-                    window.open("./commercial-lock.html", target="_self")
-                }
             });
         </script>
         <iframe src="../preloader.html" id="preloader"></iframe>
@@ -31,36 +25,19 @@
             </ul>
             <div id="nav-divider"></div>
         </div>
+        <a onclick=backPage(); class="page-back">🠬 Back to Portfolio</a>
+        <br><br><br><br><br><br><br>
         <div class="case-head org">
-            <h1>Organization</h1>
-            <h2>Evaluating & Improving</h2>
-            <a onclick=backPage(); class="page-back">🠬 Back</a>
+            <h1>Interactive Map</h1>
+            <p id="blurb"><i>Easily access tutorials & checklists for</i> The Legend of Zelda: Breath of the Wild</p>
+            <div id="nav-divider"></div>
         </div>
-        <div class="case-content org">
-            <section class="case-section org">
-                <h1>Overview</h1>
-                <div class="divider org"></div>
-                <div class="column">
-                    <h2>Client Info</h2>
-                    <p>Aquimo, Inc. creates browser-based gamification marketing products for clients in the sports & beverage industries.</p>
-                    <h2>Responsibilities</h2>
-                    <ul>
-                        <li>Wireframing/Visualization</li>
-                        <li>Implementation</li>
-                    </ul>
-                    <h2>Tools</h2>
-                    <p>InVision, Microsoft Teams</p>
-                </div>
-                <div class="column">
-                    <h2>The Problem</h2>
-                    <p>Over the last few years, the Aquimo Design Team has accumulated thousands of assets, spread across hundreds of folders. Since a standard file structure was never implemented, these folders became extremely difficult to navigate as the company began growing their client base and enhancing their products.</p>
-                    <h2>The Goal</h2>
-                    <p>Increase employee productivity and efficiency by standardizing internal folder and file structures</p>
-                </div>
-            </section>
-            <section class="case-section org">
+
+        <div class="case-content">
+            
+            <section class="case-section">
                 <h1>Process</h1>
-                <div class="divider org"></div>
+                <div class="divider"></div>
                 <div>
                     <h2>Observations</h2>
                     <p>For this project, rather than diving head-on into project management research, I chose to start by observing how the employees reacted to and interacted with the existing file structure.
@@ -98,8 +75,9 @@
                 pageTransition();
                 getLocation();
                 setTimeout(() => {
-                    history.back()
-                    console.log("Back to Commercial Portfolio")
+                        window.open("additional-projects.html", target="_self")
+                        content.prepend(loader);
+                        console.log("Back to Commercial Portfolio")
                 }, "1000");
             }
         </script>

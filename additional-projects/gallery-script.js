@@ -65,15 +65,17 @@ function gitSlides(){
         gitIndicators.item(1).setAttribute("style","background-color: rgba(0, 0, 0, 0.25);");
         gitIndicators.item(0).setAttribute("style","background-color: rgba(0, 0, 0, 0.40)");
 
-        git_slides.item(0).setAttribute("style", "display: block");
-        git_slides.item(1).setAttribute("style", "display: none");
+        git_slides.item(0).setAttribute("style", "opacity: 1; display: block");
+        git_slides.item(1).setAttribute("style", "opacity: 0; display: none");
     };
     if (currentSlide == 2){
+        
         gitIndicators.item(currentSlide - 2).setAttribute("style","background-color: rgba(0, 0, 0, 0.25);");
         gitIndicators.item(currentSlide - 1).setAttribute("style","background-color: rgba(0, 0, 0, 0.40)");
             
-        git_slides.item(0).setAttribute("style", "display: none");
-        git_slides.item(1).setAttribute("style", "display: block");
+        
+        git_slides.item(0).setAttribute("style", "opacity: 0; display: none");
+        git_slides.item(1).setAttribute("style", "opacity: 1; display: block");
     };
 };
 
@@ -109,7 +111,6 @@ function datavisSlides(){
 /*----- CREATE IMG LIGHTBOX -----*/
 const boxContent = document.createElement("div");
 boxContent.id = "boxContent";
-boxContent.setAttribute("onclick","lightboxClose();")
 
 const boxImg = document.createElement("img");
 boxImg.id = "boxImg";
@@ -124,7 +125,7 @@ imgTitle.id = "imgTitle";
 const imgDesc = document.createElement("p");
 imgDesc.id = "imgDesc";
 
-const closeLightbox = document.createElement("button");
+const closeLightbox = document.createElement("a");
 closeLightbox.id = "close-lightbox";
 closeLightbox.textContent="×"
 closeLightbox.setAttribute("onclick","lightboxClose();")
@@ -137,9 +138,10 @@ let slides = currentSlideshow.children;
 
 
 function load(){
+    let nav = document.getElementById('nav');
     const lightbox = document.createElement("div");
     lightbox.id = "lightbox";
-    lightbox.style = "display: none";
+    lightbox.style = "opacity: 0";
 
     document.body.insertBefore(lightbox, nav);
 
@@ -154,6 +156,10 @@ function load(){
     gfxSlides();
     gitSlides();
     datavisSlides();
+    console.log("Slides Loaded")
+    setTimeout(() => {
+        lightbox.style = "display: none";
+    }, "500");
 };
 
 function getFigure(e){ 
@@ -277,6 +283,79 @@ function slideNext2(){
     }
 }
 
+/*---------- OPEN GIT PAGES----------*/
+
+function openQimo(){
+    pageTransition();
+    setTimeout(() => {
+        window.open('./qimo.html', target="_self");
+        content.prepend(loader);
+}, "1000");
+}
+
+
+function openBOTW(){
+    pageTransition();
+    setTimeout(() => {
+        window.open('./interactive-map.html', target="_self");
+        content.prepend(loader);
+}, "1000");
+   
+}
+
+
+/*---------- GIT CAROUSELS----------*/
+function counter(){
+    if (i == 5){
+        i -= 4;
+        console.log(i)
+    } else{
+        ++i
+        console.log(i)
+    }
+}
+
+
+
+function botwCarousel(){
+    
+    counter();
+    if (i == i){
+        botwImages.style.height = "100%"
+    }
+    if (i == 1){
+        botwImages.src = "./git/botw/botw-ss-1.png"
+        indicators5[4].style.opacity = "0.3"
+        indicators5[0].style.opacity = "0.75"
+        console.log(botwImages.src);
+    }
+    if (i == 2){
+        botwImages.src = "./git/botw/botw-ss-2.png"
+        indicators5[0].style.opacity = "0.3"
+        indicators5[1].style.opacity = "0.75"
+        console.log(botwImages.src);
+    }
+    if (i == 3){
+        botwImages.src = "./git/botw/botw-ss-3.png"
+        indicators5[1].style.opacity = "0.3"
+        indicators5[2].style.opacity = "0.75"
+        console.log(botwImages.src);
+    }
+    if (i == 4){
+        botwImages.src = "./git/botw/botw-ss-4.png"
+        indicators5[2].style.opacity = "0.3"
+        indicators5[3].style.opacity = "0.75"
+        console.log(botwImages.src);
+    }
+    if (i == 5){
+        botwImages.src = "./git/botw/botw-ss-5.png"
+        indicators5[3].style.opacity = "0.3"
+        indicators5[4].style.opacity = "0.75"
+        console.log(botwImages.src);
+    }
+    
+}
+
 /*---------- OPEN DATA VIS PDFs----------*/
 
 function openPDF1(){
@@ -295,14 +374,21 @@ function openPDF3(){
 /*----------LIGHTBOX FUNCTIONS----------*/
 function lightboxOpen(){
     lightbox.style = "display: block";
+    setTimeout(() => {
+        lightbox.style = "opacity: 1";
+    }, "0");
     boxImg.setAttribute("target", "_blank");
     disableScroll();
 }
 
 function lightboxClose(){
-    lightbox.style = "display: none";
+    lightbox.style = "opacity: 0";
+    closeLightbox.style = "cursor: pointer"
     boxImg.setAttribute("target", "_blank");
     enableScroll();
+    setTimeout(() => {
+        lightbox.style = "display: none";
+    }, "500");
 }
 
 /*----------DISABLE SCROLL IN LIGHTBOX----------*/
