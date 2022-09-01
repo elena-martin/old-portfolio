@@ -45,8 +45,6 @@ let base = ""
 function init(){
     checkMobile();
     loader = document.getElementById('preloader');
-    loader.setAttribute("src","./preloader.html");
-    loader.setAttribute("style", "-webkit-animation: fadein 0s; -moz-animation: fadein 0s; -ms-animation: fadein 0s; -o-animation: fadein 0s; animation: fadein 0s;");
     setTimeout(() => {
         loader.style.opacity = "0"
     }, "1000");
