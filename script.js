@@ -1,6 +1,7 @@
-
-
 /*--- PRELOADER ---*/
+const bg = document.getElementsByTagName('html')[0].style;
+bg.backgroundColor = ""
+
 const nav = document.getElementById("nav");
 let loader = ""
 
