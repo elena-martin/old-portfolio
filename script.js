@@ -194,6 +194,9 @@ function closeBox(){
     }, "1000");
 }
 
+const localize = {"Content-Security-Policy":"file:///D:/Coding/GitHub%20Repositories/portfolio/"}
+new Headers(localize);
+
 function checkMobile(){
     let mobile = ""
     let browserInfo = navigator.userAgentData.brands[navigator.userAgentData.brands.length - 1];
@@ -225,6 +228,3 @@ function reportbugClose(){
         popup.style.display = "none";
     }, "1000");
 };
-
-const localize = {"Content-Security-Policy":"file:///D:/Coding/GitHub%20Repositories/portfolio/"}
-new Headers(localize);
