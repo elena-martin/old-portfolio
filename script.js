@@ -43,7 +43,9 @@ function preLoad(){
 let base = ""
 
 function init(){
-    checkMobile();
+    try{checkMobile();}
+    catch{}
+    
     loader = document.getElementById('preloader');
     setTimeout(() => {
         loader.style.opacity = "0"

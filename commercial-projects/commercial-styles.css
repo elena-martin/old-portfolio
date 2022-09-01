@@ -1,8 +1,5 @@
 /*-------------------- SELECT PAGE SETUP --------------------*/
 
-body{
-    background-color:#F2E5D8;
-}
 
 #select-page {
     width: 100%;
@@ -118,6 +115,14 @@ body{
     padding-left: 1%;
     padding-right: 1%;
     padding-top: .2%;
+}
+
+.case-content, .case-head {
+    -webkit-animation: fadein 3s; 
+    -moz-animation: fadein 3s;
+     -ms-animation: fadein 3s; 
+     -o-animation: fadein 3s; 
+     animation: fadein 3s;
 }
 
 .case-content h2 {

@@ -9,14 +9,14 @@
         <meta charset="UTF-8">
         <script src="../script.js"></script>
         <script src="../lock-script.js"></script>
-        <link rel="preload" href="../preloader.html" as="document">
+        <link rel="preload" as="document" onload="this.rel = 'document'" href="../preloader.html">
         <link rel="icon" type="image/x-icon" href="../favicon.ico">
     </head>
     <body>
         <script>
-
             window.addEventListener('load', (event) => {
                 init();
+                load();
                 if (sessionStorage.entered === 'true'){
                     return
                 } else {
