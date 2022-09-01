@@ -57,13 +57,18 @@
 } 
 
 @font-face {
-    font-family: Heavitas;
+    font-family: "Heavitas";
     src: url(./fonts/Heavitas.ttf);
 }
 
 @font-face {
     font-family: "Proxima Nova";
     src: url(./fonts/Proxima\ Nova\ Font.otf);
+}
+
+@font-face {
+    font-family: "Pockota";
+    src: url(./fonts/Pockota\ Bold.ttf);
 }
 
 /*-------------------- PAGE SETUP --------------------*/

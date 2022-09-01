@@ -40,7 +40,7 @@ body{
     margin: 0;
     font-size: 41px;
     color:rgba(255, 255, 255, 0.4);
-    font-family: Heavitas;
+    font-family: "Heavitas";
     padding: 0;
     line-height: 35px;
     padding-bottom: 40px;
@@ -52,7 +52,7 @@ h1:nth-child(2){
     margin: 0;
     font-size: 41px;
     color:#F2E5D8;
-    font-family: Heavitas;
+    font-family: "Heavitas";
     padding: 0;
     line-height: 35px;
     margin-bottom: 31px;
@@ -105,7 +105,7 @@ h1:nth-child(2){
 
 .case-content h1{
     color: #283C4F;
-    font-family: Pockota;
+    font-family: "Pockota";
     font-size: 51.25px;
     margin: 0;
     padding-top: 0;
