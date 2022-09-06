@@ -3,7 +3,8 @@
     <head>
         <title>Elena Martin | Concepts & Pre-Dev</title>
         <link rel="stylesheet" href="../styles.css">
-        <link rel="stylesheet" href="./commercial-styles.css">
+        <link rel="stylesheet" href="../additional-projects/git/git-page-styles.css">
+        <!--<link rel="stylesheet" href="./commercial-styles.css">-->
         <link rel="preload" href="../preloader.html" as="document" crossorigin />
         <meta charset="UTF-8">
         <script src="../script.js"></script>
@@ -26,15 +27,17 @@
         <div id="nav">
             <a onclick=viewHome();><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
             <ul>
-                <li><a onclick=viewAbout();>ABOUT ME</a></li>
-                <li><a onclick=viewPortfolio();>PORTFOLIO</a></li>
+                <li><a href="../about-me.html">ABOUT ME</a></li>
+                <li><a href="../portfolio.html">PORTFOLIO</a></li>
             </ul>
             <div id="nav-divider"></div>
         </div>
-        <div class="case-head predev">
+        <a onclick=backPage(); class="page-back">🠬 Back to Commercial Projects</a>
+        <br><br><br><br><br><br><br>
+        <div class="case-head org">
             <h1>Pre-Development</h1>
             <h2>Presenting Concepts</h2>
-            <a onclick=backPage(); class="page-back">🠬 Back</a>
+            <div id="nav-divider"></div>
         </div>
         <div class="case-content predev">
             <section class="case-section predev">
@@ -70,7 +73,7 @@
             <section class="case-section predev">
                 <h1>Gameplay & UI Concepts</h1>
                 <div class="divider predev"></div>
-                <div>
+                <div id="phones">
                     <section class="columns-4" id="col-1">
                         <video width="240" height="480" src="./concepts/tinyhouse-animation-win.mp4" id="concept-vid" autoplay></video>
                         <span id="toggle">
@@ -96,10 +99,9 @@
                         <h3>Home Screen</h3>
                         <p>for Coke Zero Sugar</p>
                     </section>
-                    <a onclick=backPage(); class="back-to-commercial">🠬 Back to Commercial Projects</a>
                 </div>
-                
             </section>
+            <a onclick=backPage(); class="back-to-commercial">🠬 Back to Commercial Projects</a>
         </div>
         <div id="footer">
             <p>© Copyright 2022 Elena Martin</p>

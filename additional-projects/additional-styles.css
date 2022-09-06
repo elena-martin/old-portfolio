@@ -60,10 +60,9 @@
 
 .port-section {
     display: block;
-    width: 50%;
     height: auto;
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 25vw;
+    padding-right: 25vw;
     background-size: cover;
     background-position: center;
     margin-top: 0;
@@ -75,16 +74,19 @@
 
 .port-section:first-of-type {
     background-image: url(../base-images/TexturedVignette-blue.webp);
+    background-size: 100%;
     background-color: #365673;
 }
 
 .port-section:nth-of-type(2) {
     background-image: url(../base-images/TexturedVignette-blue.webp);
+    background-size: 100%;
     background-color: #2C736C;
 }
 
 .port-section:nth-of-type(3) {
     background-image: url(../base-images/TexturedVignette-orange.webp);
+    background-size: 100%;
     background-color: #D97B59;
 }
 
@@ -123,7 +125,7 @@
     border-bottom: 65px solid transparent;
     margin-top: 205px;
     z-index: 4;
-    left: 27.5%;
+    left: 27.5vw;
     border-right: 40px solid rgba(0, 0, 0, 0.25);
 }
 
@@ -149,7 +151,7 @@
     border-bottom: 65px solid transparent;
     margin-top: 205px;
     z-index: 4;
-    right: 27.5%;
+    right: 27.5vw;
     border-left: 40px solid rgba(0, 0, 0, 0.25);
 }
 
@@ -227,7 +229,7 @@ span.data-vis:last-of-type {
     transition: .25s;
     transition-property: opacity;
     opacity: 0;
-    padding-bottom: 18.25%;
+    padding-bottom: 18%;
     padding-top: 30%;
     text-align: center;
     bottom: 0;
@@ -596,14 +598,66 @@ figure{
 
 /*-------------------- ACCESSIBILITY --------------------*/
 
-/*--- Desktop: 1920 x 1080 ---*/
-@media screen and (max-width: 1920.5px) and (min-width: 1536.5px) {
-    
-    /*NO EDITS*/
-
+/*------ DESKTOP (1536px +) ------*/
+@media (min-width: 1537px){
+    :root {
+        --content-width: 60vw;
+        --padding: calc((100vw - var(--content-width))/2);
+    }
 }
 
-/*--- Desktop: 1536 x 864 ---*/
+/*------ LAPTOP (1024px - 1536px) ------*/
+@media (max-width: 1536px){
+    :root {
+        --content-width: 65vw;
+        --padding: calc((100vw - var(--content-width))/2);
+    }
+    .port-section{
+        width: var(--content-width);
+        padding-left: calc((100vw - var(--content-width))/2);
+        padding-right: calc((100vw - var(--content-width))/2);
+    }
+    .slideshow-nav-right{
+        right: calc(var(--padding) + 1.5vw)
+    }
+    
+    .slideshow-nav-left{
+        left: calc(var(--padding) + 1.5vw)
+    }
+
+    #boxContent img {
+        margin-top: 43vh;
+    }
+
+    #close-lightbox {
+        margin-top: 10vh;
+        right: 3vw;
+    }
+}
+
+/*------ TABLET (350px - 1024px)------*/
+@media (max-width: 1024px){
+    :root {
+        --content-width: 100vw;
+        --padding: calc((100vw - var(--content-width))/2);
+    }
+    .slideshow-nav-right{
+        right: calc(var(--padding) + 5vw)
+    }
+    
+    .slideshow-nav-left{
+        left: calc(var(--padding) + 5vw)
+    }
+}
+
+/*-------------------- OLD --------------------*/
+/*--- Desktop: 1920 x 1080 ---
+@media screen and (max-width: 1920.5px) and (min-width: 1536.5px) {
+    
+  
+}*/
+
+/*--- Desktop: 1536 x 864 ---
 @media screen and (max-width: 1536.5px) and (min-width: 1440.5px) {
     .port-section {
         display: block;
@@ -637,9 +691,9 @@ figure{
     #boxContent img {
         margin-top: 24.5%;
     }
-}
+}*/
 
-/*--- Desktop: 1440 x 900 ---*/
+/*--- Desktop: 1440 x 900 ---
 @media screen and (max-width: 1440.5px) and (min-width: 1366.5px){
     .port-section {
         display: block;
@@ -700,9 +754,9 @@ figure{
         margin-bottom: 20px;
         width: 60%;
     }
-}
+}*/
 
-/*--- Desktop: 1366 x 768 ---*/
+/*--- Desktop: 1366 x 768 ---
 @media screen and (max-width: 1366.5px) and (min-width: 1280.5px){
     .port-section {
         display: block;
@@ -763,19 +817,19 @@ figure{
         margin-bottom: 20px;
         width: 60%;
     }
-}
+}*/
 
-/*--- Tablet: 1280 x 800 ---*/
+/*--- Tablet: 1280 x 800 ---
 @media screen and (max-width: 1280.5px) and (min-width: 1024.5px) {
     
-}
+}*/
 
-/*--- Tablet: 1024 x 768 ---*/
+/*--- Tablet: 1024 x 768 ---
 @media screen and (max-width: 1024.5px) and (min-width: 768.5px) {
     
-}
+}*/
 
-/*--- Mobile: 350 x 640 ---*/
+/*--- Mobile: 350 x 640 ---
 @media screen and (max-width: 1024.5px) and (min-width: 768.5px) {
     
-}
+}*/

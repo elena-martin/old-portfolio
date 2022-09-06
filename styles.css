@@ -456,10 +456,11 @@ div.orange {
 }
 
 #left{
-    width: 55%;
+    width:55%;
     padding-left: 50px;
     margin: 0;
-    display: inline-block
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #elena-m h1 {
@@ -472,18 +473,23 @@ div.orange {
     font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     line-height: 23.5px;
     color: white;
+    
 }
 
 #social img {
     display: inline-block;
-    width: 8%;
+    width: 48px;
     margin-left: 1%;
+    margin-top: 2px;
+    position: absolute;
 }
 
 #right {
-    width: 34%;
+    width: 35%;
     display: inline-block;
     padding-left: 0;
+    vertical-align: middle;
+    margin-bottom: 15px;
 }
 
 #right img {
@@ -756,9 +762,78 @@ div.orange {
     margin-left: 0;
 }
 
-/*--- Desktop: 1920 x 1080 ---*/
+/*-------------------- ACCESSIBILITY --------------------*/
+
+/*------ DESKTOP (1536px +) ------*/
+@media (min-width: 1537px){
+    #icon{
+        left: 20%;
+    }
+    .about {
+        width: 60%;
+        padding: 20%;
+    }
+    #right {
+        width: 30%;
+        margin-left: 2%;
+    }
+    #left{
+        padding-left: 5%;
+        width: 50%;
+    }
+
+}
+
+/*------ LAPTOP (1024px - 1536px) ------*/
+@media (max-width: 1536px){
+    #icon{
+        left: 20%;
+    }
+    .about {
+        width: 70%;
+        padding: 15%;
+    }
+    #right {
+        width: 30%;
+        height: 100%;
+    }
+    #left{
+        padding-left: 5%;
+        width: 60%;
+    }
+    #elena-m p{
+        max-width: 100%;
+    }
+}
+
+/*------ TABLET (350px - 1024px)------*/
+@media (max-width: 1024px){
+    #icon{
+        left: 5%;
+    }
+    .about {
+        width: 90%;
+        padding: 5%;
+    }
+    #right {
+        width: 30%;
+        height: 100%;
+    }
+    #left{
+        padding-left: 5%;
+        width: 60%;
+    }
+    #elena-m p{
+        max-width: 100%;
+    }
+}
+
+
+/*-------------------- OLD --------------------*/
+
+/*--- Desktop: 1920 x 1080 ---
 @media screen and (max-width: 1920.5px) and (min-width: 1536.5px) {
-    /*-- ABOUT ME --*/
+    /*-- ABOUT ME --
     #left {
         width: 58%;
         display: inline-block;
@@ -797,9 +872,9 @@ div.orange {
     }
 }
 
-/*--- Desktop: 1536 x 864 ---*/
+/*--- Desktop: 1536 x 864 ---
 @media screen and (max-width: 1536.5px) and (min-width: 1440.5px) {
-    /*-- ABOUT PAGE --*/
+    /*-- ABOUT PAGE --
     .about {
         width: 65%;
         padding-left: 17.5%;
@@ -844,13 +919,13 @@ div.orange {
     }
 }
 
-/*--- Desktop: 1440 x 900 ---*/
+/*--- Desktop: 1440 x 900 ---
 @media screen and (max-width: 1440.5px) and (min-width: 1366.5px){
-    /*-- NAV & HOME --*/
+    /*-- NAV & HOME --
     #icons {
         left: 20%;
     }
-    /*-- ABOUT PAGE --*/
+    /*-- ABOUT PAGE --
     .about {
         width: 65%;
         padding-left: 17.5%;
@@ -907,13 +982,13 @@ div.orange {
     }
 }
 
-/*--- Desktop: 1366 x 768 ---*/
+/*--- Desktop: 1366 x 768 ---
 @media screen and (max-width: 1366.5px) and (min-width: 1280.5px){
-    /*-- NAV & HOME --*/
+    /*-- NAV & HOME --
     #icon {
         left: 15%;
     }
-    /*-- ABOUT PAGE --*/
+    /*-- ABOUT PAGE --
     .about {
         width: 70%;
         padding-left: 15%;
@@ -971,17 +1046,17 @@ div.orange {
     }
 }
 
-/*--- Tablet: 1280 x 800 ---*/
+/*--- Tablet: 1280 x 800 ---
 @media screen and (max-width: 1280.5px) and (min-width: 1024.5px) {
     
 }
 
-/*--- Tablet: 1024 x 768 ---*/
+/*--- Tablet: 1024 x 768 ---
 @media screen and (max-width: 1024.5px) and (min-width: 768.5px) {
     
 }
 
-/*--- Mobile: 350 x 640 ---*/
+/*--- Mobile: 350 x 640 ---
 @media screen and (max-width: 1024.5px) and (min-width: 768.5px) {
     
 }

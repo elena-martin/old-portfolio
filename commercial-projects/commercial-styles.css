@@ -1,6 +1,4 @@
 /*-------------------- SELECT PAGE SETUP --------------------*/
-
-
 #select-page {
     width: 100%;
     position: relative;
@@ -88,7 +86,46 @@
     margin-left: -.1%;
 }
 
-/*-------------------- PAGE SETUP --------------------*/
+/*-------------------- ACCESSIBILITY --------------------*/
+
+/*------ DESKTOP (1536px +) ------*/
+@media (min-width: 1537px){
+    
+}
+
+/*------ LAPTOP (1024px - 1536px) ------*/
+@media (max-width: 1536px){
+    #select-page div:first-child{
+        margin-right: -.4%;
+    }
+}
+
+/*------ TABLET (350px - 1024px)------*/
+@media (max-width: 1024px){
+    #select-page div:first-child{
+        width: 33%;
+    }
+    .organization h1:first-child{
+        font-size: 55px;
+        margin-bottom: 10px;
+    }
+    .organization h1:nth-child(2){
+        font-size: 30px;
+    }
+    .development h1:first-child{
+        font-size: 55px;
+        margin-bottom: 5px;
+    }
+    .development h1:nth-child(2){
+        font-size: 30px;
+    }
+    .concepts h1{
+        font-size: 50px;
+        line-height: 50px;
+    }
+}
+
+/*-------------------- PAGE SETUP --------------------
 
 .case-head {
     width: 100%;
@@ -163,7 +200,6 @@
     margin-top: 30px;
 }
 
-
 .case-section p {
     font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     margin: 2%;
@@ -236,7 +272,7 @@ section.predev .back-to-commercial {
     padding-right: 2.5%;
 }
 
-/*---------------ORGANIZATION---------------*/
+/*---------------ORGANIZATION---------------
 .case-head.org h1 {
     margin: 0;
     color:#F2E5D8;
@@ -297,7 +333,7 @@ section.predev .back-to-commercial {
     margin-top: 15px;
 }
 
-/*---------------DEVELOPMENT---------------*/
+/*---------------DEVELOPMENT---------------
 
 .case-head.dev h1 {
     margin: 0;
@@ -345,7 +381,7 @@ section.predev .back-to-commercial {
     margin-top: 30px;
 }
 
-/*---------------PRE-DEVELOPMENT---------------*/
+/*---------------PRE-DEVELOPMENT---------------
 
 .case-head.predev h1 {
     margin: 0;
@@ -503,11 +539,11 @@ section.predev .back-to-commercial {
     padding: 0;
 }
 
-/*-------------------- ACCESSIBILITY --------------------*/
 
-/*--- Desktop: 1920 x 1080 ---*/
+/*-------------------- OLD --------------------*/
+/*--- Desktop: 1920 x 1080 ---
 @media screen and (max-width: 1920.5px) and (min-width: 1536.5px) {
-    /*-- ORGANIZATION --*/
+    /*-- ORGANIZATION --
     .case-section.org div.column:nth-of-type(2){
         width: 45%;
     } 
@@ -518,7 +554,7 @@ section.predev .back-to-commercial {
     .page-back {
         margin-top: -3%;
     }
-    /*-- CONCEPTS & PRE-DEV --*/
+    /*-- CONCEPTS & PRE-DEV --
     #col-1 {
         margin-left: -15px;
         padding-right: 50px;
@@ -528,9 +564,9 @@ section.predev .back-to-commercial {
     }
 }
 
-/*--- Desktop: 1536 x 864 ---*/
+/*--- Desktop: 1536 x 864 ---
 @media screen and (max-width: 1536.5px) and (min-width: 1440.5px) {
-    /*-- SELECT PROJECT --*/
+    /*-- SELECT PROJECT --
     #select-page div {
         width: 33.25%;
     }
@@ -546,7 +582,7 @@ section.predev .back-to-commercial {
         margin-left: 20%;
         margin-top: -3.5%;
     }
-    /*-- CONCEPTS & PRE-DEV --*/
+    /*-- CONCEPTS & PRE-DEV --
     #col-1 {
         margin-left: -15px;
         padding-right: 50px;
@@ -561,9 +597,9 @@ section.predev .back-to-commercial {
     }
 }
 
-/*--- Desktop: 1440 x 900 ---*/
+/*--- Desktop: 1440 x 900 ---
 @media screen and (max-width: 1440.5px) and (min-width: 1366.5px){
-   /*-- SELECT PROJECT --*/
+   /*-- SELECT PROJECT --
     #select-page div {
     width: 33.3%;
     margin-left: -.15%;
@@ -581,14 +617,14 @@ section.predev .back-to-commercial {
         margin-left: 20%;
         margin-top: -3.5%;
     }
-    /*-- ORGANIZATION --*/
+    /*-- ORGANIZATION --
     .case-section div.column:last-of-type {
         width: 52%;
         margin-left: -5%;
         padding-right: 0;
     }
 
-    /*-- CONCEPTS & PRE-DEV --*/
+    /*-- CONCEPTS & PRE-DEV --
     #col-1 {
         margin-left: -15px;
         padding-right: 20px;
@@ -614,9 +650,9 @@ section.predev .back-to-commercial {
     }
 }
 
-/*--- Desktop: 1366 x 768 ---*/
+/*--- Desktop: 1366 x 768 ---
 @media screen and (max-width: 1366.5px) and (min-width: 1280.5px){
-    /*-- SELECT PROJECT --*/
+    /*-- SELECT PROJECT --
     .case-head {
         padding-top: 100px;
     }
@@ -650,14 +686,14 @@ section.predev .back-to-commercial {
         .case-section:first-child {
             padding-top: 250px;
         }
-        /*-- ORGANIZATION --*/
+        /*-- ORGANIZATION --
         .case-section div.column:last-of-type {
             width: 52%;
             margin-left: -5%;
             padding-right: 0;
         }
     
-        /*-- CONCEPTS & PRE-DEV --*/
+        /*-- CONCEPTS & PRE-DEV --
         #col-1 {
             margin-left: -35px;
             padding-right: 5px;
@@ -718,17 +754,17 @@ section.predev .back-to-commercial {
         
 }
 
-/*--- Tablet: 1280 x 800 ---*/
+/*--- Tablet: 1280 x 800 ---
 @media screen and (max-width: 1280.5px) and (min-width: 1024.5px) {
     
 }
 
-/*--- Tablet: 1024 x 768 ---*/
+/*--- Tablet: 1024 x 768 ---
 @media screen and (max-width: 1024.5px) and (min-width: 768.5px) {
     
 }
 
-/*--- Mobile: 350 x 640 ---*/
+/*--- Mobile: 350 x 640 ---
 @media screen and (max-width: 1024.5px) and (min-width: 768.5px) {
     
 }
