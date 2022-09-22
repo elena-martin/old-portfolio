@@ -3,7 +3,6 @@
     <head>
         <title>Elena Martin | Commercial Projects</title>
         <link rel="stylesheet" href="../styles.css">
-        <link rel="stylesheet" href="./commercial-styles.css">
         <meta charset="UTF-8">
         <script src="../script.js"></script>
         <script src="../lock-script.js"></script>
@@ -100,5 +99,134 @@
                 }, "1000");
             }
         </script>
+
+        <style>
+            /*-------------------- SELECT PAGE SETUP --------------------*/
+            #select-page {
+                width: 100%;
+                position: relative;
+                text-align: center;
+                background-color: #1c514b;
+            }
+
+            #select-page div{
+                display: inline-block;
+                background-size: cover;
+                background-position: center;
+                z-index: 1;
+                padding-top: 60px;
+                padding-bottom: 65px;
+                margin-top: 0px;
+                width: 33.29%;
+                margin-left: 0;
+            }
+
+            .concepts h1{
+                margin: 0;
+                font-size: 61.45px;
+                color:#F2E5D8;
+                font-family: Heavitas;
+                padding: 0;
+                line-height: 57px;
+                margin-bottom: 25px;
+                font-weight: normal;
+                margin-top: 5px;
+            }
+
+            .development h1:first-child{
+                margin: 0;
+                font-size:70px;
+                color:#F2E5D8;
+                font-family: Heavitas;
+                padding: 0;
+                line-height: 35px;
+                margin-bottom: 20px;
+                font-weight: normal;
+                margin-top: 20px;
+            }
+
+            .development h1:nth-child(2){
+                margin: 0;
+                font-size:41px;
+                color:#F2E5D8;
+                font-family: Heavitas;
+                padding: 0;
+                line-height: 40px;
+                margin-bottom: 30px;
+                font-weight: normal;
+                letter-spacing: 2px;
+            }
+
+            .organization h1:first-child{
+                margin: 0;
+                font-size: 75px;
+                color:#F2E5D8;
+                font-family: Heavitas;
+                padding: 0px;
+                line-height: 35px;
+                margin-bottom: 24px;
+                font-weight: normal;
+                margin-top: 20px;
+            }
+
+            .organization h1:nth-child(2){
+                margin: 0;
+                font-size: 41px;
+                color:#F2E5D8;
+                font-family: Heavitas;
+                padding: 0;
+                line-height: 35px;
+                margin-bottom: 31px;
+                font-weight: normal;
+                letter-spacing: 2px;
+            }
+
+            #select-page div:first-child{
+                margin-right: -.2%;
+            }
+
+            #select-page div:last-child{
+                margin-left: -.1%;
+            }
+
+            /*-------------------- ACCESSIBILITY --------------------*/
+
+            /*------ DESKTOP (1536px +) ------*/
+            @media (min-width: 1537px){
+                
+            }
+
+            /*------ LAPTOP (1024px - 1536px) ------*/
+            @media (max-width: 1536px){
+                #select-page div:first-child{
+                    margin-right: -.4%;
+                }
+            }
+
+            /*------ TABLET (350px - 1024px)------*/
+            @media (max-width: 1024px){
+                #select-page div:first-child{
+                    width: 33%;
+                }
+                .organization h1:first-child{
+                    font-size: 55px;
+                    margin-bottom: 10px;
+                }
+                .organization h1:nth-child(2){
+                    font-size: 30px;
+                }
+                .development h1:first-child{
+                    font-size: 55px;
+                    margin-bottom: 5px;
+                }
+                .development h1:nth-child(2){
+                    font-size: 30px;
+                }
+                .concepts h1{
+                    font-size: 50px;
+                    line-height: 50px;
+                }
+            }
+        </style>
     </body>
 </html>
