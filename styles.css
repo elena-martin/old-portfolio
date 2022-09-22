@@ -120,6 +120,7 @@ body {
 #nav {
     width: 100%;
     position: fixed;
+    height: 70px;
     z-index: 5;
     -webkit-animation: fadein 3s; 
     -moz-animation: fadein 3s;
@@ -131,23 +132,23 @@ body {
 
 #nav-divider {
     width: 100%;
-    height: 10px;
+    height: 8px;
     background-color: #FCC069;
-    border-bottom: solid #F29544 10px;
+    border-bottom: solid #F29544 8px;
     margin-bottom: 0px;
 }
 
 #icon {
     position: absolute;
     width: auto;
-    height: 100%;
+    height: calc(100% + 8px);
     left: 25%;
     z-index: 6;
     cursor: pointer;
 }
 
 #nav ul {
-    height: 4%; 
+    height: 60px; 
     width: 100%;
     list-style-type: none;
     position: relative;
@@ -166,6 +167,7 @@ body {
     margin: 0;
     padding-top: 15px;
     padding-bottom: 15px;
+    margin-top: 4px;
     margin-left: 100px;
     margin-right: 100px;
     font-family: Arial, Helvetica, sans-serif;
@@ -179,17 +181,19 @@ body {
     cursor: pointer;
     text-decoration: none;
     z-index: 6;
+    padding-top: 10px;
+    padding-bottom: 9px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border-radius: 8px;
 }
 
 #nav ul li a:hover{
     transition-duration: .25s;
-    color: #728FA8;
+    background-color: #365673;
     cursor: pointer;
 }
 
-#nav ul li a:active{
-    color: #728FA8;
-}
 
 /*---------------HEADER (ALL PAGES)---------------*/
 #header {
