@@ -62,12 +62,22 @@ function gfxSlides(){
 
 function gitSlides(){
     if (currentSlide == 1){
-        gitIndicators.item(1).setAttribute("style","background-color: rgba(0, 0, 0, 0.25);");
+        /*gitIndicators.item(1).setAttribute("style","background-color: rgba(0, 0, 0, 0.25);");
         gitIndicators.item(0).setAttribute("style","background-color: rgba(0, 0, 0, 0.40)");
+        */
 
         git_slides.item(0).setAttribute("style", "opacity: 1; display: block");
         git_slides.item(1).setAttribute("style", "opacity: 0; display: none");
     };
+    if (currentSlide == 2){
+        /*gitIndicators.item(1).setAttribute("style","background-color: rgba(0, 0, 0, 0.25);");
+        gitIndicators.item(0).setAttribute("style","background-color: rgba(0, 0, 0, 0.40)");
+        */
+
+        git_slides.item(0).setAttribute("style", "opacity: 1; display: block");
+        git_slides.item(1).setAttribute("style", "opacity: 0; display: none");
+    };
+    /*
     if (currentSlide == 2){
         
         gitIndicators.item(currentSlide - 2).setAttribute("style","background-color: rgba(0, 0, 0, 0.25);");
@@ -76,7 +86,7 @@ function gitSlides(){
         
         git_slides.item(0).setAttribute("style", "opacity: 0; display: none");
         git_slides.item(1).setAttribute("style", "opacity: 1; display: block");
-    };
+    };*/
 };
 
 function datavisSlides(){
