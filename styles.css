@@ -128,6 +128,8 @@ body {
     -o-animation: fadein 3s; 
     animation: fadein 3s;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-color: #283C4F;
 }
 
 #nav-divider {
@@ -147,51 +149,107 @@ body {
     cursor: pointer;
 }
 
-#nav ul {
-    height: 60px; 
+#nav-buttons {
+    height: 50px;
     width: 100%;
     list-style-type: none;
     position: relative;
     text-align: center;
     padding-inline-start: 0;
     margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     background-image: url(./images/TexturedVignette.webp);
-    background-size: cover;
-    background-color: #283C4F;
 }
 
-#nav ul li{
+.menu {
     display: inline-block;
     position: relative;
     color: #F2E5D8;
     margin: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
     margin-top: 4px;
     margin-left: 100px;
     margin-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 9px;
+    padding-left: 45px;
+    padding-right: 45px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20.5px;
+    border-radius: 8px;
+    z-index: 6;
 }
 
-#nav ul li a{
+.menu a {
     transition-property: color;
     transition-duration: .25s;
     color: #F2E5D8;
     cursor: pointer;
     text-decoration: none;
-    z-index: 6;
-    padding-top: 10px;
-    padding-bottom: 9px;
-    padding-left: 45px;
-    padding-right: 45px;
-    border-radius: 8px;
+    
 }
 
-#nav ul li a:hover{
+.menu:hover {
     transition-duration: .25s;
     background-color: #365673;
+    background-clip:inherit;
     cursor: pointer;
+}
+
+.menu:last-of-type:hover {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+.menu:hover .submenu {
+    display: block;
+    clip-path:inherit;
+}
+
+
+.submenu {
+    display: none;
+    position: fixed;
+    background-color: #F2E5D8;
+    text-align: left;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+    margin-left: -45px;
+    margin-top: 5px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+    border: #365673 solid 8px;
+}
+
+.submenu a {
+    color:#365673;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    display: block;
+    cursor: pointer;
+    padding-left: 37px;
+    padding-right: 37px;
+}
+
+.submenu a:first-of-type {
+    border-top-right-radius: 8px;
+    border-bottom: rgba(0, 0, 0, 0.1) solid 1.5px;
+    padding-top: 15px;
+    padding-bottom: 14px;
+}
+
+.submenu a:last-of-type {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: rgba(0, 0, 0, 0.1) solid 1.5px;
+    padding-top: 14px;
+    padding-bottom: 15px;
+}
+
+.submenu a:hover {
+    color:#283C4F;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 

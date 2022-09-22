@@ -113,13 +113,9 @@ function viewAdditionalProj(){
     pageTransition();
     getLocation();
     setTimeout(() => {
-        if (thisURL.includes("/portfolio.html")){
             window.open("additional-projects/additional-projects.html", target="_self")
             content.prepend(loader);
             console.log("tried 2nd url")
-        } else {
-            console.log("Error")
-        }
     }, "1000");
 }
 
@@ -127,13 +123,9 @@ function viewCommercialProj(){
     pageTransition();
     getLocation();
     setTimeout(() => {
-        if (thisURL.includes("/portfolio.html")){
             window.open("commercial-projects/commercial-lock.html", target="_self")
             content.prepend(loader);
             console.log("tried 2nd url")
-        } else {
-            console.log("Error")
-        }
     }, "1000");
 }
 
