@@ -23,10 +23,15 @@
         <iframe src="../preloader.html" id="preloader"></iframe>
         <div id="nav">
             <a onclick=viewHome();><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
-            <ul>
-                <li><a onclick=viewAbout();>ABOUT ME</a></li>
-                <li><a onclick=viewPortfolio();>PORTFOLIO</a></li>
-            </ul>
+            <div id="nav-buttons">
+                <div class="menu"><a onclick=viewAbout();>ABOUT ME</a></div>
+                <div class="menu"><a onclick=viewPortfolio();>PORTFOLIO</a>
+                    <div class="submenu">
+                        <a onclick=viewCommercialProj();>Commercial Projects</a>
+                        <a onclick=viewAdditionalProj();>Additional Projects</a>
+                    </div>
+                </div>
+            </div>
             <div id="nav-divider"></div>
         </div>
         

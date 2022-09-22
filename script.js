@@ -113,9 +113,15 @@ function viewAdditionalProj(){
     pageTransition();
     getLocation();
     setTimeout(() => {
+        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
+            window.open("../additional-projects/additional-projects.html", target="_self")
+            content.prepend(loader);
+            console.log("tried 1st url")
+        } else {
             window.open("additional-projects/additional-projects.html", target="_self")
             content.prepend(loader);
             console.log("tried 2nd url")
+        }
     }, "1000");
 }
 
@@ -123,9 +129,15 @@ function viewCommercialProj(){
     pageTransition();
     getLocation();
     setTimeout(() => {
+        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
+            window.open("../commercial-projects/commercial-lock.html", target="_self")
+            content.prepend(loader);
+            console.log("tried 1st url")
+        } else {
             window.open("commercial-projects/commercial-lock.html", target="_self")
             content.prepend(loader);
             console.log("tried 2nd url")
+        }     
     }, "1000");
 }
 

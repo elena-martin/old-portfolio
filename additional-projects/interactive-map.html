@@ -21,10 +21,15 @@
         <iframe src="../preloader.html" id="preloader"></iframe>
         <div id="nav">
             <a onclick=viewHome();><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
-            <ul>
-                <li><a href="../about-me.html">ABOUT ME</a></li>
-                <li><a href="../portfolio.html">PORTFOLIO</a></li>
-            </ul>
+            <div id="nav-buttons">
+                <div class="menu"><a onclick=viewAbout();>ABOUT ME</a></div>
+                <div class="menu"><a onclick=viewPortfolio();>PORTFOLIO</a>
+                    <div class="submenu">
+                        <a onclick=viewCommercialProj();>Commercial Projects</a>
+                        <a onclick=viewAdditionalProj();>Additional Projects</a>
+                    </div>
+                </div>
+            </div>
             <div id="nav-divider"></div>
         </div>
         <a onclick=backPage(); class="page-back">🠬 Back to Additional Projects</a>
