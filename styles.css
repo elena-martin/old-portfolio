@@ -71,6 +71,11 @@
     src: url(./fonts/Pockota\ Regular.ttf);
 }
 
+@font-face {
+    font-family: "Pockota Italic";
+    src: url(./fonts/Pockota\ Medium\ Italic.ttf);
+}
+
 /*-------------------- PAGE SETUP --------------------*/
 
 html {
@@ -322,7 +327,7 @@ body {
     margin: 0;
     font-size: 61.45px;
     color:#283C4F;
-    font-family: Heavitas;
+    font-family: "Heavitas";
     font-weight: normal;
     padding: 0;
     
@@ -334,7 +339,7 @@ body {
     padding: 0;
     font-size: 102.5px;
     color:#365673;
-    font-family: Heavitas;
+    font-family: "Heavitas";
     line-height: 92px;
     margin-top: -10px;
 }
@@ -387,7 +392,7 @@ body {
     margin: 0;
     font-size: 36px;
     color:rgba(255, 255, 255, 0.4);
-    font-family: Heavitas;
+    font-family: "Heavitas";
     padding: 0;
     line-height: 41px;
     margin-bottom: 10px;
@@ -487,7 +492,7 @@ div.orange {
     margin: 0;
     font-size: 61.45px;
     color:#F2E5D8;
-    font-family: Heavitas;
+    font-family: "Heavitas";
     padding: 0;
     line-height: 61.45px;
     font-weight: normal;
@@ -495,6 +500,96 @@ div.orange {
 
 #select-page-home div h1:last-of-type{
     margin-bottom: 25px;
+}
+
+.home-section {
+    width: 70%;
+    background-color: #F2E5D8;
+    padding-top: 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 0 auto;
+    display: block;
+}
+
+.home-section.full {
+    width: 100%;
+    background-color: #365673;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.home-section h1 {
+    margin: 0;
+    font-size: 55px;
+    color:#365673;
+    font-family: "Heavitas";
+    padding: 0;
+    line-height: 55px;
+    font-weight: normal;
+}
+
+.home-section h2 {
+    margin: 0;
+    font-size: 42px;
+    color:#283C4F;
+    font-family: "Pockota Italic";
+    padding: 0;
+    line-height: 42px;
+    font-weight: 550;
+    padding-bottom: 25px;
+}
+
+.home-column {
+    width: calc(calc(100%/3) - 2.5%);
+    display: inline-block;
+    background-color: white;
+    padding-top: 8px;
+    transition-property: transform;
+    transition: .25s;
+    transform: scale(1.0);
+}
+
+.home-column:nth-of-type(2) {
+    margin-right: 1.75%;
+    margin-left: 1.75%;
+}
+
+.home-column img {
+    height: 300px;
+    width: calc(100% - 16px);
+    background-color: red;
+    z-index: 1;
+}
+
+.hover {
+    width: 100%;
+    height:70px ;
+    display: block; 
+    position: absolute;
+    background-color: white;
+    z-index: 2;
+    margin-top: -70px;
+    transition: .5s;
+    transition-property: opacity;
+    opacity: 0;
+ }
+
+ .home-column:hover{
+    transition-property: transform;
+    transition: .25s;
+    transform: scale(1.025);
+ }
+
+.home-column:hover .hover {
+
+    transition: .5s;
+    transition-property: opacity;
+    opacity: 1;
 }
 
 /*---------------ABOUT PAGE CONTENT---------------*/
