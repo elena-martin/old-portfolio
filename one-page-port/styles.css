@@ -1,16 +1,16 @@
 :root {
     --headerHeight: 5vw;
-    --contentWidth: 90vw;
+    --contentWidth: 100%;
 }
 
 @font-face {
-    font-family: Action;
-    src: url(./fonts/ActionNBA-Bold.ttf);
+    font-family: Pockota;
+    src: url(../fonts/Pockota\ Medium.ttf);
 }
 
 @font-face {
-    font-family: Billion Dreams;
-    src: url(./fonts/BillionDreams_PERSONAL.ttf);
+    font-family: Heavitas;
+    src: url(../fonts/Heavitas.ttf);
 }
 
 html {
@@ -21,8 +21,14 @@ html {
 
 body {
     margin: 0 auto;
+    background-color:#283C4F;
 }
 
+.page-head{
+    background-color: #F2E5D8;
+    padding-left: calc(calc(100% - 800px)/2);
+    padding-right:calc(calc(100% - 800px)/2);
+}
 
 #page-content {
     position: relative;
@@ -32,9 +38,7 @@ body {
     padding-bottom: 3vw;
     text-align: center;
     margin:0 auto;
-    background-color:#F2E5D8;
-    border: .5em solid #365673;
-    border-radius: 1.5em;
+
     margin-top: 2em;
 }
 
@@ -45,8 +49,6 @@ body {
     text-align: left;
     margin: 0 auto;
     margin-left: 0;
-    border-top-right-radius: .75em;
-    border-top-left-radius: .75em;
     padding: 1em;
     padding-bottom: 0;
     background-color: #365673;
@@ -54,15 +56,15 @@ body {
 }
 
 #filters-intro {
-    width: 100%;
+    width: 90%;
     padding-left: 1em;
     padding-right: 1em;
 }
 
 #filters-intro h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Heavitas", Arial, Helvetica, sans-serif;
     font-size: 2em;
-    font-weight: bold;
+    font-weight: normal;
     display: block;
     color: white;
     margin: 0;
@@ -96,12 +98,14 @@ body {
 }
 
 .filter-cat h3 {
-    margin-top: .75em;
+    margin-top: .5em;
     margin-bottom: 0;
     padding-bottom: .25em;
-    font-size: 1em;
-    color: #ffffff;
+    font-size: 1.5em;
+    color: #F2E5D8;
     border-bottom: .1em solid rgba(255, 255, 255, .25);
+    font-family: "Pockota", Arial, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 .filter-cat:first-of-type h3 {
@@ -230,7 +234,7 @@ body {
     padding: 15px;
     padding-left: 2.25%;
     padding-right: 2.25%;
-    background-color: #283C4F;
+    background-color: #365673;
     clip-path: fill-box;
     display: none;
 }
@@ -238,10 +242,10 @@ body {
 #selected-filters button{
     font-size:  1em;
     padding-top: 5px;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #365673;
+    background-color: rgba(40, 60, 79, 0.5);
     border: none;
     color: rgba(255, 255, 255, 1);
     border-radius: 5px;
@@ -266,12 +270,12 @@ color: #B8C6D0;
     padding-inline-start: 0%;
     margin: 0;
     padding-top: 0%;
-    color: white;
+    color: #F2E5D8;
     border-top-right-radius: 1.5em;
     border-bottom-right-radius: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-    font-weight: bolder;
+    font-family: "Pockota",Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    font-weight: normal;
 }
 
 #divider {
@@ -308,12 +312,18 @@ color: #B8C6D0;
     display: block;
     transition-property: position;
     transition: .5s;
+    background-color:#283C4F;
+    background-image: url(../base-images/sun-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
 }
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 40px;
     list-style-type: none;
     justify-content: center;
     margin-top: 0;
@@ -323,7 +333,7 @@ color: #B8C6D0;
 .bump-gallery {
     transition: linear;
     transition-property: transform;
-    transform: translateY(4em);
+    transform: translateY(3.8em);
 }
 
 .gallery::after {
@@ -336,11 +346,11 @@ color: #B8C6D0;
     transform: scale(1.0);
     border-radius: 1.5em;
     background-color: transparent;
-    border: .5em solid transparent;
     padding: 0%;
     display: none;
 }
 .gallery-item:hover {
+    transform-origin: 50% 50%;
     transition: .25s;
     transform: scale(1.05);
     cursor: pointer;
@@ -349,11 +359,11 @@ color: #B8C6D0;
 }
 
 .gallery > li {
-    height: 225px;
+    height: 240px;
     flex: 0 0 auto;
     position: relative;
     cursor: pointer;
-    
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.4)
 }
   
 .gallery li img {
@@ -494,7 +504,7 @@ figure:first-of-type {
     max-width: 100%;
     max-height: 40%;
     position: fixed;
-    margin-top: 18%;
+    margin-top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -508,7 +518,7 @@ figure:first-of-type {
     flex: 0 0 auto;
     position: relative;
     cursor: pointer;
-    transform: translate(0%, 15vh);
+    transform: translate(0%, 24vh);
 }
 
 .multiImg {
@@ -519,32 +529,27 @@ figure:first-of-type {
     
 }
 
-.multiImg:first-of-type {
-    margin-top: 20%;
-}
 
 #imgContent {
     display: block;
     position: absolute;
-    width: 60vw;
+    width: calc(100% - calc(2*3vw));
     background-color: #283C4F;
-    padding-top: 25px;
-    padding-bottom: 28px;
+    padding-top: 30px;
+    padding-bottom: 35px;
     padding-left: 3vw;
     padding-right: 3vw;
-    bottom: 18%;
-    left: 17vw;
+    bottom: 0;
     margin: 0 auto;
-    border-radius: 1.5em;
-    border: .5em solid #365673;
+    border-top: .5em solid #365673;
 }
 
 #imgContent h2{
     margin: 0;
     font-size: 41px;
-    color:white;
+    color:#F2E5D8;
     padding-top: 15px;
-    font-family: Arial;
+    font-family: "Pockota", Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
@@ -595,14 +600,15 @@ figure:first-of-type {
 
 
 #footer {
-    position: relative;
+    position: absolute;
     width: 98%;
     height: auto;
     padding-top: 1vw;
     padding-bottom: 1vw;
     padding-left: 2vw;
     text-align: left;
-    background-color: #494949;
+    background-color: #283C4F;
+    box-shadow: 0px -5px 30px rgba(0, 0, 0, 0.3);
     bottom: 0;
 }
 
@@ -613,4 +619,8 @@ figure:first-of-type {
     margin-left: 2.5vw;
     padding: 0%;
     font-size: .75vw;
+}
+
+.bump-footer{
+    transform: translateY(3.8em);
 }

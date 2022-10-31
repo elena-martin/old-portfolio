@@ -60,6 +60,8 @@ var relsource = ""
 var title = ""
 var desc = ""
 
+const footer = document.getElementById('footer');
+
 document.body.onload = load(); lightbox();
 
 function load(){
@@ -104,7 +106,9 @@ function editFilters()  {
             }, false)
             
             let galShift = gallery.classList;
+            let footShift= footer.classList;
             galShift.add('bump-gallery')
+            footShift.add('bump-footer')
             console.log(galShift)
 
            
@@ -121,7 +125,9 @@ function editFilters()  {
                 hide.item(0).style = "display: none"
             }, "300"); 
             let galShift = gallery.classList;
+            let footShift= footer.classList;
             galShift.remove('bump-gallery')
+            footShift.remove('bump-footer')
             console.log(galShift)
             
             for (let i = 0; i < galleryItems.length; i++) {
@@ -259,7 +265,7 @@ function getFigure(e){
     console.log(desc);
 
     
-    boxImg.setAttribute("src", relsource);
+    boxImg.setAttribute("src", source);
     imgTitle.textContent = title;
     imgDesc.textContent = desc;
 }

@@ -1,14 +1,51 @@
 <!DOCTYPE html>
     <head>
-        <title>Happy Place Design Co.</title>
+        <title>Elena Martin | Portfolio</title>
+        <link rel="stylesheet" href="./additional-styles.css">
         <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="../styles.css">
+        <script src="../script.js"></script>
+        <meta charset="UTF-8">
+        <link rel="preload" href="../preloader.html" as="document">
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
         <!--Imports a model-viewer JavaScript code -->
         <!--It helps to handle how the 3D Object would be displayed -->
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
         <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     </head>
     <body onload="load();">
-        <div id="page-content" class="body">
+        <script>
+            window.addEventListener('load', (event) => {
+                init();
+            });
+        </script>
+        <iframe src="../preloader.html" id="preloader"></iframe>
+        <div id="nav">
+            <a onclick=viewHome();><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
+            <div id="nav-buttons">
+                <div class="menu"><a onclick=viewAbout();>ABOUT ME</a></div>
+                <div class="menu"><a onclick=viewPortfolio();>PORTFOLIO</a>
+                    <div class="submenu">
+                        <a onclick=viewCommercialProj();>Commercial Projects</a>
+                        <a onclick=viewAdditionalProj();>Additional Projects</a>
+                    </div>
+                </div>
+            </div>
+            <div id="nav-divider"></div>
+        </div>
+        <div id="header">
+            <img id="logo" src="../base-images/Wordmark-2022-Light.svg" alt="Website Logo">
+        </div>
+        <div id="page-content" class="body" style="background-color:#283C4F;">
+            <div class="page-head">
+                <div class = "header-text">
+                    <h1>Check Out My</h1>
+                    <h2>Portfolio</h2>
+                </div>
+                <div class = "header-image" style="margin-left: 5px;">
+                    <img src="../base-images/Cacti.webp" alt="Cactus Ornament">
+                </div>
+            </div>
             <div id="filters">
                 <div id="filter-select" >
                     <div id="filters-intro">
@@ -77,17 +114,17 @@
                             <h2>UX/UI</h2>
                         </span>
                     </div>
-                    <img src="images/sandbox-logo.svg" alt="sandbox-logo">
+                    <img src="../additional-projects/git/sandbox-logo.svg" alt="sandbox-logo">
                     <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
                 </li>
-                <li class="gallery-item web" onclick="lightboxOpen();"><a href="./interactive-map.html" target="_blank">
+                <li class="gallery-item web"><a href="../additional-projects/interactive-map.html">
                     <div class="item-hover">
                         <span class="hover-info">
                             <h1>Interactive Map</h1>
                             <h2>Web Design</h2>
                         </span>
                     </div>
-                    <img src="images/botw-gallery.png" alt="botw">
+                    <img src="../additional-projects/git/botw-gallery.png" alt="botw">
                     <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
                 </a></li>
                 <li class="gallery-item gfx" onclick="lightboxOpen();">
@@ -97,7 +134,7 @@
                             <h2>Graphic/Print Design</h2>
                         </span>
                     </div>
-                    <img src="images/Thumbnail1.webp" alt="thumbnail">
+                    <img src="../additional-projects/gfx/Thumbnail1.webp" alt="thumbnail">
                     <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
                 </li>
                 <li class="gallery-item gfx" onclick="lightboxOpen();">
@@ -107,7 +144,7 @@
                             <h2>Graphic/Print Design</h2>
                         </span>
                     </div>
-                    <img src="images/pff-card-front.webp" alt="pff-card-front">
+                    <img src="../additional-projects/gfx/pff-card-front.webp" alt="pff-card-front">
                     <p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (1/2) - 2019&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 5" × 7"</p>
                 </li>
                 <li class="gallery-item branding" onclick="lightboxOpen();">
@@ -117,7 +154,7 @@
                             <h2>Branding</h2>
                         </span>
                     </div>
-                    <img src="images/scarlet-witch-logo.webp" alt="scarlet-witch-logo">
+                    <img src="../additional-projects/gfx/scarlet-witch-logo.webp" alt="scarlet-witch-logo">
                     <p class="gallery-desc" style="display: none;">Conceptual logo design for personal use - 2022</p>
                 </li>
                 <li class="gallery-item gfx" onclick="lightboxOpenMulti();">
@@ -127,10 +164,11 @@
                             <h2>Graphic/Print Design</h2>
                         </span>
                     </div>
-                    <img src="images/Av-JLift-Sig.webp" alt="av-jlift-signature">
-                    <img class="lightbox-only" src="./images/Av-JLift-Sig.webp" alt="av-jlift-signature">
-                    <img class="lightbox-only" src="./images/mikkosig.webp" alt="mikkolikoli-signature">
-                    <img class="lightbox-only" src="./images/Totally-80-s-PB.webp" alt="practice-briefing-banner">
+                    <img src="../additional-projects/gfx/Av-JLift-Sig.webp" alt="av-jlift-signature">
+                    <img class="lightbox-only" src="../additional-projects/gfx/Av-JLift-Sig.webp" alt="av-jlift-signature">
+                    <img class="lightbox-only" src="../additional-projects/gfx/mikkosig.webp" alt="mikkolikoli-signature">
+                    <img class="lightbox-only" src="../additional-projects/gfx/Totally-80-s-PB.webp" alt="practice-briefing-banner-1">
+                    <img class="lightbox-only" src="../additional-projects/gfx/Hellfire-PB.webp" alt="practice-briefing-banner-2">
                     <p class="gallery-desc" style="display: none;">User signatures and post banners for use on the Tactical Gaming forums&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Width Requirement: 600px</p>
                 </li>
                 <li class="gallery-item gfx" onclick="lightboxOpen();">
@@ -140,7 +178,7 @@
                             <h2>Graphic/Print Design</h2>
                         </span>
                     </div>
-                    <img src="images/neon-logo.webp" alt="neon-logo">
+                    <img src="../additional-projects/gfx/neon-logo.webp" alt="neon-logo">
                     <p class="gallery-desc" style="display: none;">Conceptual logo design/photo manipulation for personal use - 2017</p>
                 </li>
                 <li class="gallery-item gfx" onclick="lightboxOpen();">
@@ -150,7 +188,7 @@
                             <h2>Graphic/Print Design</h2>
                         </span>
                     </div>
-                    <img src="images/ben-sign.webp" alt="class-of-2020-yard-sign">
+                    <img src="../additional-projects/gfx/ben-sign.webp" alt="class-of-2020-yard-sign">
                     <p class="gallery-desc" style="display: none;">Yard sign for graduates of Oak Ridge High School - 2020&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 24" × 18"</p>
                 </li>
                 <li class="gallery-item branding" onclick="lightboxOpen();">
@@ -160,17 +198,17 @@
                             <h2>Branding</h2>
                         </span>
                     </div>
-                    <img src="images/HappyPlace.webp" alt="happy-place-logo">
+                    <img src="../additional-projects/gfx/HappyPlace.webp" alt="happy-place-logo">
                     <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
                 </li>
-                <li class="gallery-item other"><a href="./images/PDF/SouthernGreenInfographic.pdf" target="_blank">
+                <li class="gallery-item other"><a href="../additional-projects/data-vis/SouthernGreenInfographic.pdf" target="_blank">
                     <div class="item-hover">
                         <span class="hover-info">
                             <h1>Fatbergs Infographic</h1>
                             <h2>Data Visualization</h2>
                         </span>
                     </div>
-                    <img src="images/SouthernGreenInfographic.jpg" alt="mikko-signature">
+                    <img src="../additional-projects/data-vis/SouthernGreenInfographic.jpg" alt="example-infographic-1">
                     <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
                 </a></li>
                 <li class="gallery-item gfx branding" onclick="lightboxOpen();">
@@ -180,7 +218,7 @@
                             <h2>Graphic/Print Design</h2>
                         </span>
                     </div>
-                    <img src="images/stella-logo.webp" alt="stella-logo">
+                    <img src="../additional-projects/gfx/stella-logo.webp" alt="stella-logo">
                     <p class="gallery-desc" style="display: none;">Conceptual logo design for personal use - 2019 </p>
                 </li>
                 
