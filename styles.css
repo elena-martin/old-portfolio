@@ -310,17 +310,15 @@ body {
 }
 
 .page-head {
-    width: 800px;
     margin: 0 auto;
     
 }
 
 .header-text {
-    width: 75%;
     display: inline-block;
     position: relative;
     margin: 10px;
-    margin-left: 2.5%;
+    text-align: center;
 }
 
 .header-text h1{
@@ -345,9 +343,7 @@ body {
 }
 
 .header-image {
-    display: inline-block;
-    position: absolute;
-    top: 10px;
+    display: none;
     width: 137px;
     margin-right: 0;
     z-index: 1;

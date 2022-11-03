@@ -5,12 +5,12 @@
 
 @font-face {
     font-family: Pockota;
-    src: url(../fonts/Pockota\ Medium.ttf);
+    src: url(./fonts/Pockota\ Medium.ttf);
 }
 
 @font-face {
     font-family: Heavitas;
-    src: url(../fonts/Heavitas.ttf);
+    src: url(./fonts/Heavitas.ttf);
 }
 
 html {
@@ -26,8 +26,8 @@ body {
 
 .page-head{
     background-color: #F2E5D8;
-    padding-left: calc(calc(100% - 800px)/2);
-    padding-right:calc(calc(100% - 800px)/2);
+    padding-left: calc(calc(100% - 700px)/2);
+    padding-right:calc(calc(100% - 700px)/2);
 }
 
 #page-content {
@@ -35,11 +35,8 @@ body {
     width: var(--contentWidth);
     height: auto;
     padding: 0;
-    padding-bottom: 3vw;
     text-align: center;
     margin:0 auto;
-
-    margin-top: 2em;
 }
 
 #filters{
@@ -478,7 +475,7 @@ figure:first-of-type {
     margin-top: 0;
     opacity: 0;
     top: 0;
-    background-image: url(../base-images/sun-bg.webp);
+    background-image: url(./base-images/sun-bg.webp);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -602,7 +599,7 @@ figure:first-of-type {
 
 
 #footer {
-    position: absolute;
+    position: relative;
     width: 98%;
     height: auto;
     padding-top: 1vw;
