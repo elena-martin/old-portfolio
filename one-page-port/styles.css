@@ -49,8 +49,8 @@ body {
     text-align: left;
     margin: 0 auto;
     margin-left: 0;
-    padding: 1em;
-    padding-bottom: 0;
+    padding-left: 1em;
+    padding-right: 1em;
     background-color: #365673;
     background-clip: border-box;
 }
@@ -102,7 +102,7 @@ body {
     margin-bottom: 0;
     padding-bottom: .25em;
     font-size: 1.5em;
-    color: #F2E5D8;
+    color: white;
     border-bottom: .1em solid rgba(255, 255, 255, .25);
     font-family: "Pockota", Arial, Helvetica, sans-serif;
     font-weight: normal;
@@ -124,7 +124,6 @@ body {
     text-align: left;
     padding-inline-start: 0%;
     margin: 0;
-    background-color: #365673;
     color: #F2E5D8;
     font-family: Arial, Helvetica, sans-serif;
     font-size:  1.15vw;
@@ -247,7 +246,7 @@ body {
     padding-right: 15px;
     background-color: rgba(40, 60, 79, 0.5);
     border: none;
-    color: rgba(255, 255, 255, 1);
+    color: white;
     border-radius: 5px;
     margin-right: .75vw;
     cursor: pointer;
@@ -270,7 +269,7 @@ color: #B8C6D0;
     padding-inline-start: 0%;
     margin: 0;
     padding-top: 0%;
-    color: #F2E5D8;
+    color: white;
     border-top-right-radius: 1.5em;
     border-bottom-right-radius: 1.5em;
     font-family: "Pockota",Arial, Helvetica, sans-serif;
@@ -312,12 +311,8 @@ color: #B8C6D0;
     display: block;
     transition-property: position;
     transition: .5s;
-    background-color:#283C4F;
-    background-image: url(../base-images/sun-bg.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-blend-mode: overlay;
+    background-color:#F2E5D8;
+    
 }
 
 .gallery {
@@ -345,9 +340,11 @@ color: #B8C6D0;
     transition: .25s;
     transform: scale(1.0);
     border-radius: 1.5em;
-    background-color: transparent;
+    background-color: #283C4F;
+    background-clip: content-box;
     padding: 0%;
     display: none;
+    border: .5em solid transparent;
 }
 .gallery-item:hover {
     transform-origin: 50% 50%;
@@ -355,7 +352,7 @@ color: #B8C6D0;
     transform: scale(1.05);
     cursor: pointer;
     border-radius: 1.5em;
-    border: .5em solid #F29544;
+    border: .5em solid #365673;
 }
 
 .gallery > li {
@@ -363,7 +360,6 @@ color: #B8C6D0;
     flex: 0 0 auto;
     position: relative;
     cursor: pointer;
-    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.4)
 }
   
 .gallery li img {
@@ -421,7 +417,7 @@ figure:first-of-type {
     display: inline-block;
     width: 100%;
     padding-top:1em;
-    padding-bottom: 1.15em;
+    padding-bottom: 1em;
     padding-left: 15px;
     padding-right: 5%;
     background-color: #283C4F;
@@ -475,13 +471,19 @@ figure:first-of-type {
     display: block;
     position: fixed;
     background-position: center;
-    background-color: rgba(22, 32, 43, 0.75);
+    background-color: #283C4F;
     z-index: 5;
     transition: .5s;
     transition-property: opacity;
     margin-top: 0;
     opacity: 0;
     top: 0;
+    background-image: url(../base-images/sun-bg.webp);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
 }
 
 #boxContent {
@@ -534,14 +536,14 @@ figure:first-of-type {
     display: block;
     position: absolute;
     width: calc(100% - calc(2*3vw));
-    background-color: #283C4F;
+    background-color: #365673;
     padding-top: 30px;
     padding-bottom: 35px;
     padding-left: 3vw;
     padding-right: 3vw;
     bottom: 0;
     margin: 0 auto;
-    border-top: .5em solid #365673;
+    box-shadow: 0px -5px 50px rgba(0, 0, 0, 0.3);
 }
 
 #imgContent h2{
@@ -549,8 +551,8 @@ figure:first-of-type {
     font-size: 41px;
     color:#F2E5D8;
     padding-top: 15px;
-    font-family: "Pockota", Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-family: "Heavitas", Arial, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 #imgContent p{
@@ -568,7 +570,7 @@ figure:first-of-type {
     width: auto;
     color: #FFFFFF;
     border-radius: 3em;
-    background-color: #F29544;
+    background-color: #A65D42;
     display: block;
     font-size:5em;
     font-weight: normal;
@@ -582,20 +584,20 @@ figure:first-of-type {
     padding-bottom: .2em;
     transition: .25s;
     transform: scale(1.0);
-    
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.3);
 }
 
 #close-lightbox:hover {
     transition: .25s;
     transform: scale(.9);
     cursor: pointer;
-    background-color: #FCC069;
+    background-color:hsl(16, 43%, 40%);
 }
 
 #close-lightbox:active {
     transform: scale(.9);
     cursor: pointer;
-    background-color: #FCC069;
+    background-color:hsl(16, 43%, 40%);
 }
 
 
@@ -608,7 +610,6 @@ figure:first-of-type {
     padding-left: 2vw;
     text-align: left;
     background-color: #283C4F;
-    box-shadow: 0px -5px 30px rgba(0, 0, 0, 0.3);
     bottom: 0;
 }
 
