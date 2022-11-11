@@ -29,7 +29,7 @@ function preLoad(){
     baseURL = thisURL.replace("/preloader.html", "");
     relativeURL = docURL.replace(baseURL, "")
 
-    if (relativeURL.includes("/additional") || relativeURL.includes("/commercial")){
+    if (relativeURL.includes("/projects")){
         loader.src="../preloader.html";
         content.prepend(loader);
         console.log("tried 1st url")
@@ -42,18 +42,27 @@ function preLoad(){
 
 let base = ""
 
+let loadedPDF = document.getElementById('pdf')
+
 function init(){
     try{checkMobile();}
     catch{}
-    
     loader = document.getElementById('preloader');
-    setTimeout(() => {
-        loader.style.opacity = "0"
-    }, "1000");
-    setTimeout(() => {
-        loader.style.display = "none"
-    }, "2000");
-    base = this.window;
+    let URL = document.URL.toString()
+
+    function closeLoader(){
+        setTimeout(() => {
+            loader.style.opacity = "0"
+        }, "1000");
+        setTimeout(() => {
+            loader.style.display = "none"
+        }, "2000");
+        base = this.window;
+    }
+    closeLoader();
+    /*if (URL.includes("/data-vis") == true){
+        
+    } else{}*/
 };
 
 /*----------- PAGE TRANSITIONS -----------*/
@@ -64,6 +73,7 @@ function getLocation(){
     relativeURL = docURL.replace(baseURL, "");
     console.log(thisURL);
 };
+
 
 
 function pageTransition(){
@@ -80,7 +90,7 @@ function viewHome(){
     pageTransition();
     getLocation();
     setTimeout(() => {
-        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
+        if (thisURL.includes("/projects")){
             window.open("../index.html", target="_self")
             content.prepend(loader);
             console.log("tried 1st url")
@@ -97,7 +107,7 @@ function viewAbout(){
     pageTransition();
     getLocation();
     setTimeout(() => {
-        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
+        if (thisURL.includes("/projects")){
             window.open("../about-me.html", target="_self")
             content.prepend(loader);
             console.log("tried 1st url")
@@ -109,43 +119,11 @@ function viewAbout(){
     }, "1000");
 }
 
-function viewAdditionalProj(){
-    pageTransition();
-    getLocation();
-    setTimeout(() => {
-        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
-            window.open("../additional-projects/additional-projects.html", target="_self")
-            content.prepend(loader);
-            console.log("tried 1st url")
-        } else {
-            window.open("additional-projects/additional-projects.html", target="_self")
-            content.prepend(loader);
-            console.log("tried 2nd url")
-        }
-    }, "1000");
-}
-
-function viewCommercialProj(){
-    pageTransition();
-    getLocation();
-    setTimeout(() => {
-        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
-            window.open("../commercial-projects/commercial-lock.html", target="_self")
-            content.prepend(loader);
-            console.log("tried 1st url")
-        } else {
-            window.open("commercial-projects/commercial-lock.html", target="_self")
-            content.prepend(loader);
-            console.log("tried 2nd url")
-        }     
-    }, "1000");
-}
-
 function viewPortfolio(){
     pageTransition();
     getLocation();
     setTimeout(() => {
-        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
+        if (thisURL.includes("/project")){
             window.open("../portfolio.html", target="_self")
             content.prepend(loader);
             console.log("tried 1st url")
@@ -171,7 +149,7 @@ var toggleBox = {"active":false}
 function reportbugOpen(){
     getLocation();
     setTimeout(() => {
-        if (thisURL.includes("/additional") || thisURL.includes("/commercial")){
+        if (thisURL.includes("/project")){
             popup.src="../report-bug.html"
         } else {
             popup.src="./report-bug.html"

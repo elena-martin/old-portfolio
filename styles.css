@@ -201,11 +201,6 @@ body {
     cursor: pointer;
 }
 
-.menu:last-of-type:hover {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
 
 .menu:hover .submenu {
     display: block;
@@ -311,7 +306,8 @@ body {
 
 .page-head {
     margin: 0 auto;
-    
+    background-color: #F2E5D8;
+    text-align: center;
 }
 
 .header-text {

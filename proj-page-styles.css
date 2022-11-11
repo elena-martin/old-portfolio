@@ -385,7 +385,7 @@ ul:last-of-type {
     transform: scale(1.05);
 }
 
-.back-to-additional {
+.back-to-projects {
     color: white;
     border: none;
     display: block;
@@ -394,7 +394,7 @@ ul:last-of-type {
     font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
     margin: 0 auto;
     font-size: 20.5px;
-    padding-bottom: 12px;
+    padding-bottom: 11px;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 8px;
@@ -405,7 +405,7 @@ ul:last-of-type {
     z-index: 3;
 }
 
-.back-to-additional:hover {
+.back-to-projects:hover {
     background-color:hsl(16, 43%, 40%);
 }
 

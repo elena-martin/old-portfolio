@@ -5,8 +5,8 @@
         <link rel="stylesheet" href="./port-styles.css">
         <script src="./script.js"></script>
         <meta charset="UTF-8">
-        <link rel="preload" href="../preloader.html" as="document">
-        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+        <link rel="preload" href="./preloader.html" as="document">
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
         <!--Imports a model-viewer JavaScript code -->
         <!--It helps to handle how the 3D Object would be displayed -->
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -18,17 +18,12 @@
                 init();
             });
         </script>
-        <iframe src="../preloader.html" id="preloader"></iframe>
+        <iframe src="./preloader.html" id="preloader"></iframe>
         <div id="nav">
             <a onclick=viewHome();><img id="icon" src="./base-images/Icon-2022.svg" alt="Website Icon"></a>
             <div id="nav-buttons">
                 <div class="menu"><a onclick=viewAbout();>ABOUT ME</a></div>
-                <div class="menu"><a onclick=viewPortfolio();>PORTFOLIO</a>
-                    <div class="submenu">
-                        <a onclick=viewCommercialProj();>Commercial Projects</a>
-                        <a onclick=viewAdditionalProj();>Additional Projects</a>
-                    </div>
-                </div>
+                <div class="menu"><a onclick=viewPortfolio();>PORTFOLIO</a></div>
             </div>
             <div id="nav-divider"></div>
         </div>
@@ -36,7 +31,7 @@
             <img id="logo" src="./base-images/Wordmark-2022-Light.svg" alt="Website Logo">
         </div>
         <div id="page-content" class="body" style="background-color:#283C4F;">
-            <div class="page-head">
+            <!--<div class="page-head">
                 <div class = "header-text">
                     <h1>Check Out My</h1>
                     <h2>Portfolio!</h2>
@@ -44,7 +39,7 @@
                 <div class = "header-image" style="margin-left: 5px;">
                     <img src="./base-images/Cacti.webp" alt="Cactus Ornament">
                 </div>
-            </div>
+            </div>-->
 
             <div class="section-divider">
                 <p class="section-div-text">⇩&nbsp;&nbsp;CLICK ON A FILTER TO SORT PROJECTS. CLICK ON A PROJECT TO LEARN MORE!&nbsp;&nbsp;⇩</p>
@@ -52,9 +47,10 @@
 
             <div id="filters">
                 <div id="filter-select" >
+                    <h3>Filters:</h3>
                     <ul>
                         <div id="category" class="filter-cat">
-                            <h3>Design Categories</h3>
+                            
                             <li>
                                 <input type="checkbox" class="filter" id="filter1" onclick="editFilters();"> 
                                 <label for="filter1">Graphic / Print Design</label>
@@ -77,10 +73,19 @@
 
                             <li>
                                 <input type="checkbox" class="filter" id="filter5" onclick="editFilters();">
-                                <label for="filter5">Other Projects</label>
+                                <label for="filter5">Data Visualizaton</label>
                             </li>
+                            <li>
+                                <input type="checkbox" class="filter" id="filter6" onclick="editFilters();">
+                                <label for="filter6">Project Management</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="filter" id="filter7" onclick="editFilters();">
+                                <label for="filter7">Other Projects</label>
+                            </li>
+                            
                         </div>
-                        <div id="type" class="filter-cat">
+                        <!--<div id="type" class="filter-cat">
                             <h3>Project Depth</h3>
                             <li>
                                 <input type="checkbox" class="filter" id="filter6" onclick="editFilters();">
@@ -97,7 +102,7 @@
                                 <input type="checkbox" class="filter" id="filter8" onclick="editFilters();">
                                 <label for="filter8">Works In Progress</label>
                             </li>
-                        </div>
+                        </div>-->
                     </ul>
                 </div>
                 <div id="divider"></div>
@@ -107,121 +112,149 @@
             </div>
             <span id="gallery">
                 <ul class="gallery" onclick="getFigure(event);">
-                <li class="gallery-item uxui" onclick="lightboxOpen();">
-                    <div class="item-hover">
-                        <span class="hover-info">
-                            <h1>Sandbox Project</h1>
-                            <h2>UX/UI</h2>
-                        </span>
-                    </div>
-                    <img src="./additional-projects/git/sandbox-logo.svg" alt="sandbox-logo">
-                    <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
-                </li>
-                <li class="gallery-item web"><a href="./additional-projects/interactive-map.html">
-                    <div class="item-hover">
-                        <span class="hover-info">
-                            <h1>Interactive Map</h1>
-                            <h2>Web Design</h2>
-                        </span>
-                    </div>
-                    <img src="./additional-projects/git/botw-gallery.png" alt="botw">
-                    <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
-                </a></li>
-                <li class="gallery-item gfx" onclick="lightboxOpen();">
-                    <div class="item-hover">
-                        <span class="hover-info">
-                            <h1>YouTube Thumbnail</h1>
-                            <h2>Graphic / Print Design</h2>
-                        </span>
-                    </div>
-                    <img src="./additional-projects/gfx/Thumbnail1.webp" alt="thumbnail">
-                    <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
-                </li>
-                <li class="gallery-item gfx" onclick="lightboxOpen();">
-                    <div class="item-hover">
-                        <span class="hover-info">
-                            <h1>Info Card</h1>
-                            <h2>Graphic / Print Design</h2>
-                        </span>
-                    </div>
-                    <img src="./additional-projects/gfx/pff-card-front.webp" alt="pff-card-front">
-                    <p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation (1/2) - 2019&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 5" × 7"</p>
-                </li>
-                <li class="gallery-item branding" onclick="lightboxOpen();">
-                    <div class="item-hover">
-                        <span class="hover-info">
-                            <h1>Scarlet Witch Logo</h1>
-                            <h2>Branding</h2>
-                        </span>
-                    </div>
-                    <img src="./additional-projects/gfx/scarlet-witch-logo.webp" alt="scarlet-witch-logo">
-                    <p class="gallery-desc" style="display: none;">Conceptual logo design for personal use - 2022</p>
-                </li>
-                <li class="gallery-item gfx" onclick="lightboxOpenMulti();">
-                    <div class="item-hover">
-                        <span class="hover-info">
-                            <h1>Forum Graphics</h1>
-                            <h2>Graphic / Print Design</h2>
-                        </span>
-                    </div>
-                    <img src="./additional-projects/gfx/Av-JLift-Sig.webp" alt="av-jlift-signature">
-                    <img class="lightbox-only" src="./additional-projects/gfx/Av-JLift-Sig.webp" alt="av-jlift-signature">
-                    <img class="lightbox-only" src="./additional-projects/gfx/mikkosig.webp" alt="mikkolikoli-signature">
-                    <img class="lightbox-only" src="./additional-projects/gfx/Totally-80-s-PB.webp" alt="practice-briefing-banner-1">
-                    <img class="lightbox-only" src="./additional-projects/gfx/Hellfire-PB.webp" alt="practice-briefing-banner-2">
-                    <p class="gallery-desc" style="display: none;">User signatures and post banners for use on the Tactical Gaming forums&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Width Requirement: 600px</p>
-                </li>
-                <li class="gallery-item gfx" onclick="lightboxOpen();">
-                    <div class="item-hover">
-                        <span class="hover-info">
-                            <h1>Neon Logo</h1>
-                            <h2>Graphic / Print Design</h2>
-                        </span>
-                    </div>
-                    <img src="./additional-projects/gfx/neon-logo.webp" alt="neon-logo">
-                    <p class="gallery-desc" style="display: none;">Conceptual logo design/photo manipulation for personal use - 2017</p>
-                </li>
-                <li class="gallery-item gfx" onclick="lightboxOpen();">
-                    <div class="item-hover">
-                        <span class="hover-info">
-                            <h1>Class of 2020 Sign</h1>
-                            <h2>Graphic / Print Design</h2>
-                        </span>
-                    </div>
-                    <img src="./additional-projects/gfx/ben-sign.webp" alt="class-of-2020-yard-sign">
-                    <p class="gallery-desc" style="display: none;">Yard sign for graduates of Oak Ridge High School - 2020&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 24" × 18"</p>
-                </li>
-                <li class="gallery-item branding" onclick="lightboxOpen();">
-                    <div class="item-hover">
-                        <span class="hover-info">
-                            <h1>Happy Place Branding</h1>
-                            <h2>Branding</h2>
-                        </span>
-                    </div>
-                    <img src="./additional-projects/gfx/HappyPlace.webp" alt="happy-place-logo">
-                    <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
-                </li>
-                <li class="gallery-item other"><a href="./additional-projects/data-vis/SouthernGreenInfographic.pdf" target="_blank">
-                    <div class="item-hover">
-                        <span class="hover-info">
-                            <h1>Fatbergs Infographic</h1>
-                            <h2>Data Visualization</h2>
-                        </span>
-                    </div>
-                    <img src="./additional-projects/data-vis/SouthernGreenInfographic.jpg" alt="example-infographic-1">
-                    <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
-                </a></li>
-                <li class="gallery-item gfx branding" onclick="lightboxOpen();">
-                    <div class="item-hover">
-                        <span class="hover-info">
-                            <h1>Stella Logo Design</h1>
-                            <h2>Graphic / Print Design</h2>
-                        </span>
-                    </div>
-                    <img src="./additional-projects/gfx/stella-logo.webp" alt="stella-logo">
-                    <p class="gallery-desc" style="display: none;">Conceptual logo design for personal use - 2019 </p>
-                </li>
-                
+                    <li class="gallery-item uxui" onclick="lightboxOpen();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Sandbox Project</h1>
+                                <h2>UX/UI</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/git/sandbox-logo.svg" alt="sandbox-logo">
+                        <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
+                    </li>
+                    <li class="gallery-item web" onclick="projPage();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Interactive Map</h1>
+                                <h2>Web Design</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/git/botw-gallery.png" alt="botw">
+                        <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
+                    </li>
+                    <li class="gallery-item gfx" onclick="lightboxOpen();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>YouTube Thumbnail</h1>
+                                <h2>Graphic / Print Design</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/gfx/Thumbnail1.webp" alt="thumbnail">
+                        <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
+                    </li>
+                    <li class="gallery-item gfx" onclick="lightboxOpenMultiPFF();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Info Card</h1>
+                                <h2>Graphic / Print Design</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/gfx/pff-card-front.webp" alt="pff-card-front">
+                        <img class="lightbox-only pff"src="./projects/gfx/pff-card-front.webp" alt="pff-card-front">
+                        <img class="lightbox-only pff" src="./projects/gfx/pff-card-back.webp" alt="pff-card-back">
+                        <p class="gallery-desc" style="display: none;">Promotional card for Pearce Family Foundation - 2019&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 5" × 7"</p>
+                    </li>
+                    <li class="gallery-item data-vis" onclick="projPage();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Fatbergs Infographic</h1>
+                                <h2>Data Visualization</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/data-vis/SouthernGreenInfographic.jpg" alt="southern-green-infographic">
+                    </li>
+                    <li class="gallery-item branding" onclick="lightboxOpen();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Scarlet Witch Logo</h1>
+                                <h2>Branding</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/gfx/scarlet-witch-logo.webp" alt="scarlet-witch-logo">
+                        <p class="gallery-desc" style="display: none;">Conceptual logo design for personal use - 2022</p>
+                    </li>
+                    <li class="gallery-item gfx" onclick="lightboxOpenMultiTG();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Forum Graphics</h1>
+                                <h2>Graphic / Print Design</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/gfx/Av-JLift-Sig.webp" alt="av-jlift-signature">
+                        <img class="lightbox-only tg" src="./projects/gfx/Av-JLift-Sig.webp" alt="av-jlift-signature">
+                        <img class="lightbox-only tg" src="./projects/gfx/mikkosig.webp" alt="mikkolikoli-signature">
+                        <img class="lightbox-only tg" src="./projects/gfx/Totally-80-s-PB.webp" alt="practice-briefing-banner-1">
+                        <img class="lightbox-only tg" src="./projects/gfx/Hellfire-PB.webp" alt="practice-briefing-banner-2">
+                        <p class="gallery-desc" style="display: none;">User signatures and post banners for use on the Tactical Gaming forums&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Width Requirement: 600px</p>
+                    </li>
+                    <li class="gallery-item gfx" onclick="lightboxOpen();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Neon Logo</h1>
+                                <h2>Graphic / Print Design</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/gfx/neon-logo.webp" alt="neon-logo">
+                        <p class="gallery-desc" style="display: none;">Conceptual logo design/photo manipulation for personal use - 2017</p>
+                    </li>
+                    <li class="gallery-item gfx" onclick="lightboxOpen();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Class of 2020 Sign</h1>
+                                <h2>Graphic / Print Design</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/gfx/ben-sign-optimized.webp" alt="class-of-2020-yard-sign">
+                        <p class="gallery-desc" style="display: none;">Yard sign for graduates of Oak Ridge High School - 2020&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 24" × 18"</p>
+                    </li>
+                    <li class="gallery-item gfx" onclick="lightboxOpen();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>ORHS Ensemble T-Shirt</h1>
+                                <h2>Graphic / Print Design</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/gfx/ensemble-logo.webp" alt="ensemble-logo">
+                        <p class="gallery-desc" style="display: none;">Conceptual logo/t-shirt design created for the Oak Ridge High School Ensemble&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Requirement: Make use of ORHS' distinct "Cardinal" color</p>
+                    </li>
+                    <li class="gallery-item data-vis" onclick="projPage();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Personal iPhone Statistics</h1>
+                                <h2>Data Visualization</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/data-vis/iphone-stats.webp" alt="iphone-infographic">
+                    </li>
+                    <li class="gallery-item branding" onclick="lightboxOpen();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Happy Place Branding</h1>
+                                <h2>Branding</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/gfx/HappyPlace.webp" alt="happy-place-logo">
+                        <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
+                    </li>
+                    <li class="gallery-item data-vis" onclick="projPage();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Workplace Injuries Infographic</h1>
+                                <h2>Data Visualization</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/data-vis/workplace-injuries.webp" alt="workplace-injuries-infographic">
+                    </li>
+                    <li class="gallery-item gfx" onclick="lightboxOpen();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>GAT Logo Design</h1>
+                                <h2>Graphic / Print Design</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/gfx/gat-logo.webp" alt="girl-about-town-logo">
+                        <p class="gallery-desc" style="display: none;">Logo created for Girl About Town (GAT)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Requirement: Must be cohesive with existing Girl About Town branding</p>
+                    </li>
                 </ul>
             </span>
             <!--<div id="model-1" class="model-viewer">-->
@@ -234,6 +267,54 @@
             <p>Copyright 2022</p>
         </div>
         <script src="./gallery-script.js"></script>
+        <script>
+            let i = 0;
+
+            let web = document.getElementsByClassName('web')
+            let dataVis = document.getElementsByClassName('data-vis')
+            console.log(dataVis)
+
+            function projPage(){
+                getFigure(event);
+                pageTransition();
+                getLocation();
+                
+                if (target.parentElement.classList.contains('data-vis')){
+                    if (target.innerText == 'Fatbergs Infographic\nData Visualization'){
+                        setTimeout(() => {
+                            window.open("./projects/data-vis-1.html", target="_self")
+                            content.prepend(loader);
+                            console.log("View Project")
+                    }, "1000");
+                    }
+                    if (target.innerText == 'Personal iPhone Statistics\nData Visualization'){
+                        setTimeout(() => {
+                            window.open("./projects/data-vis-2.html", target="_self")
+                            content.prepend(loader);
+                            console.log("View Project")
+                    }, "1000");
+                    }
+                    if (target.innerText == 'Workplace Injuries Infographic\nData Visualization'){
+                        setTimeout(() => {
+                            window.open("./projects/data-vis-3.html", target="_self")
+                            content.prepend(loader);
+                            console.log("View Project")
+                    }, "1000");
+                    }
+                };
+
+                if (target.parentElement.classList.contains('web')){
+                    if (target.innerText == 'Interactive Map\nWeb Design'){
+                        setTimeout(() => {
+                            window.open("./projects/interactive-map.html", target="_self")
+                            content.prepend(loader);
+                            console.log("View Project")
+                    }, "1000");
+                    }
+                }
+                
+            }
+        </script>
         <!--<script src="./sorting.js"></script>-->
     </body>
 </html>

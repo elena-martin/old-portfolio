@@ -11,21 +11,8 @@ const siteBody = document.getElementsByClassName('body')
 
 const gallery = document.getElementById('gallery');
 
-/*----- GET FILTERS -----*/
+/*----- GET GALLERY ITEMS -----*/
 const galleryItems = document.getElementsByClassName('gallery-item');
-const activeFilters = document.getElementById('selected-filters')
-
-const gfxFilter = document.getElementsByClassName('gfx');
-const webFilter = document.getElementsByClassName('web');
-const brandingFilter = document.getElementsByClassName('branding');
-const uxuiFilter = document.getElementsByClassName('uxui');
-const otherFilter = document.getElementsByClassName('other');
-
-const fullProjFilter = document.getElementsByClassName('full');
-const singleFilter = document.getElementsByClassName('single');
-
-const wipFilter = document.getElementsByClassName('wip');
-const completedFilter = document.getElementsByClassName('completed');
 
 /*----- CREATE IMG LIGHTBOX -----*/
 const boxContent = document.createElement("div");
@@ -59,6 +46,9 @@ var source = ""
 var relsource = ""
 var title = ""
 var desc = ""
+
+var classes = ""
+var target = ""
 
 const footer = document.getElementById('footer');
 
@@ -117,7 +107,7 @@ function editFilters()  {
 
     //Checks if any other filters are active. If not, hides the "selected-filters" div. Automatically called before running remove();
     function checkRemove(){
-        if (checkboxes.item(0).checked == false && checkboxes.item(1).checked == false && checkboxes.item(2).checked == false && checkboxes.item(3).checked == false && checkboxes.item(4).checked == false && checkboxes.item(5).checked == false && checkboxes.item(6).checked == false && checkboxes.item(7).checked == false) {
+        if (checkboxes.item(0).checked == false && checkboxes.item(1).checked == false && checkboxes.item(2).checked == false && checkboxes.item(3).checked == false && checkboxes.item(4).checked == false && checkboxes.item(5).checked == false && checkboxes.item(6).checked == false /*&& checkboxes.item(7).checked == false*/) {
             console.log("No Filters");
             document.getElementById('selected-filters').className = 'animate-out'
             let hide = document.getElementsByClassName("animate-out")
@@ -194,17 +184,37 @@ function editFilters()  {
                         itemClasses.remove ('active')
                         itemClasses.remove ('loaded')
                     };
-                    //FIFTH FILTER - OTHER
-                    if (checkboxes[4].checked == true && galleryItems[i2].classList.contains('other') == true) {
+                    //FIFTH FILTER - DATA VIS
+                    if (checkboxes[4].checked == true && galleryItems[i2].classList.contains('data-vis') == true) {
                         itemClasses.add('active')
                         itemClasses.remove ('loaded')
                     };
-                    if (checkboxes[4].checked == false && galleryItems[i2].classList.contains('other') == true){
+                    if (checkboxes[4].checked == false && galleryItems[i2].classList.contains('data-vis') == true){
                         itemClasses.remove ('active')
                         itemClasses.remove ('loaded')
                     };
 
-                    //SIXTH FILTER - SOLO DESIGNS
+                    //SIXTH FILTER - PROJECT MANAGEMENT
+                    if (checkboxes[5].checked == true && galleryItems[i2].classList.contains('proj-management') == true) {
+                        itemClasses.add('active')
+                        itemClasses.remove ('loaded')
+                    };
+                    if (checkboxes[5].checked == false && galleryItems[i2].classList.contains('proj-management') == true){
+                        itemClasses.remove ('active')
+                        itemClasses.remove ('loaded')
+                    };
+
+                    //SEVENTH FILTER - OTHER PROJECTS
+                    if (checkboxes[6].checked == true && galleryItems[i2].classList.contains('other') == true) {
+                        itemClasses.add('active')
+                        itemClasses.remove ('loaded')
+                    };
+                    if (checkboxes[6].checked == false && galleryItems[i2].classList.contains('other') == true){
+                        itemClasses.remove ('active')
+                        itemClasses.remove ('loaded')
+                    };
+
+                    /*ALT. SIXTH FILTER - SOLO DESIGNS
                     if (checkboxes[5].checked == true && galleryItems[i2].classList.contains('single') == true) {
                         itemClasses.add('active')
                         itemClasses.remove ('loaded')
@@ -214,7 +224,7 @@ function editFilters()  {
                         itemClasses.remove ('loaded')
                     };
 
-                    //SEVENTH FILTER - FULL PROJECTS
+                    //ALT. SEVENTH FILTER - FULL PROJECTS
                     if (checkboxes[6].checked == true && galleryItems[i2].classList.contains('full') == true) {
                         itemClasses.add('active')
                         itemClasses.remove ('loaded')
@@ -222,7 +232,7 @@ function editFilters()  {
                     if (checkboxes[6].checked == false && galleryItems[i2].classList.contains('full') == true){
                         itemClasses.remove ('active')
                         itemClasses.remove ('loaded')
-                    };
+                    };*/
                 };
             } if (checkboxes[i].checked == false) {
                 let itemClasses = galleryItems[i].classList;
@@ -255,6 +265,8 @@ function lightbox(){
 
 function getFigure(e){ 
     console.log(e.target.children[0].firstElementChild.textContent);
+    classes = e.target.parentElement.parentElement.classList;
+    target = e.target;
     let img = e.target.nextElementSibling;
     source = e.target.nextElementSibling.src
     relsource = source.split('x/').pop();
@@ -288,7 +300,7 @@ function lightboxOpen(){
     disableScroll();
 }
 
-function lightboxOpenMulti(){
+function lightboxOpenMultiPFF(){
     let lightbox = document.getElementById('lightbox')
     lightbox.appendChild(closeLightboxMulti);
     boxImg.style = "display: none"
@@ -302,16 +314,44 @@ function lightboxOpenMulti(){
     }, "100");
     disableScroll();
     for (let i = 0; i < (multiImg.length); i++){
-        const newImg = document.createElement("img");
-        console.log(multiImg);
-        boxContent.appendChild(newImg);
-        newImg.setAttribute("target", "_blank");
-        newImg.setAttribute("src", multiImg[i].src);
-        newImg.className = "multiImg"
-
-        console.log(multiImg[i])
-    }
+        if (multiImg[i].classList.contains('pff')){
+            const newImg = document.createElement("img");
+            console.log(multiImg);
+            boxContent.appendChild(newImg);
+            newImg.setAttribute("target", "_blank");
+            newImg.setAttribute("src", multiImg[i].src);
+            newImg.className = "multiImg"
     
+            console.log(multiImg[i])
+        }
+    }
+}
+
+function lightboxOpenMultiTG(){
+    let lightbox = document.getElementById('lightbox')
+    lightbox.appendChild(closeLightboxMulti);
+    boxImg.style = "display: none"
+
+    siteBody[0].style = "transition: .5s -webkit-filter linear; -webkit-filter: blur(10px); -moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px); filter: blur(10px);"
+    siteBody[1].style = "transition: .5s -webkit-filter linear; -webkit-filter: blur(10px); -moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px); filter: blur(10px);"
+
+    lightbox.style = "display: block";
+    setTimeout(() => {
+        lightbox.style = "opacity: 1";
+    }, "100");
+    disableScroll();
+    for (let i = 0; i < (multiImg.length); i++){
+        if (multiImg[i].classList.contains('tg')){
+            const newImg = document.createElement("img");
+            console.log(multiImg);
+            boxContent.appendChild(newImg);
+            newImg.setAttribute("target", "_blank");
+            newImg.setAttribute("src", multiImg[i].src);
+            newImg.className = "multiImg"
+    
+            console.log(multiImg[i])
+        }
+    }
 }
 
 function lightboxClose(){

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Elena Martin | Interactive Map</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../proj-page-styles.css">
+        <meta charset="UTF-8">
+        <script src="../script.js"></script>
+        <script src="./gallery-script.js"></script>
+        <link rel="preload" as="document" onload="this.rel = 'document'" href="../preloader.html">
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    </head>
+    <body>
+        <script>
+            window.addEventListener('load', (event) => {
+                init();
+                botwCarousel();
+                setInterval(botwCarousel, 5000);
+            });
+        </script>
+        <iframe src="../preloader.html" id="preloader"></iframe>
+        <div id="nav">
+            <a onclick=viewHome();><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
+            <div id="nav-buttons">
+                <div class="menu"><a onclick=viewAbout();>ABOUT ME</a></div>
+                <div class="menu"><a onclick=viewPortfolio();>PORTFOLIO</a></div>
+            </div>
+            <div id="nav-divider"></div>
+        </div>
+        <a onclick=backPage(); class="page-back">🠬 Back to Projects</a>
+        <br><br><br><br><br><br><br>
+        <div class="case-head org">
+            <h1>Interactive Map</h1>
+            <p id="blurb"><i>Easily access tutorials & checklists for</i> The Legend of Zelda: Breath of the Wild</p>
+            <div id="nav-divider"></div>
+        </div>
+
+        <div class="case-content">
+            <section class="case-section">
+                <div id="botw-carousel"></div>
+                <div class="slide-indicators">
+                    <span class="slide-1" style="margin-right: 2%;"></span>
+                    <span class="slide-2" style="margin-right:2%;"></span>
+                    <span class="slide-3" style="margin-left:0%;"></span>
+                    <span class="slide-4" style="margin-left:2%;"></span>
+                    <span class="slide-5" style="margin-left:2%;"></span>
+                </div>
+            </section>
+            
+            <section class="case-section">
+                <h1>Overview</h1>
+                <div class="divider"></div>
+                <p>Create a website that allows the user to track in-game progress for <i>The Legend of Zelda: Breath of the Wild</i>, and view tutorials if necessary.</p>
+                    <h2>Objectives</h2>
+                        <ul>
+                            <li>Site design should be heavily centered around the unique visual style of <i>Breath of the Wild</i></li>
+                            <li>Code the site from scratch using HTML, CSS and JavaScript</li>
+                            <li>Avoid external links at all costs</li>
+                            <li>Include tutorials and map icons for each of the 120 shrines scattered across Hyrule</li>
+                            <li>Allow the user to zoom in and out of the map separately from the other site content</li>
+                        </ul>
+            </section>
+            <section class="case-section">
+                <h1>Concepts</h1>
+                <div class="divider"></div>
+                    <img src="./git/botw/botw-sketches.webp" style="margin-top: 20px;">
+            </section>
+            <section class="case-section org">
+                <h1>Inspiration</h1>
+                <div class="divider org"></div>
+                <label>
+                    <img src="./git/botw/inspo-gameUI.webp" alt="A screenshot of the game's UI" class="botw">
+                    In-game map from <i>The Legend of Zelda: Breath of the Wild</i>.<br> Nintendo Switch, Nintendo, 2017.
+                </label>
+                
+                <label>
+                    <img src="./git/botw/inpso-website.webp" alt="" class="botw">
+                    Screenshot from the Official Home for the Legend of Zelda,<br> Nintendo, www.zelda.com/.
+                </label>
+            </section>
+
+            <section class="case-section final">
+                <h1>Final Project</h1>
+                <div class="divider"></div>
+                <img src="./git/botw/WebsiteLogo.svg" style="margin-top: 40px; width: 70%;">
+                <a href="https://elena-martin.github.io/senior-project/Map%20v1.1/index.html" id="botw-link" target="_blank">Click Here to View Website</a>
+            </section>
+            <a onclick=backPage(); class="back-to-projects">🠬 Back to Projects</a>
+        </div>
+        <div id="footer">
+            <p>© Copyright 2022 Elena Martin</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick=reportbugOpen();>Report Issue</a></p>
+        </div>
+        <script>
+            let i = 0;
+
+            const carousel = document.getElementById('botw-carousel');
+            const botwImages = document.createElement('img');
+            carousel.appendChild(botwImages);
+            const indicators5 = document.getElementsByClassName('slide-indicators')[0].children;
+
+            function backPage(){
+                pageTransition();
+                getLocation();
+                setTimeout(() => {
+                        window.open("../portfolio.html", target="_self")
+                        content.prepend(loader);
+                        console.log("Back to Portfolio")
+                }, "1000");
+            }
+        </script>
+    </body>
+</html>
