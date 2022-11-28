@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Elena Martin | Concepts & Pre-Dev</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../proj-page-styles.css">
+        <link rel="preload" href="../preloader.html" as="document" crossorigin />
+        <meta charset="UTF-8">
+        <script src="../script.js"></script>
+        <script src="../lock-script.js"></script>
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    </head>
+    <body>
+        <script>
+            window.addEventListener('load', (event) => {
+                init();
+                load();
+                if (sessionStorage.entered === 'true'){
+                    return
+                } else {
+                    window.open("./commercial.html", target="_self")
+                }
+            });
+        </script>
+        <iframe src="../preloader.html" id="preloader"></iframe>
+        <div id="nav">
+            <a onclick=viewHome();><img id="icon" src="../base-images/Icon-2022.svg" alt="Website Icon"></a>
+            <div id="nav-buttons">
+                <div class="menu"><a onclick=viewAbout();>ABOUT ME</a></div>
+                <div class="menu"><a onclick=viewPortfolio();>PORTFOLIO</a>
+                    <div class="submenu">
+                        <a onclick=viewCommercialProj();>Commercial Projects</a>
+                        <a onclick=viewAdditionalProj();>Additional Projects</a>
+                    </div>
+                </div>
+            </div>
+            <div id="nav-divider"></div>
+        </div>
+        <a onclick=backPage(); class="page-back">🠬 Back to Commercial Projects</a>
+        <br><br><br><br><br><br><br>
+        <div class="case-head org">
+            <h1>Pre-Development</h1>
+            <h2>Presenting Concepts</h2>
+            <div id="nav-divider"></div>
+        </div>
+        <div class="case-content predev">
+            <section class="case-section predev">
+                <h1>One-Pagers</h1>
+                <div class="divider predev"></div>
+                <div>
+                    <h2>Dasani Trivia</h2>
+                    <p>Concept for a trivia game sponsored by Dasani to help raise environmental awareness.</p>
+                    <img src="./concepts/dasani-trivia.webp" alt="Dasani One-Pager" class="ex">
+
+                    <h2>Bojangles + Charlotte FC</h2>
+                    <p>Signage, gameplay & UI for a Charlotte FC soccer game sponsored by Bojangles</p>
+                    <img src="./concepts/bojangles-charlottefc-soccer.webp" alt="Bojangles + Charlotte FC One-Pager" class="ex">
+                </div>
+            </section>
+            <section class="case-section predev">
+                <h1>Presentation Slides</h1>
+                <div class="divider predev"></div>
+                <div>
+                    <h2>Orlando FC Product Option</h2>
+                    <p>Gameplay and UI concepts for an Orlando FC soccer game</p>
+                    <img src="./concepts/orlando-slide.webp" alt="Orlando FC Product Pitch Slide" class="ex">
+                    
+                    <h2>eSports/Streaming Game Mode Concepts</h2>
+                    <p>New and updated game concepts to fit a theme well-suited to the online gaming community</p>
+                    <img src="./concepts/esports-streamers-slide.webp" alt="eSports & Streamer Product Pitch Slide" class="ex">
+                    
+                    <h2>Company Statistics Slide</h2>
+                    <p>A compilation of data from Google Analytics including some of Aquimo's most well-performing products. </p>
+                    <img src="./concepts/aquimo-statistics-slide.webp" alt="Aquimo Statistics Slide" class="ex">
+                </div>
+            </section>
+            <section class="case-section predev">
+                <h1>Gameplay & UI Concepts</h1>
+                <div class="divider predev"></div>
+                <div id="phones">
+                    <section class="columns-4" id="col-1">
+                        <video width="240" height="480" src="./concepts/tinyhouse-animation-win.mp4" id="concept-vid" autoplay></video>
+                        <span id="toggle">
+                            <a class="toggle-buttons" onclick="toggleWin();">WIN</a>
+                            <a class="toggle-buttons" onclick="toggleLose();">LOSE</a>
+                            <input type="checkbox" title="Win/Lose" id="toggle-box">
+                        </span>
+                        <h3>Gameplay Animation</h3>
+                        <p>Building Game</p>
+                    </section>
+                    <section class="columns-4" id="col-2">
+                        <img class="concept-phone" src="./concepts/basspro-phone-splash.webp" alt="Mobile Browser Game Loading Screen Concept for Bass Pro Shops">
+                        <h3>Loading Screen</h3>
+                        <p>for Bass Pro Shops</p>
+                    </section>
+                    <section class="columns-4" id="col-3">
+                        <img class="concept-phone" src="./concepts/lilbaby-phone-gameplay.webp" alt="Mobile Browser Game Gameplay Concept for Lil Baby">
+                        <h3>Gameplay</h3>
+                        <p>for Lil Baby</p>
+                    </section>
+                    <section class="columns-4" id="col-4">
+                        <img class="concept-phone" src="./concepts/nashvillesc-phone-home.webp" alt="Mobile Browser Game Home Screen Concept for Nashville SC">
+                        <h3>Home Screen</h3>
+                        <p>for Coke Zero Sugar</p>
+                    </section>
+                </div>
+            </section>
+            <a onclick=backPage(); class="back-to-commercial">🠬 Back to Commercial Projects</a>
+        </div>
+        <div id="footer">
+            <p>© Copyright 2022 Elena Martin</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick=reportbugOpen();>Report Issue</a></p>
+        </div>
+        <script>
+            let video = document.getElementById('concept-vid');
+            const toggle = document.getElementById('toggle');
+            let nodes = toggle.childNodes;
+            let checkbox = nodes.item(5);
+            let win = nodes.item(1);
+            let lose = nodes.item(3);
+
+            function toggleWin(){
+                win.setAttribute("style", "background-color:#A65D42")
+                lose.setAttribute("style", "background-color:#D97B59")
+                checkbox.checked = false
+                video.setAttribute("src","./concepts/tinyhouse-animation-win.mp4");
+            };
+
+            function toggleLose(){
+                win.setAttribute("style", "background-color:#D97B59")
+                lose.setAttribute("style", "background-color:#A65D42")
+                checkbox.checked = true;
+                video.setAttribute("src", "./concepts/tinyhouse-animation-lose.mp4")
+            };
+
+            function load(){
+                toggleWin();
+            };
+
+            function backPage(){
+                pageTransition();
+                getLocation();
+                setTimeout(() => {
+                        window.open("commercial.html", target="_self")
+                        content.prepend(loader);
+                        console.log("Back to Commercial Portfolio")
+                }, "1000");
+            }
+            
+        </script>
+    </body>
+</html>

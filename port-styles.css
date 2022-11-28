@@ -576,7 +576,7 @@ figure:first-of-type {
     z-index: 3;
     line-height: 70px;
     padding: .25em;
-    padding-bottom: .2em;
+    padding-bottom: .12em;
     transition: .25s;
     transform: scale(1.0);
     box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.3);
