@@ -210,3 +210,11 @@ function reportbugClose(){
 
 const localize = {"Content-Security-Policy":"file:///D:/Coding/GitHub%20Repositories/portfolio/"}
 new Headers(localize);
+
+let commercialURL = ""
+
+/*------------------ ABOUT ME CODE ------------------*/
+
+let leftBrain = document.getElementById("left-brain")
+let rightBrain = document.getElementById("right-brain")
+

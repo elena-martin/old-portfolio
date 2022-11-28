@@ -1,0 +1,477 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <script src="./script.js"></script>
+    <title>Password Protected Page</title>
+    <style>
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Firefox < 16 */
+        @-moz-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Safari, Chrome and Opera > 12.1 */
+        @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Internet Explorer */
+        @-ms-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Opera < 12.1 */
+        @-o-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        } 
+
+        @keyframes fadeout {
+            from { opacity: 1; }
+            to   { opacity: 0; }
+        }
+
+        /* Firefox < 16 */
+        @-moz-keyframes fadeout {
+            from { opacity: 1; }
+            to   { opacity: 0; }
+        }
+
+        /* Safari, Chrome and Opera > 12.1 */
+        @-webkit-keyframes fadeout {
+            from { opacity: 1; }
+            to   { opacity: 0; }
+        }
+
+        /* Internet Explorer */
+        @-ms-keyframes fadeout {
+            from { opacity: 1; }
+            to   { opacity: 0; }
+        }
+
+        /* Opera < 12.1 */
+        @-o-keyframes fadeout {
+            from { opacity: 1; }
+            to   { opacity: 0; }
+        } 
+
+        @font-face {
+            font-family: "Heavitas";
+            src: url(./fonts/Heavitas.ttf);
+        }
+
+        @font-face {
+            font-family: "Proxima Nova";
+            src: url(./fonts/Proxima\ Nova\ Font.otf);
+        }
+
+
+        @font-face {
+            font-family: "Pockota";
+            src: url(./fonts/Pockota\ Regular.ttf);
+        }
+
+        #preloader {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: fixed;
+            z-index: 6;
+            transition-duration: .5s;
+            transition-property: opacity;
+            transition-timing-function: linear;
+        }
+
+        .toggle-preloader{
+            display: none;
+        }
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: "Proxima Nova",Arial, Helvetica, sans-serif;
+            background-color: #283C4F;
+        }
+        #dialogText h1{
+            text-align: center;
+            font-family: "Heavitas", Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            color: #F2E5D8;
+            background-color: #365673;
+            margin: 0;
+        }
+        #dialogText h2{
+            text-align: center;
+            font-family: "Heavitas", Arial, Helvetica, sans-serif;
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: normal;
+            background-color: #365673;
+            margin-top: 0px;
+        }
+        
+        #dialogWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+            background-color: #283C4F;
+            -webkit-animation: fadein .5s; 
+            -moz-animation: fadein .5s;
+            -ms-animation: fadein .5s; 
+            -o-animation: fadein .5s; 
+            animation: fadein .5s;
+        }
+        
+        #dialogWrapCell {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        #mainDialog {
+            max-width: 800px;
+            margin: 5px;
+            border: solid #283C4F 0px;
+            border-radius: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #365673;
+            overflow: hidden;
+            text-align: left;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #mainDialog > * {
+            padding: 10px 30px;
+        }
+        #passArea {
+            width: 400px;
+            background-color: #365673;
+            padding-left: 200px;
+            padding-top: 0;
+        }
+        #passArea > * {
+            margin: 5px auto;
+        }
+        #pass {
+            width: 100%;
+            height: 40px;
+            font-size: 30px;
+        }
+
+        #passwordPrompt {
+        
+            color: white;
+        }
+        
+        #messageWrapper {
+            float: left;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+        
+        .notifyText {
+            display: none;
+        }
+        
+        #invalidPass {
+            color: white;
+        }
+        
+        #success {
+            color: white;
+        }
+        
+        #submitPass {
+            font-size: 20px;
+            border-radius: 0px;
+            background-color: #E7E7E7;
+            border: none;
+            float: right;
+            cursor: pointer;
+        }
+        #contentFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #attribution {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        #attribution, #attribution a {
+            color: #999;
+        }
+        .error {
+            display: none;
+            color: red;
+        }
+        a {
+            color: #F2E5D8;
+        }
+
+        #pwRequest {
+            max-width: 800px;
+            margin-top: 10px;
+            border: solid #283C4F 0px;
+            border-radius: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #365673;
+            overflow: hidden;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #pwRequest h2{
+            text-align: center;
+            font-family: "Heavitas";
+            font-size: 1.1vw;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: normal;
+            background-color: #365673;
+            margin-top: 0px;
+        }
+        #pwRequested {
+            max-width: 800px;
+            margin-top: 10px;
+            border: solid #283C4F 0px;
+            border-radius: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #365673;
+            overflow: hidden;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #pwRequested h2{
+            text-align: center;
+            font-family: "Heavitas";
+            font-size: 1.4vw;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: normal;
+            margin-top: 0px;
+        }
+        #pwRequested p{
+            text-align: center;
+            font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+            font-size: 1.1vw;
+            color: #F2E5D8;
+            font-weight: normal;
+            margin-top: 0px;
+        }
+    </style>
+  </head>
+  <body>
+    <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
+    <div id="dialogWrap">
+        <div id="dialogWrapCell">
+            <div id="mainDialog">
+                <div id="dialogText">This page is password protected.</div>
+                <div id="passArea">
+                    <p id="passwordPrompt">Password</p>
+                    <input id="pass" type="password" name="pass" autofocus>
+                    <div>
+                        <span id="messageWrapper">
+                            <span id="invalidPass" class="error">Sorry, please try again.</span>
+                            <span id="trycatcherror" class="error">Sorry, something went wrong.</span>
+                            <span id="success" class="notifyText">Success!</span>
+                            &nbsp;
+                        </span>
+                        <button id="submitPass" type="button">Submit</button>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <div id="securecontext" class="error">
+                    <p>
+                        Sorry, but password protection only works over a secure connection. Please load this page via HTTPS.
+                    </p>
+                </div>
+                <div id="nocrypto" class="error">
+                    <p>
+                        Your web browser appears to be outdated. Please visit this page using a modern browser.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="attribution">
+        Protected by <a href="https://www.maxlaumeister.com/pagecrypt/">PageCrypt</a>
+    </div>
+    <script>
+        if (sessionStorage.entered === 'true'){
+            
+        }
+    (function() {
+        console.log(commercialURL)
+        var pl = "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";
+        
+        var submitPass = document.getElementById('submitPass');
+        var passEl = document.getElementById('pass');
+        var invalidPassEl = document.getElementById('invalidPass');
+        var trycatcherror = document.getElementById('trycatcherror');
+        var successEl = document.getElementById('success');
+        var contentFrame = document.getElementById('contentFrame');
+        
+        // Sanity checks
+
+        if (pl === "") {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+            alert("This page is meant to be used with the encryption tool. It doesn't work standalone.");
+            return;
+        }
+
+        if (!isSecureContext) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#securecontext").style.display = "block";
+            return;
+        }
+
+        if (!crypto.subtle) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#nocrypto").style.display = "block";
+            return;
+        }
+        
+        function str2ab(str) {
+            var ustr = atob(str);
+            var buf = new ArrayBuffer(ustr.length);
+            var bufView = new Uint8Array(buf);
+            for (var i=0, strLen=ustr.length; i < strLen; i++) {
+                bufView[i] = ustr.charCodeAt(i);
+            }
+            return bufView;
+        }
+
+        async function deriveKey(salt, password) {
+            const encoder = new TextEncoder()
+            const baseKey = await crypto.subtle.importKey(
+                'raw',
+                encoder.encode(password),
+                'PBKDF2',
+                false,
+                ['deriveKey'],
+            )
+            return await crypto.subtle.deriveKey(
+                { name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' },
+                baseKey,
+                { name: 'AES-GCM', length: 256 },
+                true,
+                ['decrypt'],
+            )
+        }
+        
+        async function doSubmit(evt) {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+
+            let iv, ciphertext, key;
+            
+            try {
+                var unencodedPl = str2ab(pl);
+
+                const salt = unencodedPl.slice(0, 32)
+                iv = unencodedPl.slice(32, 32 + 16)
+                ciphertext = unencodedPl.slice(32 + 16)
+
+                key = await deriveKey(salt, passEl.value);
+            } catch (e) {
+                trycatcherror.style.display = "inline";
+                console.error(e);
+                return;
+            }
+
+            try {
+                const decryptedArray = new Uint8Array(
+                    await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ciphertext)
+                );
+
+                let decrypted = new TextDecoder().decode(decryptedArray);
+
+                if (decrypted === "") throw "No data returned";
+
+                const basestr = '<base href="." target="_top">';
+                const anchorfixstr = `
+                    <script>
+                        Array.from(document.links).forEach((anchor) => {
+                            const href = anchor.getAttribute("href");
+                            if (href.startsWith("#")) {
+                                anchor.addEventListener("click", function(e) {
+                                    e.preventDefault();
+                                    const targetId = this.getAttribute("href").substring(1);
+                                    const targetEl = document.getElementById(targetId);
+                                    targetEl.scrollIntoView();
+                                });
+                            }
+                        });
+                    <\/script>
+                `;
+                
+                // Set default iframe link targets to _top so all links break out of the iframe
+                if (decrypted.includes("<head>")) decrypted = decrypted.replace("<head>", "<head>" + basestr);
+                else if (decrypted.includes("<!DOCTYPE html>")) decrypted = decrypted.replace("<!DOCTYPE html>", "<!DOCTYPE html>" + basestr);
+                else decrypted = basestr + decrypted;
+
+                // Fix fragment links
+                if (decrypted.includes("</body>")) decrypted = decrypted.replace("</body>", anchorfixstr + '</body>');
+                else if (decrypted.includes("</html>")) decrypted = decrypted.replace("</html>", anchorfixstr + '</html>');
+                else decrypted = decrypted + anchorfixstr;
+                
+                contentFrame.srcdoc = decrypted;
+                
+                successEl.style.display = "inline";
+                setTimeout(function() {
+                    dialogWrap.style.display = "none";
+                }, 1000);
+            } catch (e) {
+                invalidPassEl.style.display = "inline";
+                passEl.value = "";
+                submitPass.disabled = false;
+                passEl.disabled = false;
+                console.error(e);
+                return;
+            }
+        }
+        
+        submitPass.onclick = doSubmit;
+        passEl.onkeypress = function(e){
+            if (!e) e = window.event;
+            var keyCode = e.keyCode || e.which;
+            invalidPassEl.style.display = "none";
+            sessionStorage.setItem('entered','true');
+            if (keyCode == '13'){
+              // Enter pressed
+              doSubmit();
+              return false;
+            }
+        }
+    })();
+    </script>
+  </body>
+</html>

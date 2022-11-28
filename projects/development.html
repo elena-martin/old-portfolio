@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <script src="../script.js"></script>
         <script src="../lock-script.js"></script>
-        <link rel="preload" href="../preloader.html" as="document">
+        <link rel="preload" as="document" onload="this.rel = 'document'" href="../preloader.html">
         <link rel="icon" type="image/x-icon" href="../favicon.ico">
     </head>
     <body>
@@ -17,7 +17,7 @@
                 if (sessionStorage.entered === 'true'){
                     return
                 } else {
-                    window.open("./commercial.html", target="_self")
+                    window.open("./commercial-lock.html", target="_self")
                 }
             });
         </script>
@@ -27,15 +27,11 @@
             <div id="nav-buttons">
                 <div class="menu"><a onclick=viewAbout();>ABOUT ME</a></div>
                 <div class="menu"><a onclick=viewPortfolio();>PORTFOLIO</a>
-                    <div class="submenu">
-                        <a onclick=viewCommercialProj();>Commercial Projects</a>
-                        <a onclick=viewAdditionalProj();>Additional Projects</a>
-                    </div>
                 </div>
             </div>
             <div id="nav-divider"></div>
         </div>
-        <a onclick=backPage(); class="page-back">🠬 Back to Commercial Projects</a>
+        <a onclick=backPage(); class="page-back">🠬 Back to Projects</a>
         <br><br><br><br><br><br><br>
         <div class="case-head dev">
             <h1>Product Development</h1>
@@ -71,7 +67,7 @@
                 </div>
                 
             </section>
-            <a onclick=backPage(); class="back-to-commercial">🠬 Back to Commercial Projects</a>
+            <a onclick=backPage(); class="back-to-projects">🠬 Back to Projects</a>
         </div>
         <div id="footer">
             <p>© Copyright 2022 Elena Martin</p>
@@ -82,10 +78,10 @@
                 pageTransition();
                 getLocation();
                 setTimeout(() => {
-                        window.open("commercial.html", target="_self")
+                        window.open("../portfolio.html", target="_self")
                         content.prepend(loader);
-                        console.log("Back to Commercial Portfolio")
-                }, "2000");
+                        console.log("Back to Portfolio")
+                }, "1000");
             }
         </script>
     </body>

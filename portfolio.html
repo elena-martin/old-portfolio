@@ -3,6 +3,7 @@
         <title>Elena Martin | Portfolio</title>
         <link rel="stylesheet" href="./styles.css">
         <link rel="stylesheet" href="./port-styles.css">
+        <link rel="stylesheet" href="./lock.css">
         <script src="./script.js"></script>
         <meta charset="UTF-8">
         <link rel="preload" href="./preloader.html" as="document">
@@ -27,10 +28,61 @@
             </div>
             <div id="nav-divider"></div>
         </div>
+        <!--<div id="lock" style="display: none">
+            <div id="dialogWrap">
+            <div id="dialogWrapCell">
+                <div id="mainDialog">
+                    <div id="dialogText">
+                        <h1>Enter the Password</h1>
+                        <h2>You can find it at the bottom of my resume</h2>
+                    </div>
+                    <div id="passArea">
+                        <p id="passwordPrompt">Password</p>
+                        <input id="pass" type="password" name="pass" autocomplete="false" autofocus>
+                        <div>
+                            <span id="messageWrapper">
+                                <span id="invalidPass" class="error">Sorry, please try again.</span>
+                                <span id="trycatcherror" class="error">Sorry, something went wrong.</span>
+                                <span id="success" class="notifyText">Success!</span>
+                                &nbsp;
+                            </span>
+                            <button id="submitPass" type="button">Submit</button>
+                            <div style="clear: both;"></div>
+                        </div>
+                    </div>
+                    <div id="securecontext" class="error">
+                        <p>
+                            Sorry, but password protection only works over a secure connection. Please load this page via HTTPS.
+                        </p>
+                    </div>
+                    <div id="nocrypto" class="error">
+                        <p>
+                            Your web browser appears to be outdated. Please visit this page using a modern browser.
+                        </p>
+                    </div>
+                </div>
+                <div id="pwRequest">
+                    <h2>Don't have my resume? Request the password below</h2>
+                    <input type="text" placeholder="Your Name" id="name" required>
+                    <input type="email" placeholder="Your Email" id="email" required>
+                    <input type="text" placeholder="Your Company" id="company" required>
+                    <input type="button" value="Submit">
+                </div>
+                <div id="pwRequested" style="display: none;">
+                    <h2>Password Requested!</h2>
+                    <p>Send the auto-filled email to recieve the password in your inbox shortly.</p>
+                </div>
+            </div>
+            </div>
+            <div id="attribution">
+                Protected by <a href="https://www.maxlaumeister.com/pagecrypt/">PageCrypt</a>
+            </div>
+        </div>-->
         <div id="header">
             <img id="logo" src="./base-images/Wordmark-2022-Light.svg" alt="Website Logo">
         </div>
         <div id="page-content" class="body" style="background-color:#283C4F;">
+            
             <!--<div class="page-head">
                 <div class = "header-text">
                     <h1>Check Out My</h1>
@@ -112,16 +164,6 @@
             </div>
             <span id="gallery">
                 <ul class="gallery" onclick="getFigure(event);">
-                    <li class="gallery-item uxui" onclick="lightboxOpen();">
-                        <div class="item-hover">
-                            <span class="hover-info">
-                                <h1>Sandbox Project</h1>
-                                <h2>UX/UI</h2>
-                            </span>
-                        </div>
-                        <img src="./projects/git/sandbox-logo.svg" alt="sandbox-logo">
-                        <p class="gallery-desc" style="display: none;">YouTube thumbnail created for a client&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Size Requirement: 1280px × 720px </p>
-                    </li>
                     
                     <li class="gallery-item data-vis" onclick="projPage();">
                         <div class="item-hover">
@@ -142,18 +184,36 @@
                         <img src="./projects/gfx/scarlet-witch-logo.webp" alt="scarlet-witch-logo">
                         <p class="gallery-desc" style="display: none;">Conceptual logo design for personal use - 2022</p>
                     </li>
-                    <li class="gallery-item pm" onclick="lightboxOpen();">
+                    <li class="gallery-item uxui commercial" onclick="enterPW();">
                         <div class="item-hover">
                             <span class="hover-info">
-                                <h1>Unofficial Scarlet Witch Logo</h1>
-                                <h2>Branding</h2>
+                                <h1>Product Development</h1>
+                                <h2>UX / UI</h2>
                             </span>
                         </div>
-                        <img src="./projects/commercial/organization/org-gallery-thumbnail.png" alt="organization">
+                        <img src="./projects/development/dev-gallery-thumbnail.png" alt="development">
                         <p class="gallery-desc" style="display: none;">Conceptual logo design for personal use - 2022</p>
                     </li>
-                    
-                    
+                    <li class="gallery-item pm commercial" onclick="enterPW();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>Concept Design & Presentation</h1>
+                                <h2>Project Management</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/concepts/concepts-gallery-thumbnail.png" alt="concepts">
+                        <p class="gallery-desc" style="display: none;">Conceptual logo design for personal use - 2022</p>
+                    </li>
+                    <li class="gallery-item pm commercial" onclick="enterPW();">
+                        <div class="item-hover">
+                            <span class="hover-info">
+                                <h1>File / Project Organization</h1>
+                                <h2>Project Management</h2>
+                            </span>
+                        </div>
+                        <img src="./projects/organization/org-gallery-thumbnail.png" alt="organization">
+                        <p class="gallery-desc" style="display: none;">Conceptual logo design for personal use - 2022</p>
+                    </li>
                     <li class="gallery-item branding" onclick="lightboxOpen();">
                         <div class="item-hover">
                             <span class="hover-info">
@@ -276,12 +336,14 @@
                 <!--<model-viewer src="images/martie-sun.gltf" alt="Martie" auto-rotate camera-controls ar ios-src="images/martie-sun.gltf"></model-viewer>-->
             <!--</div>-->
         </div>
+        
         <div id="footer" class="body">
             <p>Copyright 2022</p>
         </div>
         <script src="./gallery-script.js"></script>
+        
         <script>
-            let i = 0;
+            let locked = "";
 
             let web = document.getElementsByClassName('web')
             let dataVis = document.getElementsByClassName('data-vis')
@@ -305,14 +367,14 @@
                             window.open("./projects/data-vis-2.html", target="_self")
                             content.prepend(loader);
                             console.log("View Project")
-                    }, "1000");
+                        }, "1000");
                     }
                     if (target.innerText == 'Workplace Injuries Infographic\nData Visualization'){
                         setTimeout(() => {
                             window.open("./projects/data-vis-3.html", target="_self")
                             content.prepend(loader);
                             console.log("View Project")
-                    }, "1000");
+                        }, "1000");
                     }
                 };
 
@@ -322,12 +384,13 @@
                             window.open("./projects/interactive-map.html", target="_self")
                             content.prepend(loader);
                             console.log("View Project")
-                    }, "1000");
+                        }, "1000");
                     }
                 }
                 
+
             }
         </script>
-        <!--<script src="./sorting.js"></script>-->
+       <script src="./projects/lock-script.js"></script>
     </body>
 </html>

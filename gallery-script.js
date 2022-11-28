@@ -42,6 +42,90 @@ closeLightboxMulti.id = "close-lightbox";
 closeLightboxMulti.textContent="\u2716"
 closeLightboxMulti.setAttribute("onclick","lightboxCloseMulti();")
 
+/*----- CREATE PW LIGHTBOX -----*/
+const dialogWrap = document.createElement("div");
+dialogWrap.id = "dialogWrap";
+
+const dialogWrapCell = document.createElement("div");
+dialogWrapCell.id = "dialogWrapCell";
+
+const mainDialog = document.createElement("div");
+mainDialog.id = "mainDialog";
+
+const dialogText = document.createElement("div");
+dialogText.id = "dialogText";
+
+const h1 = document.createElement("h1");
+h1.textContent = "Enter the Password";
+
+const h2 = document.createElement("h2");
+h2.textContent = "You can find it at the bottom of my resume"
+
+const passArea = document.createElement("div");
+passArea.id = "passArea";
+
+const passwordPrompt = document.createElement("p");
+passwordPrompt.id = "passwordPrompt";
+passwordPrompt.textContent = "Password";
+
+const pass = document.createElement("input");
+pass.id = "pass";
+pass.type = "password";
+pass.name = "pass";
+pass.autocomplete = "false";
+
+const div = document.createElement("div");
+
+const msgWrapper = document.createElement("span");
+msgWrapper.id = "messageWrapper";
+
+const invalidPass = document.createElement("span");
+invalidPass.id = "invalidPass";
+invalidPass.className = "error";
+invalidPass.textContent = "Sorry, please try again."
+
+const trycatcherror = document.createElement("span");
+trycatcherror.id = "trycatcherror";
+trycatcherror.className = "error";
+trycatcherror.textContent = "Sorry, something went wrong."
+
+const success = document.createElement("span");
+success.id = "success";
+success.className = "notifyText";
+success.textContent = "Success!"
+
+const submitPass = document.createElement("button");
+submitPass.id = "submitPass";
+submitPass.type = "button";
+submitPass.textContent = "Submit"
+
+const securecontext = document.createElement("div");
+securecontext.id = "securecontext";
+securecontext.className = "error";
+
+const securep = document.createElement("p");
+securep.textContent = "Sorry, but password protection only works over a secure connection. Please load this page via HTTPS."
+
+const nocrypto = document.createElement("div");
+nocrypto.id = "nocrypto";
+nocrypto.className = "error";
+
+const cryptop = document.createElement("p");
+cryptop.textContent = "Your web browser appears to be outdated. Please visit this page using a modern browser."
+
+const attribution = document.createElement("div");
+attribution.id = "attribution";
+attribution.textContent = "Protected by "
+
+const link = document.createElement('a');
+link.href = "https://www.maxlaumeister.com/pagecrypt/"
+link.textContent = "PageCrypt"
+
+const closePW = document.createElement("a");
+closePW.id = "close-lightbox";
+closePW.textContent="\u2716"
+closePW.setAttribute("onclick","lightboxClosePW();")
+
 var source = ""
 var relsource = ""
 var title = ""
@@ -52,7 +136,39 @@ var target = ""
 
 const footer = document.getElementById('footer');
 
-document.body.onload = load(); lightbox();
+document.body.onload = load(); lightbox(); createPWBox();
+
+function createPWBox() {
+    const lock = document.createElement("div");
+    lock.id = "lock";
+    lock.setAttribute("style", "display: none;");
+
+    document.body.insertBefore(lock, pageContent);
+
+    
+    lock.appendChild(dialogWrap);
+    dialogWrap.appendChild(dialogWrapCell);
+    dialogWrapCell.appendChild(mainDialog);
+    mainDialog.appendChild(dialogText);
+    dialogText.appendChild(h1);
+    dialogText.appendChild(h2);
+    dialogText.appendChild(passArea);
+    passArea.appendChild(passwordPrompt);
+    passArea.appendChild(pass);
+    passArea.appendChild(div);
+    div.appendChild(msgWrapper);
+    msgWrapper.appendChild(invalidPass);
+    msgWrapper.appendChild(trycatcherror);
+    msgWrapper.appendChild(success);
+    div.appendChild(submitPass);
+    mainDialog.appendChild(securecontext);
+    securecontext.appendChild(securep);
+    mainDialog.appendChild(nocrypto);
+    nocrypto.appendChild(cryptop);
+    dialogWrap.appendChild(attribution);
+    attribution.appendChild(link);
+}
+
 
 function load(){
     editFilters();
@@ -62,6 +178,7 @@ function load(){
         itemsClasses.add('loaded')
         console.log(itemsClasses)
     };
+    sessionStorage.setItem("unlocked", "false");
 };
 
 function editFilters()  {
@@ -195,11 +312,11 @@ function editFilters()  {
                     };
 
                     //SIXTH FILTER - PROJECT MANAGEMENT
-                    if (checkboxes[5].checked == true && galleryItems[i2].classList.contains('proj-management') == true) {
+                    if (checkboxes[5].checked == true && galleryItems[i2].classList.contains('pm') == true) {
                         itemClasses.add('active')
                         itemClasses.remove ('loaded')
                     };
-                    if (checkboxes[5].checked == false && galleryItems[i2].classList.contains('proj-management') == true){
+                    if (checkboxes[5].checked == false && galleryItems[i2].classList.contains('pm') == true){
                         itemClasses.remove ('active')
                         itemClasses.remove ('loaded')
                     };
@@ -261,6 +378,7 @@ function lightbox(){
     
     imgContent.appendChild(imgTitle);
     imgContent.appendChild(imgDesc);
+    
 }
 
 function getFigure(e){ 
@@ -354,6 +472,50 @@ function lightboxOpenMultiTG(){
     }
 }
 
+function enterPW(){
+    if (window.locked !== 'false'){
+        let lock= document.getElementById('lock');
+        let lightbox = document.getElementById('lightbox');
+
+        siteBody[0].style = "transition: .5s -webkit-filter linear; -webkit-filter: blur(10px); -moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px); filter: blur(10px);"
+        siteBody[1].style = "transition: .5s -webkit-filter linear; -webkit-filter: blur(10px); -moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px); filter: blur(10px);"
+
+        lock.style = "display: block";
+        setTimeout(() => {
+            lock.style = "opacity: 1";
+        }, "100");
+        boxImg.setAttribute("target", "_blank");
+        disableScroll();
+        lock.appendChild(closePW);
+        lightbox.removeChild(boxContent);
+        lightbox.removeChild(imgContent);
+        
+        boxImg.style = "display: block"
+
+        siteBody[0].style = "transition: .5s -webkit-filter linear; -webkit-filter: blur(10px); -moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px); filter: blur(10px);"
+        siteBody[1].style = "transition: .5s -webkit-filter linear; -webkit-filter: blur(10px); -moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px); filter: blur(10px);"
+
+        lightbox.style = "display: block";
+        setTimeout(() => {
+            lightbox.style = "opacity: 1; background: transparent; pointer-events: none;";
+        }, "100");
+        boxImg.setAttribute("target", "_blank");
+        disableScroll();
+    } else if (window.locked === 'false'){
+        if (target.innerText == 'Product Development\nUX / UI'){
+            commercialURL = "./projects/development.html"
+            console.log(commercialURL)
+            setTimeout(() => {
+                window.open("./projects/development.html", target="_self")
+                content.prepend(loader);
+            }, "1000");
+        }
+    }
+
+    let frame = document.getElementById('enter-password');
+    console.log(frame);
+}
+
 function lightboxClose(){
     let lightbox = document.getElementById('lightbox')
     lightbox.style = "opacity: 0";
@@ -381,8 +543,6 @@ function lightboxCloseMulti(){
         lightbox.style = "display: none";
     }, "500");
 
-    
-    
     function removeMulti(images){
         for (let i = 0; i < images.length; i++){
             console.log(images)
@@ -392,6 +552,29 @@ function lightboxCloseMulti(){
     removeMulti(document.querySelectorAll('.multiImg'));
     
 }
+
+function lightboxClosePW(){
+    let lightbox = document.getElementById('lightbox')
+    let enterPW = document.getElementById('lock');
+    enterPW.style.display = "none";
+    lightbox.style = "opacity: 0";
+    siteBody[0].style = "transition: .5s -webkit-filter linear; -webkit-filter: blur(0px); -moz-filter: blur(0px); -o-filter: blur(0px); -ms-filter: blur(0px); filter: blur(0px);"
+    siteBody[1].style = "transition: .5s -webkit-filter linear; -webkit-filter: blur(0px); -moz-filter: blur(0px); -o-filter: blur(0px); -ms-filter: blur(0px); filter: blur(0px);"
+
+    closeLightbox.style = "cursor: pointer"
+    
+    enableScroll();
+    setTimeout(() => {
+        lightbox.style = "display: none";
+    }, "500");
+    setTimeout(() => {
+        lightbox.style = "display: none";
+        lightbox.appendChild(boxContent);
+        boxContent.appendChild(boxImg);
+        lightbox.appendChild(imgContent);
+    }, "800");
+}
+
 
 /*----------DISABLE SCROLL IN LIGHTBOX----------*/
 

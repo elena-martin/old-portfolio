@@ -228,7 +228,7 @@ body {
     padding: 15px;
     padding-left: 2.25%;
     padding-right: 2.25%;
-    background-color: #365673;
+    background-color: #283C4F;
     clip-path: fill-box;
     display: none;
 }
@@ -239,7 +239,7 @@ body {
     padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: rgba(40, 60, 79, 0.5);
+    background-color: #365673;
     border: none;
     color: white;
     border-radius: 5px;
@@ -339,7 +339,7 @@ color: #B8C6D0;
     background-clip: content-box;
     padding: 0%;
     display: none;
-    border: .5em solid transparent;
+    
 }
 .gallery-item:hover {
     transform-origin: 50% 50%;
@@ -347,7 +347,7 @@ color: #B8C6D0;
     transform: scale(1.05);
     cursor: pointer;
     border-radius: 1.5em;
-    border: .5em solid #283C4F;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
 }
 
 .gallery > li {
