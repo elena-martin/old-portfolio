@@ -195,11 +195,11 @@ function editFilters()  {
                     };
 
                     //SIXTH FILTER - PROJECT MANAGEMENT
-                    if (checkboxes[5].checked == true && galleryItems[i2].classList.contains('proj-management') == true) {
+                    if (checkboxes[5].checked == true && galleryItems[i2].classList.contains('pm') == true) {
                         itemClasses.add('active')
                         itemClasses.remove ('loaded')
                     };
-                    if (checkboxes[5].checked == false && galleryItems[i2].classList.contains('proj-management') == true){
+                    if (checkboxes[5].checked == false && galleryItems[i2].classList.contains('pm') == true){
                         itemClasses.remove ('active')
                         itemClasses.remove ('loaded')
                     };
